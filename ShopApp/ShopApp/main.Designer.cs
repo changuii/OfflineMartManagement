@@ -295,9 +295,9 @@ namespace ShopApp
         private custom.CustomRadioButton userRadio;
         private custom.CustomButton customButton3;
         private textbox.CostomTextBox passwordTextBox;
-        private DataSet1 dataSet11;
         private DataSet1TableAdapters.CUSTOMERTableAdapter customerTableAdapter1;
         private DataSet1TableAdapters.SELLERTableAdapter sellerTableAdapter1;
+        private DataSet1 dataSet11;
         private DataSet1TableAdapters.ADMINTableAdapter adminTableAdapter1;
     }
 }

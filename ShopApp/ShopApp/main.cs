@@ -56,7 +56,6 @@ namespace ShopApp
             string pw = passwordTextBox.Texts;
 
 
-
             if (userRadio.Checked)
             {
                 string condition = $"C_EMAIL = '{email}' AND PASSWORD = '{pw}'";
@@ -68,6 +67,10 @@ namespace ShopApp
                     this.Hide();
                     User user = new User();
                     user.Show();
+                }
+                else
+                {
+                    MessageBox.Show("이메일이 존재하지 안거나 비밀번호가 일치하지 않습니다.");
                 }
 
             } else if (sellerRadio.Checked)
@@ -83,6 +86,10 @@ namespace ShopApp
                     Seller seller = new Seller();
                     seller.Show();
                 }
+                else
+                {
+                    MessageBox.Show("이메일이 존재하지 안거나 비밀번호가 일치하지 않습니다.");
+                }
             }
             else if (adminRadio.Checked)
             {
@@ -96,6 +103,10 @@ namespace ShopApp
                     this.Hide();
                     Management management = new Management(this.emailTextBox.Texts);
                     management.Show();
+                }
+                else
+                {
+                    MessageBox.Show("이메일이 존재하지 안거나 비밀번호가 일치하지 않습니다.");
                 }
             }
         }
