@@ -13,7 +13,6 @@ namespace ShopApp
     public partial class Management : Form
     {
         string email = "";
-
         public Management(string email)
         {
             this.email = email;
@@ -59,6 +58,11 @@ namespace ShopApp
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
             emailLabel.Text = this.email + "님 환영합니다.";
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+           
         }
     }
 }

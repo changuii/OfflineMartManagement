@@ -19,6 +19,7 @@ namespace ShopApp
         {
             InitializeComponent();
             userRadio.Checked = true;
+            errorText.Text = "";
         }
         
 
@@ -41,9 +42,6 @@ namespace ShopApp
 
         private void button2_Click(object sender, EventArgs e)
         {
-            Signin form3 = new Signin();
-            form3.Show();
-            this.Hide();
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -65,12 +63,13 @@ namespace ShopApp
                 if (result.Length > 0)
                 {
                     this.Hide();
-                    User user = new User();
+                    User user = new User(result[0]["C_EMAIL"].ToString(), result[0]["NAME"].ToString());
                     user.Show();
                 }
                 else
                 {
-                    MessageBox.Show("이메일이 존재하지 안거나 비밀번호가 일치하지 않습니다.");
+                    errorText.Text = "이메일이 존재하지 않거나 비밀번호가 일치하지 않습니다.";
+                    
                 }
 
             } else if (sellerRadio.Checked)
@@ -88,7 +87,7 @@ namespace ShopApp
                 }
                 else
                 {
-                    MessageBox.Show("이메일이 존재하지 안거나 비밀번호가 일치하지 않습니다.");
+                    errorText.Text = "이메일이 존재하지 않거나 비밀번호가 일치하지 않습니다.";
                 }
             }
             else if (adminRadio.Checked)
@@ -106,7 +105,7 @@ namespace ShopApp
                 }
                 else
                 {
-                    MessageBox.Show("이메일이 존재하지 안거나 비밀번호가 일치하지 않습니다.");
+                    errorText.Text = "이메일이 존재하지 않거나 비밀번호가 일치하지 않습니다.";
                 }
             }
         }

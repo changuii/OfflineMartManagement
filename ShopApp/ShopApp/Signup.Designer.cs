@@ -29,12 +29,12 @@ namespace ShopApp
         /// </summary>
         private void InitializeComponent()
         {
-            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signup));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
-            this.costomTextBox4 = new ShopApp.textbox.CostomTextBox();
-            this.costomTextBox3 = new ShopApp.textbox.CostomTextBox();
-            this.costomTextBox2 = new ShopApp.textbox.CostomTextBox();
+            this.errorText = new System.Windows.Forms.Label();
+            this.passwordTextBox2 = new ShopApp.textbox.CostomTextBox();
+            this.passwordTextBox1 = new ShopApp.textbox.CostomTextBox();
+            this.nameTextBox = new ShopApp.textbox.CostomTextBox();
             this.customRadioButton3 = new ShopApp.custom.CustomRadioButton();
             this.customRadioButton2 = new ShopApp.custom.CustomRadioButton();
             this.customRadioButton1 = new ShopApp.custom.CustomRadioButton();
@@ -44,26 +44,30 @@ namespace ShopApp
             this.label2 = new System.Windows.Forms.Label();
             this.customButton1 = new ShopApp.custom.CustomButton();
             this.label3 = new System.Windows.Forms.Label();
-            this.costomTextBox1 = new ShopApp.textbox.CostomTextBox();
+            this.emailTextBox = new ShopApp.textbox.CostomTextBox();
+            this.iconSplitButton1 = new FontAwesome.Sharp.IconSplitButton();
+            this.dataSet11 = new ShopApp.DataSet1();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(375, 370);
             this.panel1.TabIndex = 8;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint_1);
             // 
             // panel2
             // 
-            this.panel2.Controls.Add(this.costomTextBox4);
-            this.panel2.Controls.Add(this.costomTextBox3);
-            this.panel2.Controls.Add(this.costomTextBox2);
+            this.panel2.Controls.Add(this.errorText);
+            this.panel2.Controls.Add(this.passwordTextBox2);
+            this.panel2.Controls.Add(this.passwordTextBox1);
+            this.panel2.Controls.Add(this.nameTextBox);
             this.panel2.Controls.Add(this.customRadioButton3);
             this.panel2.Controls.Add(this.customRadioButton2);
             this.panel2.Controls.Add(this.customRadioButton1);
@@ -73,7 +77,7 @@ namespace ShopApp
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.customButton1);
             this.panel2.Controls.Add(this.label3);
-            this.panel2.Controls.Add(this.costomTextBox1);
+            this.panel2.Controls.Add(this.emailTextBox);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Right;
             this.panel2.Location = new System.Drawing.Point(375, 0);
             this.panel2.Name = "panel2";
@@ -81,50 +85,61 @@ namespace ShopApp
             this.panel2.TabIndex = 10;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // costomTextBox4
+            // errorText
             // 
-            this.costomTextBox4.BackColor = System.Drawing.SystemColors.Window;
-            this.costomTextBox4.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.costomTextBox4.BorderSize = 2;
-            this.costomTextBox4.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.costomTextBox4.Location = new System.Drawing.Point(59, 198);
-            this.costomTextBox4.Name = "costomTextBox4";
-            this.costomTextBox4.Padding = new System.Windows.Forms.Padding(7);
-            this.costomTextBox4.PasswordChar = true;
-            this.costomTextBox4.Size = new System.Drawing.Size(277, 29);
-            this.costomTextBox4.TabIndex = 24;
-            this.costomTextBox4.Texts = "";
-            this.costomTextBox4.UnderlinedStyle = true;
+            this.errorText.AutoSize = true;
+            this.errorText.Font = new System.Drawing.Font("던파 비트비트체 TTF", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.errorText.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorText.Location = new System.Drawing.Point(59, 276);
+            this.errorText.Name = "errorText";
+            this.errorText.Size = new System.Drawing.Size(64, 12);
+            this.errorText.TabIndex = 25;
+            this.errorText.Text = "errorText";
             // 
-            // costomTextBox3
+            // passwordTextBox2
             // 
-            this.costomTextBox3.BackColor = System.Drawing.SystemColors.Window;
-            this.costomTextBox3.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.costomTextBox3.BorderSize = 2;
-            this.costomTextBox3.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.costomTextBox3.Location = new System.Drawing.Point(59, 158);
-            this.costomTextBox3.Name = "costomTextBox3";
-            this.costomTextBox3.Padding = new System.Windows.Forms.Padding(7);
-            this.costomTextBox3.PasswordChar = true;
-            this.costomTextBox3.Size = new System.Drawing.Size(277, 29);
-            this.costomTextBox3.TabIndex = 23;
-            this.costomTextBox3.Texts = "";
-            this.costomTextBox3.UnderlinedStyle = true;
+            this.passwordTextBox2.BackColor = System.Drawing.SystemColors.Window;
+            this.passwordTextBox2.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.passwordTextBox2.BorderSize = 2;
+            this.passwordTextBox2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.passwordTextBox2.Location = new System.Drawing.Point(59, 198);
+            this.passwordTextBox2.Name = "passwordTextBox2";
+            this.passwordTextBox2.Padding = new System.Windows.Forms.Padding(7);
+            this.passwordTextBox2.PasswordChar = true;
+            this.passwordTextBox2.Size = new System.Drawing.Size(277, 29);
+            this.passwordTextBox2.TabIndex = 24;
+            this.passwordTextBox2.Texts = "";
+            this.passwordTextBox2.UnderlinedStyle = true;
             // 
-            // costomTextBox2
+            // passwordTextBox1
             // 
-            this.costomTextBox2.BackColor = System.Drawing.SystemColors.Window;
-            this.costomTextBox2.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.costomTextBox2.BorderSize = 2;
-            this.costomTextBox2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.costomTextBox2.Location = new System.Drawing.Point(59, 238);
-            this.costomTextBox2.Name = "costomTextBox2";
-            this.costomTextBox2.Padding = new System.Windows.Forms.Padding(7);
-            this.costomTextBox2.PasswordChar = false;
-            this.costomTextBox2.Size = new System.Drawing.Size(277, 29);
-            this.costomTextBox2.TabIndex = 22;
-            this.costomTextBox2.Texts = "";
-            this.costomTextBox2.UnderlinedStyle = true;
+            this.passwordTextBox1.BackColor = System.Drawing.SystemColors.Window;
+            this.passwordTextBox1.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.passwordTextBox1.BorderSize = 2;
+            this.passwordTextBox1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.passwordTextBox1.Location = new System.Drawing.Point(59, 158);
+            this.passwordTextBox1.Name = "passwordTextBox1";
+            this.passwordTextBox1.Padding = new System.Windows.Forms.Padding(7);
+            this.passwordTextBox1.PasswordChar = true;
+            this.passwordTextBox1.Size = new System.Drawing.Size(277, 29);
+            this.passwordTextBox1.TabIndex = 23;
+            this.passwordTextBox1.Texts = "";
+            this.passwordTextBox1.UnderlinedStyle = true;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.nameTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.nameTextBox.BorderSize = 2;
+            this.nameTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nameTextBox.Location = new System.Drawing.Point(59, 238);
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Padding = new System.Windows.Forms.Padding(7);
+            this.nameTextBox.PasswordChar = false;
+            this.nameTextBox.Size = new System.Drawing.Size(277, 29);
+            this.nameTextBox.TabIndex = 22;
+            this.nameTextBox.Texts = "";
+            this.nameTextBox.UnderlinedStyle = true;
             // 
             // customRadioButton3
             // 
@@ -222,7 +237,7 @@ namespace ShopApp
             this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(119, 291);
+            this.customButton1.Location = new System.Drawing.Point(119, 298);
             this.customButton1.Name = "customButton1";
             this.customButton1.Size = new System.Drawing.Size(150, 40);
             this.customButton1.TabIndex = 13;
@@ -240,20 +255,37 @@ namespace ShopApp
             this.label3.TabIndex = 12;
             this.label3.Text = "PW";
             // 
-            // costomTextBox1
+            // emailTextBox
             // 
-            this.costomTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.costomTextBox1.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.costomTextBox1.BorderSize = 2;
-            this.costomTextBox1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.costomTextBox1.Location = new System.Drawing.Point(59, 114);
-            this.costomTextBox1.Name = "costomTextBox1";
-            this.costomTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.costomTextBox1.PasswordChar = false;
-            this.costomTextBox1.Size = new System.Drawing.Size(277, 29);
-            this.costomTextBox1.TabIndex = 9;
-            this.costomTextBox1.Texts = "";
-            this.costomTextBox1.UnderlinedStyle = true;
+            this.emailTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.emailTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.emailTextBox.BorderSize = 2;
+            this.emailTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.emailTextBox.Location = new System.Drawing.Point(59, 114);
+            this.emailTextBox.Name = "emailTextBox";
+            this.emailTextBox.Padding = new System.Windows.Forms.Padding(7);
+            this.emailTextBox.PasswordChar = false;
+            this.emailTextBox.Size = new System.Drawing.Size(277, 29);
+            this.emailTextBox.TabIndex = 9;
+            this.emailTextBox.Texts = "";
+            this.emailTextBox.UnderlinedStyle = true;
+            // 
+            // iconSplitButton1
+            // 
+            this.iconSplitButton1.Flip = FontAwesome.Sharp.FlipOrientation.Normal;
+            this.iconSplitButton1.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.iconSplitButton1.IconColor = System.Drawing.Color.Black;
+            this.iconSplitButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconSplitButton1.IconSize = 48;
+            this.iconSplitButton1.Name = "iconSplitButton1";
+            this.iconSplitButton1.Rotation = 0D;
+            this.iconSplitButton1.Size = new System.Drawing.Size(23, 23);
+            this.iconSplitButton1.Text = "iconSplitButton1";
+            // 
+            // dataSet11
+            // 
+            this.dataSet11.DataSetName = "DataSet1";
+            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // Signup
             // 
@@ -269,6 +301,7 @@ namespace ShopApp
             this.Load += new System.EventHandler(this.Signup_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -281,14 +314,20 @@ namespace ShopApp
         private System.Windows.Forms.Label label2;
         private custom.CustomButton customButton1;
         private System.Windows.Forms.Label label3;
-        private textbox.CostomTextBox costomTextBox1;
+        private textbox.CostomTextBox emailTextBox;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
         private custom.CustomRadioButton customRadioButton3;
         private custom.CustomRadioButton customRadioButton2;
         private custom.CustomRadioButton customRadioButton1;
-        private textbox.CostomTextBox costomTextBox2;
-        private textbox.CostomTextBox costomTextBox4;
-        private textbox.CostomTextBox costomTextBox3;
+        private textbox.CostomTextBox nameTextBox;
+        private textbox.CostomTextBox passwordTextBox2;
+        private textbox.CostomTextBox passwordTextBox1;
+        private DataSet1TableAdapters.ADMINTableAdapter adminTableAdapter1;
+        private DataSet1TableAdapters.SELLERTableAdapter sellerTableAdapter1;
+        private DataSet1TableAdapters.CUSTOMERTableAdapter customerTableAdapter1;
+        private System.Windows.Forms.Label errorText;
+        private FontAwesome.Sharp.IconSplitButton iconSplitButton1;
+        private DataSet1 dataSet11;
     }
 }

@@ -35,6 +35,7 @@ namespace ShopApp
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
+            this.errorText = new System.Windows.Forms.Label();
             this.passwordTextBox = new ShopApp.textbox.CostomTextBox();
             this.customButton3 = new ShopApp.custom.CustomButton();
             this.adminRadio = new ShopApp.custom.CustomRadioButton();
@@ -95,6 +96,7 @@ namespace ShopApp
             // 
             // panel2
             // 
+            this.panel2.Controls.Add(this.errorText);
             this.panel2.Controls.Add(this.passwordTextBox);
             this.panel2.Controls.Add(this.customButton3);
             this.panel2.Controls.Add(this.adminRadio);
@@ -112,6 +114,17 @@ namespace ShopApp
             this.panel2.Size = new System.Drawing.Size(375, 370);
             this.panel2.TabIndex = 8;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
+            // 
+            // errorText
+            // 
+            this.errorText.AutoSize = true;
+            this.errorText.Font = new System.Drawing.Font("던파 비트비트체 TTF", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.errorText.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorText.Location = new System.Drawing.Point(57, 225);
+            this.errorText.Name = "errorText";
+            this.errorText.Size = new System.Drawing.Size(64, 12);
+            this.errorText.TabIndex = 21;
+            this.errorText.Text = "errorText";
             // 
             // passwordTextBox
             // 
@@ -299,6 +312,7 @@ namespace ShopApp
         private DataSet1TableAdapters.SELLERTableAdapter sellerTableAdapter1;
         private DataSet1 dataSet11;
         private DataSet1TableAdapters.ADMINTableAdapter adminTableAdapter1;
+        private System.Windows.Forms.Label errorText;
     }
 }
 

@@ -42,9 +42,9 @@ namespace ShopApp
             this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel2 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
+            this.emailLabel = new System.Windows.Forms.Label();
             this.timeLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
-            this.emailLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.panel4.SuspendLayout();
             this.SuspendLayout();
@@ -207,6 +207,7 @@ namespace ShopApp
             this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
             // 
             // panel2
             // 
@@ -228,6 +229,17 @@ namespace ShopApp
             this.panel4.TabIndex = 0;
             this.panel4.Paint += new System.Windows.Forms.PaintEventHandler(this.panel4_Paint);
             // 
+            // emailLabel
+            // 
+            this.emailLabel.AutoSize = true;
+            this.emailLabel.Font = new System.Drawing.Font("던파 비트비트체 TTF", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.emailLabel.Location = new System.Drawing.Point(635, 20);
+            this.emailLabel.Name = "emailLabel";
+            this.emailLabel.Size = new System.Drawing.Size(81, 20);
+            this.emailLabel.TabIndex = 1;
+            this.emailLabel.Text = "현재 시각";
+            this.emailLabel.Click += new System.EventHandler(this.label1_Click);
+            // 
             // timeLabel
             // 
             this.timeLabel.AutoSize = true;
@@ -242,17 +254,6 @@ namespace ShopApp
             // 
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.ClockEvent);
-            // 
-            // emailLabel
-            // 
-            this.emailLabel.AutoSize = true;
-            this.emailLabel.Font = new System.Drawing.Font("던파 비트비트체 TTF", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.emailLabel.Location = new System.Drawing.Point(635, 20);
-            this.emailLabel.Name = "emailLabel";
-            this.emailLabel.Size = new System.Drawing.Size(81, 20);
-            this.emailLabel.TabIndex = 1;
-            this.emailLabel.Text = "현재 시각";
-            this.emailLabel.Click += new System.EventHandler(this.label1_Click);
             // 
             // Management
             // 
