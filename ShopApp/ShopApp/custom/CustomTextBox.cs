@@ -66,6 +66,21 @@ namespace ShopApp.textbox
             }
 
         }
+
+        public bool Multiline
+        {
+            get
+            {
+                return this.textBox1.Multiline;
+            }
+            set
+            {
+                this.textBox1.Multiline = value;
+            }
+
+        }
+
+
         protected override void OnPaint(PaintEventArgs e)
         {
             base.OnPaint(e);

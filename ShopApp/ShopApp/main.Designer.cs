@@ -133,6 +133,7 @@ namespace ShopApp
             this.passwordTextBox.BorderSize = 2;
             this.passwordTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.passwordTextBox.Location = new System.Drawing.Point(59, 183);
+            this.passwordTextBox.Multiline = false;
             this.passwordTextBox.Name = "passwordTextBox";
             this.passwordTextBox.Padding = new System.Windows.Forms.Padding(7);
             this.passwordTextBox.PasswordChar = true;
@@ -251,6 +252,7 @@ namespace ShopApp
             this.emailTextBox.BorderSize = 2;
             this.emailTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.emailTextBox.Location = new System.Drawing.Point(59, 148);
+            this.emailTextBox.Multiline = false;
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Padding = new System.Windows.Forms.Padding(7);
             this.emailTextBox.PasswordChar = false;

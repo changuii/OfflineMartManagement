@@ -46,6 +46,7 @@ namespace ShopApp.custom
             DataGridViewColumn s_email = dataGridView1.Columns["S_EMAIL"];
             s_email.HeaderText = "판매자";
 
+            s_email.AutoSizeMode = DataGridViewAutoSizeColumnMode.Fill;
 
         }
 
@@ -60,6 +61,11 @@ namespace ShopApp.custom
         }
 
         private void dataGridView1_CellContentClick_1(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick_2(object sender, DataGridViewCellEventArgs e)
         {
 
         }

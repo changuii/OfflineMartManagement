@@ -32,31 +32,37 @@ namespace ShopApp.custom
             this.components = new System.ComponentModel.Container();
             this.productName = new System.Windows.Forms.Label();
             this.productCard = new System.Windows.Forms.GroupBox();
-            this.productPrice = new System.Windows.Forms.Label();
-            this.productCategory = new System.Windows.Forms.Label();
-            this.productStock = new System.Windows.Forms.Label();
             this.productSeller = new System.Windows.Forms.Label();
+            this.productStock = new System.Windows.Forms.Label();
+            this.productCategory = new System.Windows.Forms.Label();
+            this.productPrice = new System.Windows.Forms.Label();
             this.dataSet11 = new ShopApp.DataSet1();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRODUCTTableAdapter = new ShopApp.DataSet1TableAdapters.PRODUCTTableAdapter();
             this.pIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sTOCKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.cATEGORYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pRODUCTTableAdapter = new ShopApp.DataSet1TableAdapters.PRODUCTTableAdapter();
             this.customButton1 = new ShopApp.custom.CustomButton();
             this.customButton2 = new ShopApp.custom.CustomButton();
             this.selectStock = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.costomTextBox1 = new ShopApp.textbox.CostomTextBox();
             this.cartTableAdapter1 = new ShopApp.DataSet1TableAdapters.CARTTableAdapter();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.panel1 = new System.Windows.Forms.Panel();
+            this.searchButton = new FontAwesome.Sharp.IconButton();
+            this.searchTextBox = new ShopApp.textbox.CostomTextBox();
+            this.errorText = new System.Windows.Forms.Label();
+            this.purchaseTableAdapter1 = new ShopApp.DataSet1TableAdapters.PURCHASETableAdapter();
             this.productCard.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // productName
@@ -86,25 +92,15 @@ namespace ShopApp.custom
             this.productCard.Text = "Product";
             this.productCard.Enter += new System.EventHandler(this.productCard_Enter);
             // 
-            // productPrice
+            // productSeller
             // 
-            this.productPrice.AutoSize = true;
-            this.productPrice.Font = new System.Drawing.Font("던파 비트비트체 TTF", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.productPrice.Location = new System.Drawing.Point(70, 140);
-            this.productPrice.Name = "productPrice";
-            this.productPrice.Size = new System.Drawing.Size(85, 27);
-            this.productPrice.TabIndex = 2;
-            this.productPrice.Text = "Price";
-            // 
-            // productCategory
-            // 
-            this.productCategory.AutoSize = true;
-            this.productCategory.Font = new System.Drawing.Font("던파 비트비트체 TTF", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.productCategory.Location = new System.Drawing.Point(213, 10);
-            this.productCategory.Name = "productCategory";
-            this.productCategory.Size = new System.Drawing.Size(101, 20);
-            this.productCategory.TabIndex = 3;
-            this.productCategory.Text = "category";
+            this.productSeller.AutoSize = true;
+            this.productSeller.Font = new System.Drawing.Font("던파 비트비트체 TTF", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.productSeller.Location = new System.Drawing.Point(70, 180);
+            this.productSeller.Name = "productSeller";
+            this.productSeller.Size = new System.Drawing.Size(92, 27);
+            this.productSeller.TabIndex = 5;
+            this.productSeller.Text = "seller";
             // 
             // productStock
             // 
@@ -116,15 +112,25 @@ namespace ShopApp.custom
             this.productStock.TabIndex = 4;
             this.productStock.Text = "Stock";
             // 
-            // productSeller
+            // productCategory
             // 
-            this.productSeller.AutoSize = true;
-            this.productSeller.Font = new System.Drawing.Font("던파 비트비트체 TTF", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.productSeller.Location = new System.Drawing.Point(70, 180);
-            this.productSeller.Name = "productSeller";
-            this.productSeller.Size = new System.Drawing.Size(92, 27);
-            this.productSeller.TabIndex = 5;
-            this.productSeller.Text = "seller";
+            this.productCategory.AutoSize = true;
+            this.productCategory.Font = new System.Drawing.Font("던파 비트비트체 TTF", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.productCategory.Location = new System.Drawing.Point(213, 10);
+            this.productCategory.Name = "productCategory";
+            this.productCategory.Size = new System.Drawing.Size(101, 20);
+            this.productCategory.TabIndex = 3;
+            this.productCategory.Text = "category";
+            // 
+            // productPrice
+            // 
+            this.productPrice.AutoSize = true;
+            this.productPrice.Font = new System.Drawing.Font("던파 비트비트체 TTF", 21.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.productPrice.Location = new System.Drawing.Point(70, 140);
+            this.productPrice.Name = "productPrice";
+            this.productPrice.Size = new System.Drawing.Size(85, 27);
+            this.productPrice.TabIndex = 2;
+            this.productPrice.Text = "Price";
             // 
             // dataSet11
             // 
@@ -145,17 +151,60 @@ namespace ShopApp.custom
             this.cATEGORYDataGridViewTextBoxColumn,
             this.sEMAILDataGridViewTextBoxColumn});
             this.dataGridView1.DataSource = this.pRODUCTBindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 52);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.ReadOnly = true;
             this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(545, 560);
+            this.dataGridView1.Size = new System.Drawing.Size(547, 508);
             this.dataGridView1.TabIndex = 3;
             this.dataGridView1.CellClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellClick);
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
             this.dataGridView1.CurrentCellChanged += new System.EventHandler(this.dataGridView1_CurrentCellChanged);
+            // 
+            // pIDDataGridViewTextBoxColumn
+            // 
+            this.pIDDataGridViewTextBoxColumn.DataPropertyName = "P_ID";
+            this.pIDDataGridViewTextBoxColumn.HeaderText = "P_ID";
+            this.pIDDataGridViewTextBoxColumn.Name = "pIDDataGridViewTextBoxColumn";
+            this.pIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nAMEDataGridViewTextBoxColumn
+            // 
+            this.nAMEDataGridViewTextBoxColumn.DataPropertyName = "NAME";
+            this.nAMEDataGridViewTextBoxColumn.HeaderText = "제품명";
+            this.nAMEDataGridViewTextBoxColumn.Name = "nAMEDataGridViewTextBoxColumn";
+            this.nAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pRICEDataGridViewTextBoxColumn
+            // 
+            this.pRICEDataGridViewTextBoxColumn.DataPropertyName = "PRICE";
+            this.pRICEDataGridViewTextBoxColumn.HeaderText = "가격";
+            this.pRICEDataGridViewTextBoxColumn.Name = "pRICEDataGridViewTextBoxColumn";
+            this.pRICEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sTOCKDataGridViewTextBoxColumn
+            // 
+            this.sTOCKDataGridViewTextBoxColumn.DataPropertyName = "STOCK";
+            this.sTOCKDataGridViewTextBoxColumn.HeaderText = "재고";
+            this.sTOCKDataGridViewTextBoxColumn.Name = "sTOCKDataGridViewTextBoxColumn";
+            this.sTOCKDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cATEGORYDataGridViewTextBoxColumn
+            // 
+            this.cATEGORYDataGridViewTextBoxColumn.DataPropertyName = "CATEGORY";
+            this.cATEGORYDataGridViewTextBoxColumn.HeaderText = "카테고리";
+            this.cATEGORYDataGridViewTextBoxColumn.Name = "cATEGORYDataGridViewTextBoxColumn";
+            this.cATEGORYDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sEMAILDataGridViewTextBoxColumn
+            // 
+            this.sEMAILDataGridViewTextBoxColumn.DataPropertyName = "S_EMAIL";
+            this.sEMAILDataGridViewTextBoxColumn.HeaderText = "판매자";
+            this.sEMAILDataGridViewTextBoxColumn.Name = "sEMAILDataGridViewTextBoxColumn";
+            this.sEMAILDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // pRODUCTBindingSource
             // 
@@ -165,43 +214,6 @@ namespace ShopApp.custom
             // pRODUCTTableAdapter
             // 
             this.pRODUCTTableAdapter.ClearBeforeFill = true;
-            // 
-            // pIDDataGridViewTextBoxColumn
-            // 
-            this.pIDDataGridViewTextBoxColumn.DataPropertyName = "P_ID";
-            this.pIDDataGridViewTextBoxColumn.HeaderText = "P_ID";
-            this.pIDDataGridViewTextBoxColumn.Name = "pIDDataGridViewTextBoxColumn";
-            this.pIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // nAMEDataGridViewTextBoxColumn
-            // 
-            this.nAMEDataGridViewTextBoxColumn.DataPropertyName = "NAME";
-            this.nAMEDataGridViewTextBoxColumn.HeaderText = "제품명";
-            this.nAMEDataGridViewTextBoxColumn.Name = "nAMEDataGridViewTextBoxColumn";
-            // 
-            // pRICEDataGridViewTextBoxColumn
-            // 
-            this.pRICEDataGridViewTextBoxColumn.DataPropertyName = "PRICE";
-            this.pRICEDataGridViewTextBoxColumn.HeaderText = "가격";
-            this.pRICEDataGridViewTextBoxColumn.Name = "pRICEDataGridViewTextBoxColumn";
-            // 
-            // sTOCKDataGridViewTextBoxColumn
-            // 
-            this.sTOCKDataGridViewTextBoxColumn.DataPropertyName = "STOCK";
-            this.sTOCKDataGridViewTextBoxColumn.HeaderText = "재고";
-            this.sTOCKDataGridViewTextBoxColumn.Name = "sTOCKDataGridViewTextBoxColumn";
-            // 
-            // cATEGORYDataGridViewTextBoxColumn
-            // 
-            this.cATEGORYDataGridViewTextBoxColumn.DataPropertyName = "CATEGORY";
-            this.cATEGORYDataGridViewTextBoxColumn.HeaderText = "카테고리";
-            this.cATEGORYDataGridViewTextBoxColumn.Name = "cATEGORYDataGridViewTextBoxColumn";
-            // 
-            // sEMAILDataGridViewTextBoxColumn
-            // 
-            this.sEMAILDataGridViewTextBoxColumn.DataPropertyName = "S_EMAIL";
-            this.sEMAILDataGridViewTextBoxColumn.HeaderText = "판매자";
-            this.sEMAILDataGridViewTextBoxColumn.Name = "sEMAILDataGridViewTextBoxColumn";
             // 
             // customButton1
             // 
@@ -219,6 +231,7 @@ namespace ShopApp.custom
             this.customButton1.TabIndex = 4;
             this.customButton1.Text = "구매";
             this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // customButton2
             // 
@@ -268,38 +281,88 @@ namespace ShopApp.custom
             this.label2.TabIndex = 7;
             this.label2.Text = "구매일자";
             // 
-            // costomTextBox1
-            // 
-            this.costomTextBox1.BackColor = System.Drawing.SystemColors.Window;
-            this.costomTextBox1.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.costomTextBox1.BorderSize = 2;
-            this.costomTextBox1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.costomTextBox1.Location = new System.Drawing.Point(729, 331);
-            this.costomTextBox1.Name = "costomTextBox1";
-            this.costomTextBox1.Padding = new System.Windows.Forms.Padding(7);
-            this.costomTextBox1.PasswordChar = false;
-            this.costomTextBox1.Size = new System.Drawing.Size(174, 35);
-            this.costomTextBox1.TabIndex = 8;
-            this.costomTextBox1.Texts = "";
-            this.costomTextBox1.UnderlinedStyle = true;
-            // 
             // cartTableAdapter1
             // 
             this.cartTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Location = new System.Drawing.Point(726, 337);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
+            this.dateTimePicker1.TabIndex = 8;
+            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.searchButton);
+            this.panel1.Controls.Add(this.searchTextBox);
+            this.panel1.Controls.Add(this.dataGridView1);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(547, 560);
+            this.panel1.TabIndex = 9;
+            // 
+            // searchButton
+            // 
+            this.searchButton.Font = new System.Drawing.Font("던파 비트비트체 TTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.searchButton.IconChar = FontAwesome.Sharp.IconChar.None;
+            this.searchButton.IconColor = System.Drawing.Color.Black;
+            this.searchButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.searchButton.Location = new System.Drawing.Point(343, 12);
+            this.searchButton.Name = "searchButton";
+            this.searchButton.Size = new System.Drawing.Size(118, 29);
+            this.searchButton.TabIndex = 5;
+            this.searchButton.Text = "검색";
+            this.searchButton.UseVisualStyleBackColor = true;
+            this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
+            // 
+            // searchTextBox
+            // 
+            this.searchTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.searchTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.searchTextBox.BorderSize = 2;
+            this.searchTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.searchTextBox.Location = new System.Drawing.Point(47, 12);
+            this.searchTextBox.Name = "searchTextBox";
+            this.searchTextBox.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.searchTextBox.PasswordChar = false;
+            this.searchTextBox.Size = new System.Drawing.Size(250, 29);
+            this.searchTextBox.TabIndex = 4;
+            this.searchTextBox.Texts = "";
+            this.searchTextBox.UnderlinedStyle = true;
+            // 
+            // errorText
+            // 
+            this.errorText.AutoSize = true;
+            this.errorText.Font = new System.Drawing.Font("던파 비트비트체 TTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.errorText.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorText.Location = new System.Drawing.Point(634, 435);
+            this.errorText.Name = "errorText";
+            this.errorText.Size = new System.Drawing.Size(52, 15);
+            this.errorText.TabIndex = 10;
+            this.errorText.Text = "label3";
+            // 
+            // purchaseTableAdapter1
+            // 
+            this.purchaseTableAdapter1.ClearBeforeFill = true;
             // 
             // ProductList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 560);
-            this.Controls.Add(this.costomTextBox1);
+            this.Controls.Add(this.errorText);
+            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.selectStock);
             this.Controls.Add(this.customButton2);
             this.Controls.Add(this.customButton1);
-            this.Controls.Add(this.dataGridView1);
             this.Controls.Add(this.productCard);
+            this.Font = new System.Drawing.Font("던파 비트비트체 TTF", 8.999999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ProductList";
             this.Text = "Form1";
@@ -309,6 +372,7 @@ namespace ShopApp.custom
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -336,7 +400,12 @@ namespace ShopApp.custom
         private System.Windows.Forms.ComboBox selectStock;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
-        private textbox.CostomTextBox costomTextBox1;
         private DataSet1TableAdapters.CARTTableAdapter cartTableAdapter1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
+        private System.Windows.Forms.Panel panel1;
+        private FontAwesome.Sharp.IconButton searchButton;
+        private textbox.CostomTextBox searchTextBox;
+        private System.Windows.Forms.Label errorText;
+        private DataSet1TableAdapters.PURCHASETableAdapter purchaseTableAdapter1;
     }
 }

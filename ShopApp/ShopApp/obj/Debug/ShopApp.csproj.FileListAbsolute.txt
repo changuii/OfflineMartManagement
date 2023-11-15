@@ -57,3 +57,10 @@ C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\bin\Debug\
 C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\bin\Debug\System.Text.Json.xml
 C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\bin\Debug\System.Threading.Tasks.Extensions.xml
 C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\bin\Debug\System.ValueTuple.xml
+C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.UserPurchase.resources
+C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.AdminProductRegister.resources
+C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.SellerPurchase.resources
+C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.AdminNotification.resources
+C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.UserNotification.resources
+C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.UserReview.resources
+C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.UserReviewRegister.resources

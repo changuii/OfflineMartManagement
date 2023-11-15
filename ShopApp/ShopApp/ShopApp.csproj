@@ -92,6 +92,18 @@
     <Reference Include="WindowsBase" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="custom\AdminNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\AdminNotification.Designer.cs">
+      <DependentUpon>AdminNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="custom\AdminProductRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\AdminProductRegister.Designer.cs">
+      <DependentUpon>AdminProductRegister.cs</DependentUpon>
+    </Compile>
     <Compile Include="custom\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -110,11 +122,41 @@
     <Compile Include="custom\ProductList.Designer.cs">
       <DependentUpon>ProductList.cs</DependentUpon>
     </Compile>
+    <Compile Include="custom\SellerPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\SellerPurchase.Designer.cs">
+      <DependentUpon>SellerPurchase.cs</DependentUpon>
+    </Compile>
     <Compile Include="custom\UserCart.cs">
       <SubType>Form</SubType>
     </Compile>
     <Compile Include="custom\UserCart.Designer.cs">
       <DependentUpon>UserCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="custom\UserNotification.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\UserNotification.Designer.cs">
+      <DependentUpon>UserNotification.cs</DependentUpon>
+    </Compile>
+    <Compile Include="custom\UserPurchase.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\UserPurchase.Designer.cs">
+      <DependentUpon>UserPurchase.cs</DependentUpon>
+    </Compile>
+    <Compile Include="custom\UserReview.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\UserReview.Designer.cs">
+      <DependentUpon>UserReview.cs</DependentUpon>
+    </Compile>
+    <Compile Include="custom\UserReviewRegister.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\UserReviewRegister.Designer.cs">
+      <DependentUpon>UserReviewRegister.cs</DependentUpon>
     </Compile>
     <Compile Include="DataSet1.cs">
       <DependentUpon>DataSet1.xsd</DependentUpon>
@@ -162,14 +204,35 @@
     <Compile Include="User.Designer.cs">
       <DependentUpon>User.cs</DependentUpon>
     </Compile>
+    <EmbeddedResource Include="custom\AdminNotification.resx">
+      <DependentUpon>AdminNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="custom\AdminProductRegister.resx">
+      <DependentUpon>AdminProductRegister.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="custom\CustomPTextBox.resx">
       <DependentUpon>CustomPTextBox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="custom\ProductList.resx">
       <DependentUpon>ProductList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="custom\SellerPurchase.resx">
+      <DependentUpon>SellerPurchase.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="custom\UserCart.resx">
       <DependentUpon>UserCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="custom\UserNotification.resx">
+      <DependentUpon>UserNotification.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="custom\UserPurchase.resx">
+      <DependentUpon>UserPurchase.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="custom\UserReview.resx">
+      <DependentUpon>UserReview.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="custom\UserReviewRegister.resx">
+      <DependentUpon>UserReviewRegister.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="main.resx">
       <DependentUpon>main.cs</DependentUpon>

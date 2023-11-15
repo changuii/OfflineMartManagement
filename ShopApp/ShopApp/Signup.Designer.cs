@@ -29,6 +29,7 @@ namespace ShopApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Signup));
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
             this.errorText = new System.Windows.Forms.Label();
@@ -47,6 +48,9 @@ namespace ShopApp
             this.emailTextBox = new ShopApp.textbox.CostomTextBox();
             this.iconSplitButton1 = new FontAwesome.Sharp.IconSplitButton();
             this.dataSet11 = new ShopApp.DataSet1();
+            this.adminTableAdapter1 = new ShopApp.DataSet1TableAdapters.ADMINTableAdapter();
+            this.customerTableAdapter1 = new ShopApp.DataSet1TableAdapters.CUSTOMERTableAdapter();
+            this.sellerTableAdapter1 = new ShopApp.DataSet1TableAdapters.SELLERTableAdapter();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             this.SuspendLayout();
@@ -54,6 +58,7 @@ namespace ShopApp
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("panel1.BackgroundImage")));
             this.panel1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -287,6 +292,18 @@ namespace ShopApp
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // adminTableAdapter1
+            // 
+            this.adminTableAdapter1.ClearBeforeFill = true;
+            // 
+            // customerTableAdapter1
+            // 
+            this.customerTableAdapter1.ClearBeforeFill = true;
+            // 
+            // sellerTableAdapter1
+            // 
+            this.sellerTableAdapter1.ClearBeforeFill = true;
+            // 
             // Signup
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -323,11 +340,11 @@ namespace ShopApp
         private textbox.CostomTextBox nameTextBox;
         private textbox.CostomTextBox passwordTextBox2;
         private textbox.CostomTextBox passwordTextBox1;
-        private DataSet1TableAdapters.ADMINTableAdapter adminTableAdapter1;
-        private DataSet1TableAdapters.SELLERTableAdapter sellerTableAdapter1;
-        private DataSet1TableAdapters.CUSTOMERTableAdapter customerTableAdapter1;
         private System.Windows.Forms.Label errorText;
         private FontAwesome.Sharp.IconSplitButton iconSplitButton1;
         private DataSet1 dataSet11;
+        private DataSet1TableAdapters.ADMINTableAdapter adminTableAdapter1;
+        private DataSet1TableAdapters.CUSTOMERTableAdapter customerTableAdapter1;
+        private DataSet1TableAdapters.SELLERTableAdapter sellerTableAdapter1;
     }
 }
