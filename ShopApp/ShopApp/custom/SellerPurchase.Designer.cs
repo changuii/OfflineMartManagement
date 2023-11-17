@@ -47,8 +47,8 @@ namespace ShopApp.custom
             this.dataSet1 = new ShopApp.DataSet1();
             this.pURCHASE_VIEW1TableAdapter = new ShopApp.DataSet1TableAdapters.PURCHASE_VIEW1TableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.errorText = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
-            this.customButton2 = new ShopApp.custom.CustomButton();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.timeLabel = new System.Windows.Forms.Label();
@@ -64,9 +64,11 @@ namespace ShopApp.custom
             this.p_idLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.customButton1 = new ShopApp.custom.CustomButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.purchaseTableAdapter1 = new ShopApp.DataSet1TableAdapters.PURCHASETableAdapter();
+            this.productTableAdapter1 = new ShopApp.DataSet1TableAdapters.PRODUCTTableAdapter();
+            this.customButton2 = new ShopApp.custom.CustomButton();
+            this.customButton1 = new ShopApp.custom.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEW1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -209,6 +211,7 @@ namespace ShopApp.custom
             // 
             // panel1
             // 
+            this.panel1.Controls.Add(this.errorText);
             this.panel1.Controls.Add(this.groupBox4);
             this.panel1.Controls.Add(this.groupBox3);
             this.panel1.Controls.Add(this.groupBox2);
@@ -221,6 +224,17 @@ namespace ShopApp.custom
             this.panel1.Size = new System.Drawing.Size(1010, 561);
             this.panel1.TabIndex = 1;
             // 
+            // errorText
+            // 
+            this.errorText.AutoSize = true;
+            this.errorText.Font = new System.Drawing.Font("던파 비트비트체 TTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.errorText.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorText.Location = new System.Drawing.Point(701, 264);
+            this.errorText.Name = "errorText";
+            this.errorText.Size = new System.Drawing.Size(85, 15);
+            this.errorText.TabIndex = 7;
+            this.errorText.Text = "errorText";
+            // 
             // groupBox4
             // 
             this.groupBox4.Controls.Add(this.customButton2);
@@ -232,25 +246,9 @@ namespace ShopApp.custom
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "RequestProcess";
             // 
-            // customButton2
-            // 
-            this.customButton2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton2.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton2.BorderRadius = 40;
-            this.customButton2.BorderSize = 0;
-            this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(192, 20);
-            this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(150, 40);
-            this.customButton2.TabIndex = 1;
-            this.customButton2.Text = "허용여부 변경";
-            this.customButton2.UseVisualStyleBackColor = false;
-            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
-            // 
             // comboBox2
             // 
+            this.comboBox2.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.comboBox2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.comboBox2.FormattingEnabled = true;
             this.comboBox2.Location = new System.Drawing.Point(6, 28);
@@ -408,6 +406,42 @@ namespace ShopApp.custom
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "RequestFilter";
             // 
+            // comboBox1
+            // 
+            this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.comboBox1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.comboBox1.FormattingEnabled = true;
+            this.comboBox1.Location = new System.Drawing.Point(6, 28);
+            this.comboBox1.Name = "comboBox1";
+            this.comboBox1.Size = new System.Drawing.Size(157, 26);
+            this.comboBox1.TabIndex = 2;
+            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
+            // 
+            // purchaseTableAdapter1
+            // 
+            this.purchaseTableAdapter1.ClearBeforeFill = true;
+            // 
+            // productTableAdapter1
+            // 
+            this.productTableAdapter1.ClearBeforeFill = true;
+            // 
+            // customButton2
+            // 
+            this.customButton2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton2.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton2.BorderRadius = 40;
+            this.customButton2.BorderSize = 0;
+            this.customButton2.FlatAppearance.BorderSize = 0;
+            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton2.ForeColor = System.Drawing.Color.White;
+            this.customButton2.Location = new System.Drawing.Point(192, 20);
+            this.customButton2.Name = "customButton2";
+            this.customButton2.Size = new System.Drawing.Size(150, 40);
+            this.customButton2.TabIndex = 1;
+            this.customButton2.Text = "허용여부 변경";
+            this.customButton2.UseVisualStyleBackColor = false;
+            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
+            // 
             // customButton1
             // 
             this.customButton1.BackColor = System.Drawing.Color.MediumSeaGreen;
@@ -425,20 +459,6 @@ namespace ShopApp.custom
             this.customButton1.UseVisualStyleBackColor = false;
             this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
-            // comboBox1
-            // 
-            this.comboBox1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(6, 28);
-            this.comboBox1.Name = "comboBox1";
-            this.comboBox1.Size = new System.Drawing.Size(157, 26);
-            this.comboBox1.TabIndex = 2;
-            this.comboBox1.SelectedIndexChanged += new System.EventHandler(this.comboBox1_SelectedIndexChanged);
-            // 
-            // purchaseTableAdapter1
-            // 
-            this.purchaseTableAdapter1.ClearBeforeFill = true;
-            // 
             // SellerPurchase
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -453,6 +473,7 @@ namespace ShopApp.custom
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEW1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
+            this.panel1.PerformLayout();
             this.groupBox4.ResumeLayout(false);
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
@@ -502,5 +523,7 @@ namespace ShopApp.custom
         private System.Windows.Forms.DataGridViewTextBoxColumn sEMAILDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn ID;
         private DataSet1TableAdapters.PURCHASETableAdapter purchaseTableAdapter1;
+        private System.Windows.Forms.Label errorText;
+        private DataSet1TableAdapters.PRODUCTTableAdapter productTableAdapter1;
     }
 }

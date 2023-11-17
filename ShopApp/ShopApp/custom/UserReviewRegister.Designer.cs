@@ -34,21 +34,19 @@ namespace ShopApp.custom
             this.dataSet1 = new ShopApp.DataSet1();
             this.pURCHASE_VIEW1TableAdapter = new ShopApp.DataSet1TableAdapters.PURCHASE_VIEW1TableAdapter();
             this.panel1 = new System.Windows.Forms.Panel();
-            this.rEVIEWVIEW1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.rEVIEW_VIEW1TableAdapter = new ShopApp.DataSet1TableAdapters.REVIEW_VIEW1TableAdapter();
-            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pURCHASEDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cATEGORYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.sTOCKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.aLLOWDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pSTOCKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.pIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.cEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.nAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pSTOCKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.aLLOWDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sTOCKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cATEGORYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pURCHASEDATEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.sEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.iDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.c_emailLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
@@ -59,12 +57,15 @@ namespace ShopApp.custom
             this.titleLabel = new System.Windows.Forms.Label();
             this.titleTextBox = new System.Windows.Forms.TextBox();
             this.contentTextBox = new System.Windows.Forms.TextBox();
+            this.rEVIEWVIEW1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.rEVIEW_VIEW1TableAdapter = new ShopApp.DataSet1TableAdapters.REVIEW_VIEW1TableAdapter();
+            this.reviewTableAdapter1 = new ShopApp.DataSet1TableAdapters.REVIEWTableAdapter();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEW1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.rEVIEWVIEW1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rEVIEWVIEW1BindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // pURCHASEVIEW1BindingSource
@@ -91,105 +92,6 @@ namespace ShopApp.custom
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1012, 560);
             this.panel1.TabIndex = 1;
-            // 
-            // rEVIEWVIEW1BindingSource
-            // 
-            this.rEVIEWVIEW1BindingSource.DataMember = "REVIEW_VIEW1";
-            this.rEVIEWVIEW1BindingSource.DataSource = this.dataSet1;
-            // 
-            // rEVIEW_VIEW1TableAdapter
-            // 
-            this.rEVIEW_VIEW1TableAdapter.ClearBeforeFill = true;
-            // 
-            // iDDataGridViewTextBoxColumn
-            // 
-            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
-            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
-            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
-            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.iDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // sEMAILDataGridViewTextBoxColumn
-            // 
-            this.sEMAILDataGridViewTextBoxColumn.DataPropertyName = "S_EMAIL";
-            this.sEMAILDataGridViewTextBoxColumn.HeaderText = "판매자";
-            this.sEMAILDataGridViewTextBoxColumn.Name = "sEMAILDataGridViewTextBoxColumn";
-            this.sEMAILDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sEMAILDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // pURCHASEDATEDataGridViewTextBoxColumn
-            // 
-            this.pURCHASEDATEDataGridViewTextBoxColumn.DataPropertyName = "PURCHASE_DATE";
-            this.pURCHASEDATEDataGridViewTextBoxColumn.HeaderText = "구매시간";
-            this.pURCHASEDATEDataGridViewTextBoxColumn.Name = "pURCHASEDATEDataGridViewTextBoxColumn";
-            this.pURCHASEDATEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cATEGORYDataGridViewTextBoxColumn
-            // 
-            this.cATEGORYDataGridViewTextBoxColumn.DataPropertyName = "CATEGORY";
-            this.cATEGORYDataGridViewTextBoxColumn.HeaderText = "카테고리";
-            this.cATEGORYDataGridViewTextBoxColumn.Name = "cATEGORYDataGridViewTextBoxColumn";
-            this.cATEGORYDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // sTOCKDataGridViewTextBoxColumn
-            // 
-            this.sTOCKDataGridViewTextBoxColumn.DataPropertyName = "STOCK";
-            this.sTOCKDataGridViewTextBoxColumn.HeaderText = "STOCK";
-            this.sTOCKDataGridViewTextBoxColumn.Name = "sTOCKDataGridViewTextBoxColumn";
-            this.sTOCKDataGridViewTextBoxColumn.ReadOnly = true;
-            this.sTOCKDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // pRICEDataGridViewTextBoxColumn
-            // 
-            this.pRICEDataGridViewTextBoxColumn.DataPropertyName = "PRICE";
-            this.pRICEDataGridViewTextBoxColumn.HeaderText = "개당가격";
-            this.pRICEDataGridViewTextBoxColumn.Name = "pRICEDataGridViewTextBoxColumn";
-            this.pRICEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // aLLOWDataGridViewTextBoxColumn
-            // 
-            this.aLLOWDataGridViewTextBoxColumn.DataPropertyName = "ALLOW";
-            this.aLLOWDataGridViewTextBoxColumn.HeaderText = "ALLOW";
-            this.aLLOWDataGridViewTextBoxColumn.Name = "aLLOWDataGridViewTextBoxColumn";
-            this.aLLOWDataGridViewTextBoxColumn.ReadOnly = true;
-            this.aLLOWDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // pSTOCKDataGridViewTextBoxColumn
-            // 
-            this.pSTOCKDataGridViewTextBoxColumn.DataPropertyName = "P_STOCK";
-            this.pSTOCKDataGridViewTextBoxColumn.HeaderText = "구매수량";
-            this.pSTOCKDataGridViewTextBoxColumn.Name = "pSTOCKDataGridViewTextBoxColumn";
-            this.pSTOCKDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pPRICEDataGridViewTextBoxColumn
-            // 
-            this.pPRICEDataGridViewTextBoxColumn.DataPropertyName = "P_PRICE";
-            this.pPRICEDataGridViewTextBoxColumn.HeaderText = "전체가격";
-            this.pPRICEDataGridViewTextBoxColumn.Name = "pPRICEDataGridViewTextBoxColumn";
-            this.pPRICEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nAMEDataGridViewTextBoxColumn
-            // 
-            this.nAMEDataGridViewTextBoxColumn.DataPropertyName = "NAME";
-            this.nAMEDataGridViewTextBoxColumn.HeaderText = "제품명";
-            this.nAMEDataGridViewTextBoxColumn.Name = "nAMEDataGridViewTextBoxColumn";
-            this.nAMEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // pIDDataGridViewTextBoxColumn
-            // 
-            this.pIDDataGridViewTextBoxColumn.DataPropertyName = "P_ID";
-            this.pIDDataGridViewTextBoxColumn.HeaderText = "P_ID";
-            this.pIDDataGridViewTextBoxColumn.Name = "pIDDataGridViewTextBoxColumn";
-            this.pIDDataGridViewTextBoxColumn.ReadOnly = true;
-            this.pIDDataGridViewTextBoxColumn.Visible = false;
-            // 
-            // cEMAILDataGridViewTextBoxColumn
-            // 
-            this.cEMAILDataGridViewTextBoxColumn.DataPropertyName = "C_EMAIL";
-            this.cEMAILDataGridViewTextBoxColumn.HeaderText = "C_EMAIL";
-            this.cEMAILDataGridViewTextBoxColumn.Name = "cEMAILDataGridViewTextBoxColumn";
-            this.cEMAILDataGridViewTextBoxColumn.ReadOnly = true;
-            this.cEMAILDataGridViewTextBoxColumn.Visible = false;
             // 
             // dataGridView1
             // 
@@ -219,6 +121,97 @@ namespace ShopApp.custom
             this.dataGridView1.Size = new System.Drawing.Size(643, 560);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            // 
+            // cEMAILDataGridViewTextBoxColumn
+            // 
+            this.cEMAILDataGridViewTextBoxColumn.DataPropertyName = "C_EMAIL";
+            this.cEMAILDataGridViewTextBoxColumn.HeaderText = "C_EMAIL";
+            this.cEMAILDataGridViewTextBoxColumn.Name = "cEMAILDataGridViewTextBoxColumn";
+            this.cEMAILDataGridViewTextBoxColumn.ReadOnly = true;
+            this.cEMAILDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pIDDataGridViewTextBoxColumn
+            // 
+            this.pIDDataGridViewTextBoxColumn.DataPropertyName = "P_ID";
+            this.pIDDataGridViewTextBoxColumn.HeaderText = "P_ID";
+            this.pIDDataGridViewTextBoxColumn.Name = "pIDDataGridViewTextBoxColumn";
+            this.pIDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pIDDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // nAMEDataGridViewTextBoxColumn
+            // 
+            this.nAMEDataGridViewTextBoxColumn.DataPropertyName = "NAME";
+            this.nAMEDataGridViewTextBoxColumn.HeaderText = "제품명";
+            this.nAMEDataGridViewTextBoxColumn.Name = "nAMEDataGridViewTextBoxColumn";
+            this.nAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pPRICEDataGridViewTextBoxColumn
+            // 
+            this.pPRICEDataGridViewTextBoxColumn.DataPropertyName = "P_PRICE";
+            this.pPRICEDataGridViewTextBoxColumn.HeaderText = "전체가격";
+            this.pPRICEDataGridViewTextBoxColumn.Name = "pPRICEDataGridViewTextBoxColumn";
+            this.pPRICEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pSTOCKDataGridViewTextBoxColumn
+            // 
+            this.pSTOCKDataGridViewTextBoxColumn.DataPropertyName = "P_STOCK";
+            this.pSTOCKDataGridViewTextBoxColumn.HeaderText = "구매수량";
+            this.pSTOCKDataGridViewTextBoxColumn.Name = "pSTOCKDataGridViewTextBoxColumn";
+            this.pSTOCKDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // aLLOWDataGridViewTextBoxColumn
+            // 
+            this.aLLOWDataGridViewTextBoxColumn.DataPropertyName = "ALLOW";
+            this.aLLOWDataGridViewTextBoxColumn.HeaderText = "ALLOW";
+            this.aLLOWDataGridViewTextBoxColumn.Name = "aLLOWDataGridViewTextBoxColumn";
+            this.aLLOWDataGridViewTextBoxColumn.ReadOnly = true;
+            this.aLLOWDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // pRICEDataGridViewTextBoxColumn
+            // 
+            this.pRICEDataGridViewTextBoxColumn.DataPropertyName = "PRICE";
+            this.pRICEDataGridViewTextBoxColumn.HeaderText = "개당가격";
+            this.pRICEDataGridViewTextBoxColumn.Name = "pRICEDataGridViewTextBoxColumn";
+            this.pRICEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sTOCKDataGridViewTextBoxColumn
+            // 
+            this.sTOCKDataGridViewTextBoxColumn.DataPropertyName = "STOCK";
+            this.sTOCKDataGridViewTextBoxColumn.HeaderText = "STOCK";
+            this.sTOCKDataGridViewTextBoxColumn.Name = "sTOCKDataGridViewTextBoxColumn";
+            this.sTOCKDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sTOCKDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // cATEGORYDataGridViewTextBoxColumn
+            // 
+            this.cATEGORYDataGridViewTextBoxColumn.DataPropertyName = "CATEGORY";
+            this.cATEGORYDataGridViewTextBoxColumn.HeaderText = "카테고리";
+            this.cATEGORYDataGridViewTextBoxColumn.Name = "cATEGORYDataGridViewTextBoxColumn";
+            this.cATEGORYDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // pURCHASEDATEDataGridViewTextBoxColumn
+            // 
+            this.pURCHASEDATEDataGridViewTextBoxColumn.DataPropertyName = "PURCHASE_DATE";
+            this.pURCHASEDATEDataGridViewTextBoxColumn.HeaderText = "구매시간";
+            this.pURCHASEDATEDataGridViewTextBoxColumn.Name = "pURCHASEDATEDataGridViewTextBoxColumn";
+            this.pURCHASEDATEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // sEMAILDataGridViewTextBoxColumn
+            // 
+            this.sEMAILDataGridViewTextBoxColumn.DataPropertyName = "S_EMAIL";
+            this.sEMAILDataGridViewTextBoxColumn.HeaderText = "판매자";
+            this.sEMAILDataGridViewTextBoxColumn.Name = "sEMAILDataGridViewTextBoxColumn";
+            this.sEMAILDataGridViewTextBoxColumn.ReadOnly = true;
+            this.sEMAILDataGridViewTextBoxColumn.Visible = false;
+            // 
+            // iDDataGridViewTextBoxColumn
+            // 
+            this.iDDataGridViewTextBoxColumn.DataPropertyName = "ID";
+            this.iDDataGridViewTextBoxColumn.HeaderText = "ID";
+            this.iDDataGridViewTextBoxColumn.Name = "iDDataGridViewTextBoxColumn";
+            this.iDDataGridViewTextBoxColumn.ReadOnly = true;
+            this.iDDataGridViewTextBoxColumn.Visible = false;
             // 
             // groupBox1
             // 
@@ -247,6 +240,7 @@ namespace ShopApp.custom
             this.c_emailLabel.Size = new System.Drawing.Size(69, 22);
             this.c_emailLabel.TabIndex = 12;
             this.c_emailLabel.Text = "작성자";
+            this.c_emailLabel.Click += new System.EventHandler(this.c_emailLabel_Click);
             // 
             // nameLabel
             // 
@@ -289,12 +283,13 @@ namespace ShopApp.custom
             this.customButton4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.customButton4.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.customButton4.ForeColor = System.Drawing.Color.White;
-            this.customButton4.Location = new System.Drawing.Point(37, 465);
+            this.customButton4.Location = new System.Drawing.Point(85, 465);
             this.customButton4.Name = "customButton4";
             this.customButton4.Size = new System.Drawing.Size(190, 40);
             this.customButton4.TabIndex = 7;
-            this.customButton4.Text = "제품명으로 리뷰 조회";
+            this.customButton4.Text = "리뷰 등록/수정";
             this.customButton4.UseVisualStyleBackColor = false;
+            this.customButton4.Click += new System.EventHandler(this.customButton4_Click);
             // 
             // contentLabel
             // 
@@ -331,6 +326,19 @@ namespace ShopApp.custom
             this.contentTextBox.Size = new System.Drawing.Size(343, 277);
             this.contentTextBox.TabIndex = 0;
             // 
+            // rEVIEWVIEW1BindingSource
+            // 
+            this.rEVIEWVIEW1BindingSource.DataMember = "REVIEW_VIEW1";
+            this.rEVIEWVIEW1BindingSource.DataSource = this.dataSet1;
+            // 
+            // rEVIEW_VIEW1TableAdapter
+            // 
+            this.rEVIEW_VIEW1TableAdapter.ClearBeforeFill = true;
+            // 
+            // reviewTableAdapter1
+            // 
+            this.reviewTableAdapter1.ClearBeforeFill = true;
+            // 
             // UserReviewRegister
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -344,10 +352,10 @@ namespace ShopApp.custom
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEW1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.panel1.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.rEVIEWVIEW1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.rEVIEWVIEW1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -382,5 +390,6 @@ namespace ShopApp.custom
         private System.Windows.Forms.Label titleLabel;
         private System.Windows.Forms.TextBox titleTextBox;
         private System.Windows.Forms.TextBox contentTextBox;
+        private DataSet1TableAdapters.REVIEWTableAdapter reviewTableAdapter1;
     }
 }

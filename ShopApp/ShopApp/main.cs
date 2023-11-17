@@ -130,7 +130,7 @@ namespace ShopApp
 
         private void customButton3_Click(object sender, EventArgs e)
         {
-            this.Close();
+            Application.Exit();
         }
     }
 }

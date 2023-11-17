@@ -79,6 +79,7 @@ namespace ShopApp.custom
                 if (newData != null)
                 {
                     newData["NAME"] = nameTextBox.Texts;
+                    string price = newData["PRICE"].ToString();
                     newData["PRICE"] = priceTextBox.Texts;
                     newData["STOCK"] = stockTextBox.Texts;
                     newData["CATEGORY"] = categoryTextBox.Texts;
@@ -86,6 +87,19 @@ namespace ShopApp.custom
                     pRODUCTTableAdapter.Update(dataSet1.PRODUCT);
                     errorText.Text = "정상적으로 수정되었습니다.";
                     errorText.ForeColor = Color.MediumSeaGreen;
+                    //공지
+                    if (!price.Equals(priceTextBox.Texts))
+                    {
+                        notificationTableAdapter1.Fill(dataSet1.NOTIFICATION);
+                        DataTable notificationTable = dataSet1.Tables["NOTIFICATION"];
+                        DataRow notification = notificationTable.NewRow();
+                        notification["CREATION_TIME"] = DateTime.Now;
+                        notification["TITLE"] = $"[상품가격변경] {nameTextBox.Texts}의 가격이 변경되었습니다. ";
+                        notification["CONTENT"] = $"{nameTextBox.Texts}의 가격이 {price}원에서 {priceTextBox.Texts}원으로 변경되었습니다. 확인하시고 구매하시길 바랍니다.";
+                        notificationTable.Rows.Add(notification);
+                        notificationTableAdapter1.Update(dataSet1.NOTIFICATION);
+                    }
+
                 }
                 else
                 {
@@ -100,6 +114,16 @@ namespace ShopApp.custom
                     pRODUCTTableAdapter.Update(dataSet1.PRODUCT);
                     errorText.Text = "정상적으로 등록되었습니다.";
                     errorText.ForeColor = Color.MediumSeaGreen;
+
+                    //공지
+                    notificationTableAdapter1.Fill(dataSet1.NOTIFICATION);
+                    DataTable notificationTable = dataSet1.Tables["NOTIFICATION"];
+                    DataRow notification = notificationTable.NewRow();
+                    notification["CREATION_TIME"] = DateTime.Now;
+                    notification["TITLE"] = $"[신규상품입고] {nameTextBox.Texts}가 새롭게 입고되었습니다. ";
+                    notification["CONTENT"] = $"새로운 상품 {nameTextBox.Texts}가 저희 가게에 새롭게 입고되었습니다. 많은 관심 부탁드립니다.";
+                    notificationTable.Rows.Add(notification);
+                    notificationTableAdapter1.Update(dataSet1.NOTIFICATION);
                 }
             }catch(Exception ex)
             {

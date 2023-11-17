@@ -31,7 +31,17 @@ namespace ShopApp.custom
         {
             this.components = new System.ComponentModel.Container();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.nAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.tITLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cONTENTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.cREATIONTIMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.rEVIEWVIEW1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new ShopApp.DataSet1();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.c_emailLabel = new System.Windows.Forms.Label();
+            this.nameLabel = new System.Windows.Forms.Label();
             this.searchTextBox = new System.Windows.Forms.TextBox();
             this.timeLabel = new System.Windows.Forms.Label();
             this.errorLabel = new System.Windows.Forms.Label();
@@ -40,22 +50,12 @@ namespace ShopApp.custom
             this.titleLabel = new System.Windows.Forms.Label();
             this.titleTextBox = new System.Windows.Forms.TextBox();
             this.contentTextBox = new System.Windows.Forms.TextBox();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.dataSet1 = new ShopApp.DataSet1();
-            this.rEVIEWVIEW1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rEVIEW_VIEW1TableAdapter = new ShopApp.DataSet1TableAdapters.REVIEW_VIEW1TableAdapter();
-            this.nAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.tITLEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cONTENTDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.cREATIONTIMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.nameLabel = new System.Windows.Forms.Label();
-            this.c_emailLabel = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
-            this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.rEVIEWVIEW1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -68,6 +68,76 @@ namespace ShopApp.custom
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1011, 560);
             this.panel1.TabIndex = 1;
+            // 
+            // dataGridView1
+            // 
+            this.dataGridView1.AllowUserToAddRows = false;
+            this.dataGridView1.AllowUserToDeleteRows = false;
+            this.dataGridView1.AutoGenerateColumns = false;
+            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
+            this.nAMEDataGridViewTextBoxColumn,
+            this.cEMAILDataGridViewTextBoxColumn,
+            this.tITLEDataGridViewTextBoxColumn,
+            this.cONTENTDataGridViewTextBoxColumn,
+            this.cREATIONTIMEDataGridViewTextBoxColumn});
+            this.dataGridView1.DataSource = this.rEVIEWVIEW1BindingSource;
+            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
+            this.dataGridView1.Name = "dataGridView1";
+            this.dataGridView1.ReadOnly = true;
+            this.dataGridView1.RowTemplate.Height = 23;
+            this.dataGridView1.Size = new System.Drawing.Size(586, 560);
+            this.dataGridView1.TabIndex = 3;
+            this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
+            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
+            // 
+            // nAMEDataGridViewTextBoxColumn
+            // 
+            this.nAMEDataGridViewTextBoxColumn.DataPropertyName = "NAME";
+            this.nAMEDataGridViewTextBoxColumn.HeaderText = "제품명";
+            this.nAMEDataGridViewTextBoxColumn.Name = "nAMEDataGridViewTextBoxColumn";
+            this.nAMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cEMAILDataGridViewTextBoxColumn
+            // 
+            this.cEMAILDataGridViewTextBoxColumn.DataPropertyName = "C_EMAIL";
+            this.cEMAILDataGridViewTextBoxColumn.HeaderText = "작성자";
+            this.cEMAILDataGridViewTextBoxColumn.Name = "cEMAILDataGridViewTextBoxColumn";
+            this.cEMAILDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // tITLEDataGridViewTextBoxColumn
+            // 
+            this.tITLEDataGridViewTextBoxColumn.DataPropertyName = "TITLE";
+            this.tITLEDataGridViewTextBoxColumn.HeaderText = "제목";
+            this.tITLEDataGridViewTextBoxColumn.Name = "tITLEDataGridViewTextBoxColumn";
+            this.tITLEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cONTENTDataGridViewTextBoxColumn
+            // 
+            this.cONTENTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cONTENTDataGridViewTextBoxColumn.DataPropertyName = "CONTENT";
+            this.cONTENTDataGridViewTextBoxColumn.HeaderText = "내용";
+            this.cONTENTDataGridViewTextBoxColumn.Name = "cONTENTDataGridViewTextBoxColumn";
+            this.cONTENTDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // cREATIONTIMEDataGridViewTextBoxColumn
+            // 
+            this.cREATIONTIMEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.cREATIONTIMEDataGridViewTextBoxColumn.DataPropertyName = "CREATION_TIME";
+            this.cREATIONTIMEDataGridViewTextBoxColumn.HeaderText = "작성시간";
+            this.cREATIONTIMEDataGridViewTextBoxColumn.Name = "cREATIONTIMEDataGridViewTextBoxColumn";
+            this.cREATIONTIMEDataGridViewTextBoxColumn.ReadOnly = true;
+            // 
+            // rEVIEWVIEW1BindingSource
+            // 
+            this.rEVIEWVIEW1BindingSource.DataMember = "REVIEW_VIEW1";
+            this.rEVIEWVIEW1BindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // groupBox1
             // 
@@ -87,6 +157,26 @@ namespace ShopApp.custom
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Review Info";
+            // 
+            // c_emailLabel
+            // 
+            this.c_emailLabel.AutoSize = true;
+            this.c_emailLabel.Font = new System.Drawing.Font("던파 비트비트체 TTF", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.c_emailLabel.Location = new System.Drawing.Point(285, 44);
+            this.c_emailLabel.Name = "c_emailLabel";
+            this.c_emailLabel.Size = new System.Drawing.Size(69, 22);
+            this.c_emailLabel.TabIndex = 12;
+            this.c_emailLabel.Text = "작성자";
+            // 
+            // nameLabel
+            // 
+            this.nameLabel.AutoSize = true;
+            this.nameLabel.Font = new System.Drawing.Font("던파 비트비트체 TTF", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nameLabel.Location = new System.Drawing.Point(5, 36);
+            this.nameLabel.Name = "nameLabel";
+            this.nameLabel.Size = new System.Drawing.Size(91, 30);
+            this.nameLabel.TabIndex = 11;
+            this.nameLabel.Text = "제품명";
             // 
             // searchTextBox
             // 
@@ -171,98 +261,9 @@ namespace ShopApp.custom
             this.contentTextBox.Size = new System.Drawing.Size(400, 277);
             this.contentTextBox.TabIndex = 0;
             // 
-            // dataGridView1
-            // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.AutoGenerateColumns = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.nAMEDataGridViewTextBoxColumn,
-            this.cEMAILDataGridViewTextBoxColumn,
-            this.tITLEDataGridViewTextBoxColumn,
-            this.cONTENTDataGridViewTextBoxColumn,
-            this.cREATIONTIMEDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.rEVIEWVIEW1BindingSource;
-            this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.dataGridView1.Location = new System.Drawing.Point(0, 0);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.RowTemplate.Height = 23;
-            this.dataGridView1.Size = new System.Drawing.Size(586, 560);
-            this.dataGridView1.TabIndex = 3;
-            this.dataGridView1.CellMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dataGridView1_CellMouseClick);
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // rEVIEWVIEW1BindingSource
-            // 
-            this.rEVIEWVIEW1BindingSource.DataMember = "REVIEW_VIEW1";
-            this.rEVIEWVIEW1BindingSource.DataSource = this.dataSet1;
-            // 
             // rEVIEW_VIEW1TableAdapter
             // 
             this.rEVIEW_VIEW1TableAdapter.ClearBeforeFill = true;
-            // 
-            // nAMEDataGridViewTextBoxColumn
-            // 
-            this.nAMEDataGridViewTextBoxColumn.DataPropertyName = "NAME";
-            this.nAMEDataGridViewTextBoxColumn.HeaderText = "제품명";
-            this.nAMEDataGridViewTextBoxColumn.Name = "nAMEDataGridViewTextBoxColumn";
-            this.nAMEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cEMAILDataGridViewTextBoxColumn
-            // 
-            this.cEMAILDataGridViewTextBoxColumn.DataPropertyName = "C_EMAIL";
-            this.cEMAILDataGridViewTextBoxColumn.HeaderText = "작성자";
-            this.cEMAILDataGridViewTextBoxColumn.Name = "cEMAILDataGridViewTextBoxColumn";
-            this.cEMAILDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // tITLEDataGridViewTextBoxColumn
-            // 
-            this.tITLEDataGridViewTextBoxColumn.DataPropertyName = "TITLE";
-            this.tITLEDataGridViewTextBoxColumn.HeaderText = "제목";
-            this.tITLEDataGridViewTextBoxColumn.Name = "tITLEDataGridViewTextBoxColumn";
-            this.tITLEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cONTENTDataGridViewTextBoxColumn
-            // 
-            this.cONTENTDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cONTENTDataGridViewTextBoxColumn.DataPropertyName = "CONTENT";
-            this.cONTENTDataGridViewTextBoxColumn.HeaderText = "내용";
-            this.cONTENTDataGridViewTextBoxColumn.Name = "cONTENTDataGridViewTextBoxColumn";
-            this.cONTENTDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // cREATIONTIMEDataGridViewTextBoxColumn
-            // 
-            this.cREATIONTIMEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.cREATIONTIMEDataGridViewTextBoxColumn.DataPropertyName = "CREATION_TIME";
-            this.cREATIONTIMEDataGridViewTextBoxColumn.HeaderText = "작성시간";
-            this.cREATIONTIMEDataGridViewTextBoxColumn.Name = "cREATIONTIMEDataGridViewTextBoxColumn";
-            this.cREATIONTIMEDataGridViewTextBoxColumn.ReadOnly = true;
-            // 
-            // nameLabel
-            // 
-            this.nameLabel.AutoSize = true;
-            this.nameLabel.Font = new System.Drawing.Font("던파 비트비트체 TTF", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.nameLabel.Location = new System.Drawing.Point(5, 36);
-            this.nameLabel.Name = "nameLabel";
-            this.nameLabel.Size = new System.Drawing.Size(91, 30);
-            this.nameLabel.TabIndex = 11;
-            this.nameLabel.Text = "제품명";
-            // 
-            // c_emailLabel
-            // 
-            this.c_emailLabel.AutoSize = true;
-            this.c_emailLabel.Font = new System.Drawing.Font("던파 비트비트체 TTF", 18F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.c_emailLabel.Location = new System.Drawing.Point(285, 44);
-            this.c_emailLabel.Name = "c_emailLabel";
-            this.c_emailLabel.Size = new System.Drawing.Size(69, 22);
-            this.c_emailLabel.TabIndex = 12;
-            this.c_emailLabel.Text = "작성자";
             // 
             // UserReview
             // 
@@ -275,11 +276,11 @@ namespace ShopApp.custom
             this.Text = "UserReview";
             this.Load += new System.EventHandler(this.UserReview_Load);
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.rEVIEWVIEW1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.rEVIEWVIEW1BindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }

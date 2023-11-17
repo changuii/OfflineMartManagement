@@ -64,6 +64,7 @@ namespace ShopApp
             this.button4Panel.Visible = false;
             this.button5Panel.Visible = false;
             this.button6Panel.Visible = false;
+            this.button7Panel.Visible = false;
             if (buttonIndex == 1)
             {
                 sellectIcon.IconChar = button1.IconChar;
@@ -90,6 +91,10 @@ namespace ShopApp
             {
                 sellectIcon.IconChar = button6.IconChar;
                 this.button6Panel.Visible = true;
+            }else if(buttonIndex == 7)
+            {
+                sellectIcon.IconChar = button7.IconChar;
+                this.button7Panel.Visible = true;
             }
         }
 
@@ -97,7 +102,7 @@ namespace ShopApp
         {
             sellect_button(2);
             panel2.Controls.Clear();
-            UserCart userCart = new UserCart(this.email);
+            UserCart userCart = new UserCart(this.email, this.name);
             userCart.TopLevel = false;
             userCart.Dock = DockStyle.Fill;
             userCart.Visible = true;
@@ -147,6 +152,22 @@ namespace ShopApp
             userReviewRegister.Dock = DockStyle.Fill;
             userReviewRegister.Visible = true;
             panel2.Controls.Add(userReviewRegister);
+        }
+
+        private void botton7_Click(object sender, EventArgs e)
+        {
+            sellect_button(7);
+            panel2.Controls.Clear();
+            UserInfo userInfo = new UserInfo(this.email, this);
+            userInfo.TopLevel = false;
+            userInfo.Dock = DockStyle.Fill;
+            userInfo.Visible = true;
+            panel2.Controls.Add(userInfo);
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 }

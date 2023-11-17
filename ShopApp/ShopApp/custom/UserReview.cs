@@ -23,13 +23,13 @@ namespace ShopApp.custom
             this.rEVIEW_VIEW1TableAdapter.Fill(this.dataSet1.REVIEW_VIEW1);
             errorLabel.Text = "";
             DataGridViewRow data = this.dataGridView1.CurrentRow;
-            
+
             if (data != null)
             {
                 this.nameLabel.Text = data.Cells[0].Value.ToString();
                 this.c_emailLabel.Text = data.Cells[1].Value.ToString();
-                this.titleLabel.Text = data.Cells[2].Value.ToString();
-                this.contentLabel.Text = data.Cells[3].Value.ToString();
+                this.titleTextBox.Text = data.Cells[2].Value.ToString();
+                this.contentTextBox.Text = data.Cells[3].Value.ToString();
                 this.timeLabel.Text = data.Cells[4].Value.ToString();
             }
         }
@@ -38,7 +38,7 @@ namespace ShopApp.custom
         {
             if (this.searchTextBox.Text != "")
             {
-                this.rEVIEWVIEW1BindingSource.Filter = $"TITLE LIKE '%{this.searchTextBox.Text}%'";
+                this.rEVIEWVIEW1BindingSource.Filter = $"NAME LIKE '%{this.searchTextBox.Text}%'";
                 errorLabel.ForeColor = Color.MediumSeaGreen;
                 errorLabel.Text = this.searchTextBox.Text + ", 검색이 완료되었습니다.";
                 DataGridViewRow data = this.dataGridView1.CurrentRow;
@@ -47,13 +47,14 @@ namespace ShopApp.custom
                 {
                     this.nameLabel.Text = data.Cells[0].Value.ToString();
                     this.c_emailLabel.Text = data.Cells[1].Value.ToString();
-                    this.titleLabel.Text = data.Cells[2].Value.ToString();
-                    this.contentLabel.Text = data.Cells[3].Value.ToString();
+                    this.titleTextBox.Text = data.Cells[2].Value.ToString();
+                    this.contentTextBox.Text = data.Cells[3].Value.ToString();
                     this.timeLabel.Text = data.Cells[4].Value.ToString();
                 }
             }
             else
             {
+                this.rEVIEWVIEW1BindingSource.Filter = "";
                 this.rEVIEW_VIEW1TableAdapter.Fill(dataSet1.REVIEW_VIEW1);
             }
         }
@@ -66,10 +67,15 @@ namespace ShopApp.custom
             {
                 this.nameLabel.Text = data.Cells[0].Value.ToString();
                 this.c_emailLabel.Text = data.Cells[1].Value.ToString();
-                this.titleLabel.Text = data.Cells[2].Value.ToString();
-                this.contentLabel.Text = data.Cells[3].Value.ToString();
+                this.titleTextBox.Text = data.Cells[2].Value.ToString();
+                this.contentTextBox.Text = data.Cells[3].Value.ToString();
                 this.timeLabel.Text = data.Cells[4].Value.ToString();
             }
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
         }
     }
 }

@@ -36,7 +36,6 @@ namespace ShopApp.custom
             this.productStock = new System.Windows.Forms.Label();
             this.productCategory = new System.Windows.Forms.Label();
             this.productPrice = new System.Windows.Forms.Label();
-            this.dataSet11 = new ShopApp.DataSet1();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.pIDDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.nAMEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -45,23 +44,24 @@ namespace ShopApp.custom
             this.cATEGORYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.sEMAILDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.pRODUCTBindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.pRODUCTTableAdapter = new ShopApp.DataSet1TableAdapters.PRODUCTTableAdapter();
-            this.customButton1 = new ShopApp.custom.CustomButton();
-            this.customButton2 = new ShopApp.custom.CustomButton();
+            this.dataSet11 = new ShopApp.DataSet1();
             this.selectStock = new System.Windows.Forms.ComboBox();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
-            this.cartTableAdapter1 = new ShopApp.DataSet1TableAdapters.CARTTableAdapter();
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.panel1 = new System.Windows.Forms.Panel();
             this.searchButton = new FontAwesome.Sharp.IconButton();
-            this.searchTextBox = new ShopApp.textbox.CostomTextBox();
             this.errorText = new System.Windows.Forms.Label();
+            this.pRODUCTTableAdapter = new ShopApp.DataSet1TableAdapters.PRODUCTTableAdapter();
+            this.cartTableAdapter1 = new ShopApp.DataSet1TableAdapters.CARTTableAdapter();
             this.purchaseTableAdapter1 = new ShopApp.DataSet1TableAdapters.PURCHASETableAdapter();
+            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
+            this.searchTextBox = new ShopApp.textbox.CostomTextBox();
+            this.customButton2 = new ShopApp.custom.CustomButton();
+            this.customButton1 = new ShopApp.custom.CustomButton();
             this.productCard.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -131,11 +131,6 @@ namespace ShopApp.custom
             this.productPrice.Size = new System.Drawing.Size(85, 27);
             this.productPrice.TabIndex = 2;
             this.productPrice.Text = "Price";
-            // 
-            // dataSet11
-            // 
-            this.dataSet11.DataSetName = "DataSet1";
-            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // dataGridView1
             // 
@@ -211,48 +206,14 @@ namespace ShopApp.custom
             this.pRODUCTBindingSource.DataMember = "PRODUCT";
             this.pRODUCTBindingSource.DataSource = this.dataSet11;
             // 
-            // pRODUCTTableAdapter
+            // dataSet11
             // 
-            this.pRODUCTTableAdapter.ClearBeforeFill = true;
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton1.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton1.BorderRadius = 40;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(620, 456);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(150, 40);
-            this.customButton1.TabIndex = 4;
-            this.customButton1.Text = "구매";
-            this.customButton1.UseVisualStyleBackColor = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
-            // 
-            // customButton2
-            // 
-            this.customButton2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton2.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton2.BorderRadius = 40;
-            this.customButton2.BorderSize = 0;
-            this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(776, 456);
-            this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(150, 40);
-            this.customButton2.TabIndex = 5;
-            this.customButton2.Text = "장바구니 담기";
-            this.customButton2.UseVisualStyleBackColor = false;
-            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
+            this.dataSet11.DataSetName = "DataSet1";
+            this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // selectStock
             // 
+            this.selectStock.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
             this.selectStock.Font = new System.Drawing.Font("던파 비트비트체 TTF", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.selectStock.FormattingEnabled = true;
             this.selectStock.Location = new System.Drawing.Point(727, 285);
@@ -275,23 +236,11 @@ namespace ShopApp.custom
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.label2.Location = new System.Drawing.Point(645, 338);
+            this.label2.Location = new System.Drawing.Point(645, 343);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(77, 20);
             this.label2.TabIndex = 7;
             this.label2.Text = "구매일자";
-            // 
-            // cartTableAdapter1
-            // 
-            this.cartTableAdapter1.ClearBeforeFill = true;
-            // 
-            // dateTimePicker1
-            // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(726, 337);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(200, 20);
-            this.dateTimePicker1.TabIndex = 8;
-            this.dateTimePicker1.ValueChanged += new System.EventHandler(this.dateTimePicker1_ValueChanged);
             // 
             // panel1
             // 
@@ -299,6 +248,7 @@ namespace ShopApp.custom
             this.panel1.Controls.Add(this.searchTextBox);
             this.panel1.Controls.Add(this.dataGridView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.panel1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.panel1.Location = new System.Drawing.Point(0, 0);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(547, 560);
@@ -318,6 +268,37 @@ namespace ShopApp.custom
             this.searchButton.UseVisualStyleBackColor = true;
             this.searchButton.Click += new System.EventHandler(this.searchButton_Click);
             // 
+            // errorText
+            // 
+            this.errorText.AutoSize = true;
+            this.errorText.Font = new System.Drawing.Font("던파 비트비트체 TTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.errorText.ForeColor = System.Drawing.Color.DarkRed;
+            this.errorText.Location = new System.Drawing.Point(627, 480);
+            this.errorText.Name = "errorText";
+            this.errorText.Size = new System.Drawing.Size(52, 15);
+            this.errorText.TabIndex = 10;
+            this.errorText.Text = "label3";
+            // 
+            // pRODUCTTableAdapter
+            // 
+            this.pRODUCTTableAdapter.ClearBeforeFill = true;
+            // 
+            // cartTableAdapter1
+            // 
+            this.cartTableAdapter1.ClearBeforeFill = true;
+            // 
+            // purchaseTableAdapter1
+            // 
+            this.purchaseTableAdapter1.ClearBeforeFill = true;
+            // 
+            // dateTimePicker1
+            // 
+            this.dateTimePicker1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.dateTimePicker1.Location = new System.Drawing.Point(728, 338);
+            this.dateTimePicker1.Name = "dateTimePicker1";
+            this.dateTimePicker1.Size = new System.Drawing.Size(209, 28);
+            this.dateTimePicker1.TabIndex = 11;
+            // 
             // searchTextBox
             // 
             this.searchTextBox.BackColor = System.Drawing.SystemColors.Window;
@@ -325,37 +306,59 @@ namespace ShopApp.custom
             this.searchTextBox.BorderSize = 2;
             this.searchTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.searchTextBox.Location = new System.Drawing.Point(47, 12);
+            this.searchTextBox.Multiline = false;
             this.searchTextBox.Name = "searchTextBox";
-            this.searchTextBox.Padding = new System.Windows.Forms.Padding(7, 7, 7, 7);
+            this.searchTextBox.Padding = new System.Windows.Forms.Padding(7);
             this.searchTextBox.PasswordChar = false;
             this.searchTextBox.Size = new System.Drawing.Size(250, 29);
             this.searchTextBox.TabIndex = 4;
             this.searchTextBox.Texts = "";
             this.searchTextBox.UnderlinedStyle = true;
             // 
-            // errorText
+            // customButton2
             // 
-            this.errorText.AutoSize = true;
-            this.errorText.Font = new System.Drawing.Font("던파 비트비트체 TTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.errorText.ForeColor = System.Drawing.Color.DarkRed;
-            this.errorText.Location = new System.Drawing.Point(634, 435);
-            this.errorText.Name = "errorText";
-            this.errorText.Size = new System.Drawing.Size(52, 15);
-            this.errorText.TabIndex = 10;
-            this.errorText.Text = "label3";
+            this.customButton2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton2.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton2.BorderRadius = 40;
+            this.customButton2.BorderSize = 0;
+            this.customButton2.FlatAppearance.BorderSize = 0;
+            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.customButton2.ForeColor = System.Drawing.Color.White;
+            this.customButton2.Location = new System.Drawing.Point(776, 498);
+            this.customButton2.Name = "customButton2";
+            this.customButton2.Size = new System.Drawing.Size(150, 40);
+            this.customButton2.TabIndex = 5;
+            this.customButton2.Text = "장바구니 담기";
+            this.customButton2.UseVisualStyleBackColor = false;
+            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
             // 
-            // purchaseTableAdapter1
+            // customButton1
             // 
-            this.purchaseTableAdapter1.ClearBeforeFill = true;
+            this.customButton1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton1.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton1.BorderRadius = 40;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.Location = new System.Drawing.Point(620, 498);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(150, 40);
+            this.customButton1.TabIndex = 4;
+            this.customButton1.Text = "구매";
+            this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // ProductList
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 560);
+            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.errorText);
             this.Controls.Add(this.panel1);
-            this.Controls.Add(this.dateTimePicker1);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.selectStock);
@@ -369,9 +372,9 @@ namespace ShopApp.custom
             this.Load += new System.EventHandler(this.Form1_Load);
             this.productCard.ResumeLayout(false);
             this.productCard.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
             this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -401,11 +404,11 @@ namespace ShopApp.custom
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label2;
         private DataSet1TableAdapters.CARTTableAdapter cartTableAdapter1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Panel panel1;
         private FontAwesome.Sharp.IconButton searchButton;
         private textbox.CostomTextBox searchTextBox;
         private System.Windows.Forms.Label errorText;
         private DataSet1TableAdapters.PURCHASETableAdapter purchaseTableAdapter1;
+        private System.Windows.Forms.DateTimePicker dateTimePicker1;
     }
 }

@@ -104,6 +104,12 @@
     <Compile Include="custom\AdminProductRegister.Designer.cs">
       <DependentUpon>AdminProductRegister.cs</DependentUpon>
     </Compile>
+    <Compile Include="custom\AdminUserRating.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\AdminUserRating.Designer.cs">
+      <DependentUpon>AdminUserRating.cs</DependentUpon>
+    </Compile>
     <Compile Include="custom\CustomButton.cs">
       <SubType>Component</SubType>
     </Compile>
@@ -133,6 +139,18 @@
     </Compile>
     <Compile Include="custom\UserCart.Designer.cs">
       <DependentUpon>UserCart.cs</DependentUpon>
+    </Compile>
+    <Compile Include="custom\UserDelete.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\UserDelete.Designer.cs">
+      <DependentUpon>UserDelete.cs</DependentUpon>
+    </Compile>
+    <Compile Include="custom\UserInfo.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\UserInfo.Designer.cs">
+      <DependentUpon>UserInfo.cs</DependentUpon>
     </Compile>
     <Compile Include="custom\UserNotification.cs">
       <SubType>Form</SubType>
@@ -210,6 +228,9 @@
     <EmbeddedResource Include="custom\AdminProductRegister.resx">
       <DependentUpon>AdminProductRegister.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="custom\AdminUserRating.resx">
+      <DependentUpon>AdminUserRating.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="custom\CustomPTextBox.resx">
       <DependentUpon>CustomPTextBox.cs</DependentUpon>
     </EmbeddedResource>
@@ -221,6 +242,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="custom\UserCart.resx">
       <DependentUpon>UserCart.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="custom\UserDelete.resx">
+      <DependentUpon>UserDelete.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="custom\UserInfo.resx">
+      <DependentUpon>UserInfo.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="custom\UserNotification.resx">
       <DependentUpon>UserNotification.cs</DependentUpon>

@@ -23,6 +23,14 @@ namespace ShopApp.custom
             // TODO: 이 코드는 데이터를 'dataSet1.NOTIFICATION' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
             this.nOTIFICATIONTableAdapter.Fill(this.dataSet1.NOTIFICATION);
             errorLabel.Text = "";
+            DataGridViewRow data = this.dataGridView1.CurrentRow;
+
+            if (data != null)
+            {
+                this.timeLabel.Text = "작성시간 : " + data.Cells[0].Value.ToString();
+                this.titleTextBox.Text = data.Cells[1].Value.ToString();
+                this.contentTextBox.Text = data.Cells[2].Value.ToString();
+            }
 
         }
 
@@ -105,6 +113,11 @@ namespace ShopApp.custom
         }
 
         private void errorLabel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
         }
