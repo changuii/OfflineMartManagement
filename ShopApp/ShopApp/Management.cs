@@ -130,6 +130,12 @@ namespace ShopApp
         private void button3_Click(object sender, EventArgs e)
         {
             sellect_button(3);
+            panel2.Controls.Clear();
+            AdminUserRating adminUserRating = new AdminUserRating();
+            adminUserRating.TopLevel = false;
+            adminUserRating.Dock = DockStyle.Fill;
+            adminUserRating.Visible = true;
+            panel2.Controls.Add(adminUserRating);
         }
 
         private void button4_Click(object sender, EventArgs e)

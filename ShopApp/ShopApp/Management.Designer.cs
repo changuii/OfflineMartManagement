@@ -203,7 +203,7 @@ namespace ShopApp
             this.button3.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button3.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button3.ForeColor = System.Drawing.SystemColors.Control;
-            this.button3.IconChar = FontAwesome.Sharp.IconChar.Shopify;
+            this.button3.IconChar = FontAwesome.Sharp.IconChar.User;
             this.button3.IconColor = System.Drawing.Color.Black;
             this.button3.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.button3.IconSize = 32;
@@ -212,7 +212,7 @@ namespace ShopApp
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(134, 55);
             this.button3.TabIndex = 3;
-            this.button3.Text = "나의 장바구니";
+            this.button3.Text = "고객 관리";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button3.UseVisualStyleBackColor = true;
@@ -245,7 +245,7 @@ namespace ShopApp
             this.button2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button2.ForeColor = System.Drawing.SystemColors.Control;
-            this.button2.IconChar = FontAwesome.Sharp.IconChar.Shopify;
+            this.button2.IconChar = FontAwesome.Sharp.IconChar.Message;
             this.button2.IconColor = System.Drawing.Color.Black;
             this.button2.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.button2.IconSize = 32;
@@ -287,7 +287,7 @@ namespace ShopApp
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button1.ForeColor = System.Drawing.SystemColors.Control;
-            this.button1.IconChar = FontAwesome.Sharp.IconChar.Shopify;
+            this.button1.IconChar = FontAwesome.Sharp.IconChar.BoxesPacking;
             this.button1.IconColor = System.Drawing.Color.Black;
             this.button1.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.button1.IconSize = 32;

@@ -66,3 +66,4 @@ C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\
 C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.UserReviewRegister.resources
 C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.UserInfo.resources
 C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.UserDelete.resources
+C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.AdminUserRating.resources
