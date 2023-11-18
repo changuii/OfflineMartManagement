@@ -141,6 +141,12 @@ namespace ShopApp
         private void button4_Click(object sender, EventArgs e)
         {
             sellect_button(4);
+            panel2.Controls.Clear();
+            AdminMonthSales adminMonthSales = new AdminMonthSales();
+            adminMonthSales.TopLevel = false;
+            adminMonthSales.Dock = DockStyle.Fill;
+            adminMonthSales.Visible = true;
+            panel2.Controls.Add(adminMonthSales);
         }
 
         private void button5_Click(object sender, EventArgs e)

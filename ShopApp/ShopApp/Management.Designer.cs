@@ -161,7 +161,7 @@ namespace ShopApp
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button4.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button4.ForeColor = System.Drawing.SystemColors.Control;
-            this.button4.IconChar = FontAwesome.Sharp.IconChar.Shopify;
+            this.button4.IconChar = FontAwesome.Sharp.IconChar.CalendarCheck;
             this.button4.IconColor = System.Drawing.Color.Black;
             this.button4.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.button4.IconSize = 32;
@@ -170,7 +170,7 @@ namespace ShopApp
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(134, 55);
             this.button4.TabIndex = 3;
-            this.button4.Text = "상품 등록";
+            this.button4.Text = "매츌 현황";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button4.UseVisualStyleBackColor = true;

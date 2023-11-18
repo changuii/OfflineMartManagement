@@ -67,3 +67,5 @@ C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\
 C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.UserInfo.resources
 C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.UserDelete.resources
 C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.AdminUserRating.resources
+C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.AdminMonthSales.resources
+C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.AdminMonthSalesTable.resources
