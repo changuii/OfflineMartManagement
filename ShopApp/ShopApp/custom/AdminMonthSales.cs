@@ -36,5 +36,20 @@ namespace ShopApp.custom
             adminMonthSalesTable.Visible = true;
             panel1.Controls.Add(adminMonthSalesTable);
         }
+
+        private void customButton3_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void customButton4_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            AdminSalesWeek adminSalesWeek = new AdminSalesWeek();
+            adminSalesWeek.TopLevel = false;
+            adminSalesWeek.Dock = DockStyle.Fill;
+            adminSalesWeek.Visible = true;
+            panel1.Controls.Add(adminSalesWeek);
+        }
     }
 }

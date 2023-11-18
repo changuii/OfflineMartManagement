@@ -79,6 +79,7 @@
     <Reference Include="System.ValueTuple, Version=4.0.3.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
       <HintPath>..\packages\System.ValueTuple.4.5.0\lib\net47\System.ValueTuple.dll</HintPath>
     </Reference>
+    <Reference Include="System.Windows.Forms.DataVisualization" />
     <Reference Include="System.Xaml" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -115,6 +116,18 @@
     </Compile>
     <Compile Include="custom\AdminProductRegister.Designer.cs">
       <DependentUpon>AdminProductRegister.cs</DependentUpon>
+    </Compile>
+    <Compile Include="custom\AdminSalesDay.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\AdminSalesDay.Designer.cs">
+      <DependentUpon>AdminSalesDay.cs</DependentUpon>
+    </Compile>
+    <Compile Include="custom\AdminSalesWeek.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\AdminSalesWeek.Designer.cs">
+      <DependentUpon>AdminSalesWeek.cs</DependentUpon>
     </Compile>
     <Compile Include="custom\AdminUserRating.cs">
       <SubType>Form</SubType>
@@ -245,6 +258,12 @@
     </EmbeddedResource>
     <EmbeddedResource Include="custom\AdminProductRegister.resx">
       <DependentUpon>AdminProductRegister.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="custom\AdminSalesDay.resx">
+      <DependentUpon>AdminSalesDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="custom\AdminSalesWeek.resx">
+      <DependentUpon>AdminSalesWeek.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="custom\AdminUserRating.resx">
       <DependentUpon>AdminUserRating.cs</DependentUpon>
