@@ -51,5 +51,25 @@ namespace ShopApp.custom
             adminSalesWeek.Visible = true;
             panel1.Controls.Add(adminSalesWeek);
         }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            AdminSalesDay adminSalesDay = new AdminSalesDay();
+            adminSalesDay.TopLevel = false;
+            adminSalesDay.Dock = DockStyle.Fill;
+            adminSalesDay.Visible = true;
+            panel1.Controls.Add(adminSalesDay);
+        }
+
+        private void customButton3_Click_1(object sender, EventArgs e)
+        {
+            panel1.Controls.Clear();
+            AdminSalesDOW adminSalesDOW = new AdminSalesDOW();
+            adminSalesDOW.TopLevel = false;
+            adminSalesDOW.Dock = DockStyle.Fill;
+            adminSalesDOW.Visible = true;
+            panel1.Controls.Add(adminSalesDOW);
+        }
     }
 }

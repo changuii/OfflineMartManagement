@@ -683,7 +683,7 @@ GROUP BY PRODUCT."NAME"</CommandText>
           </TableAdapter>
           <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PURCHASE_VIEW_WEEK1TableAdapter" GeneratorDataComponentClassName="PURCHASE_VIEW_WEEK1TableAdapter" Name="PURCHASE_VIEW_WEEK1" UserDataComponentName="PURCHASE_VIEW_WEEK1TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="S5584994.PURCHASE_VIEW_WEEK1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
                     <CommandText>SELECT  *
@@ -700,13 +700,13 @@ FROM     PURCHASE_VIEW_WEEK1</CommandText>
             </Mappings>
             <Sources />
           </TableAdapter>
-          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="DataTable1TableAdapter" GeneratorDataComponentClassName="DataTable1TableAdapter" Name="DataTable1" UserDataComponentName="DataTable1TableAdapter">
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PURCHASE_VIEW_DAY1TableAdapter" GeneratorDataComponentClassName="PURCHASE_VIEW_DAY1TableAdapter" Name="PURCHASE_VIEW_DAY1" UserDataComponentName="PURCHASE_VIEW_DAY1TableAdapter">
             <MainSource>
-              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectName="S5584994.PURCHASE_VIEW_DAY1" DbObjectType="View" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
                 <SelectCommand>
                   <DbCommand CommandType="Text" ModifiedByUser="true">
-                    <CommandText>SELECT  *
-FROM     PURCHASE_VIEW_DAY1</CommandText>
+                    <CommandText>SELECT  "DAY", TOTAL_PRICE, TOTAL_STOCK
+FROM     S5584994.PURCHASE_VIEW_DAY1</CommandText>
                     <Parameters />
                   </DbCommand>
                 </SelectCommand>
@@ -714,6 +714,25 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </MainSource>
             <Mappings>
               <Mapping SourceColumn="DAY" DataSetColumn="DAY" />
+              <Mapping SourceColumn="TOTAL_PRICE" DataSetColumn="TOTAL_PRICE" />
+              <Mapping SourceColumn="TOTAL_STOCK" DataSetColumn="TOTAL_STOCK" />
+            </Mappings>
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="PURCHASE_VIEW_DOW1TableAdapter" GeneratorDataComponentClassName="PURCHASE_VIEW_DOW1TableAdapter" Name="PURCHASE_VIEW_DOW1" UserDataComponentName="PURCHASE_VIEW_DOW1TableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="ConnectionString (Settings)" DbObjectType="Unknown" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="false" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="true">
+                    <CommandText>SELECT  *
+FROM     PURCHASE_VIEW_DOW1</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings>
+              <Mapping SourceColumn="DAY_OF_WEEK" DataSetColumn="DAY_OF_WEEK" />
               <Mapping SourceColumn="TOTAL_PRICE" DataSetColumn="TOTAL_PRICE" />
               <Mapping SourceColumn="TOTAL_STOCK" DataSetColumn="TOTAL_STOCK" />
             </Mappings>
@@ -727,7 +746,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
   <xs:element name="DataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="DataSet1" msprop:Generator_UserDSName="DataSet1">
     <xs:complexType>
       <xs:choice minOccurs="0" maxOccurs="unbounded">
-        <xs:element name="ADMIN" msprop:Generator_TableClassName="ADMINDataTable" msprop:Generator_TableVarName="tableADMIN" msprop:Generator_RowChangedName="ADMINRowChanged" msprop:Generator_TablePropName="ADMIN" msprop:Generator_RowDeletingName="ADMINRowDeleting" msprop:Generator_RowChangingName="ADMINRowChanging" msprop:Generator_RowEvHandlerName="ADMINRowChangeEventHandler" msprop:Generator_RowDeletedName="ADMINRowDeleted" msprop:Generator_RowClassName="ADMINRow" msprop:Generator_UserTableName="ADMIN" msprop:Generator_RowEvArgName="ADMINRowChangeEvent">
+        <xs:element name="ADMIN" msprop:Generator_TableClassName="ADMINDataTable" msprop:Generator_TableVarName="tableADMIN" msprop:Generator_TablePropName="ADMIN" msprop:Generator_RowDeletingName="ADMINRowDeleting" msprop:Generator_RowChangingName="ADMINRowChanging" msprop:Generator_RowEvHandlerName="ADMINRowChangeEventHandler" msprop:Generator_RowDeletedName="ADMINRowDeleted" msprop:Generator_UserTableName="ADMIN" msprop:Generator_RowChangedName="ADMINRowChanged" msprop:Generator_RowEvArgName="ADMINRowChangeEvent" msprop:Generator_RowClassName="ADMINRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="EMAIL" msprop:Generator_ColumnVarNameInTable="columnEMAIL" msprop:Generator_ColumnPropNameInRow="EMAIL" msprop:Generator_ColumnPropNameInTable="EMAILColumn" msprop:Generator_UserColumnName="EMAIL">
@@ -747,7 +766,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CART" msprop:Generator_TableClassName="CARTDataTable" msprop:Generator_TableVarName="tableCART" msprop:Generator_RowChangedName="CARTRowChanged" msprop:Generator_TablePropName="CART" msprop:Generator_RowDeletingName="CARTRowDeleting" msprop:Generator_RowChangingName="CARTRowChanging" msprop:Generator_RowEvHandlerName="CARTRowChangeEventHandler" msprop:Generator_RowDeletedName="CARTRowDeleted" msprop:Generator_RowClassName="CARTRow" msprop:Generator_UserTableName="CART" msprop:Generator_RowEvArgName="CARTRowChangeEvent">
+        <xs:element name="CART" msprop:Generator_TableClassName="CARTDataTable" msprop:Generator_TableVarName="tableCART" msprop:Generator_TablePropName="CART" msprop:Generator_RowDeletingName="CARTRowDeleting" msprop:Generator_RowChangingName="CARTRowChanging" msprop:Generator_RowEvHandlerName="CARTRowChangeEventHandler" msprop:Generator_RowDeletedName="CARTRowDeleted" msprop:Generator_UserTableName="CART" msprop:Generator_RowChangedName="CARTRowChanged" msprop:Generator_RowEvArgName="CARTRowChangeEvent" msprop:Generator_RowClassName="CARTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="C_EMAIL" msprop:Generator_ColumnVarNameInTable="columnC_EMAIL" msprop:Generator_ColumnPropNameInRow="C_EMAIL" msprop:Generator_ColumnPropNameInTable="C_EMAILColumn" msprop:Generator_UserColumnName="C_EMAIL">
@@ -762,7 +781,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CUSTOMER" msprop:Generator_TableClassName="CUSTOMERDataTable" msprop:Generator_TableVarName="tableCUSTOMER" msprop:Generator_RowChangedName="CUSTOMERRowChanged" msprop:Generator_TablePropName="CUSTOMER" msprop:Generator_RowDeletingName="CUSTOMERRowDeleting" msprop:Generator_RowChangingName="CUSTOMERRowChanging" msprop:Generator_RowEvHandlerName="CUSTOMERRowChangeEventHandler" msprop:Generator_RowDeletedName="CUSTOMERRowDeleted" msprop:Generator_RowClassName="CUSTOMERRow" msprop:Generator_UserTableName="CUSTOMER" msprop:Generator_RowEvArgName="CUSTOMERRowChangeEvent">
+        <xs:element name="CUSTOMER" msprop:Generator_TableClassName="CUSTOMERDataTable" msprop:Generator_TableVarName="tableCUSTOMER" msprop:Generator_TablePropName="CUSTOMER" msprop:Generator_RowDeletingName="CUSTOMERRowDeleting" msprop:Generator_RowChangingName="CUSTOMERRowChanging" msprop:Generator_RowEvHandlerName="CUSTOMERRowChangeEventHandler" msprop:Generator_RowDeletedName="CUSTOMERRowDeleted" msprop:Generator_UserTableName="CUSTOMER" msprop:Generator_RowChangedName="CUSTOMERRowChanged" msprop:Generator_RowEvArgName="CUSTOMERRowChangeEvent" msprop:Generator_RowClassName="CUSTOMERRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="C_EMAIL" msprop:Generator_ColumnVarNameInTable="columnC_EMAIL" msprop:Generator_ColumnPropNameInRow="C_EMAIL" msprop:Generator_ColumnPropNameInTable="C_EMAILColumn" msprop:Generator_UserColumnName="C_EMAIL">
@@ -796,7 +815,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PRODUCT" msprop:Generator_TableClassName="PRODUCTDataTable" msprop:Generator_TableVarName="tablePRODUCT" msprop:Generator_RowChangedName="PRODUCTRowChanged" msprop:Generator_TablePropName="PRODUCT" msprop:Generator_RowDeletingName="PRODUCTRowDeleting" msprop:Generator_RowChangingName="PRODUCTRowChanging" msprop:Generator_RowEvHandlerName="PRODUCTRowChangeEventHandler" msprop:Generator_RowDeletedName="PRODUCTRowDeleted" msprop:Generator_RowClassName="PRODUCTRow" msprop:Generator_UserTableName="PRODUCT" msprop:Generator_RowEvArgName="PRODUCTRowChangeEvent">
+        <xs:element name="PRODUCT" msprop:Generator_TableClassName="PRODUCTDataTable" msprop:Generator_TableVarName="tablePRODUCT" msprop:Generator_TablePropName="PRODUCT" msprop:Generator_RowDeletingName="PRODUCTRowDeleting" msprop:Generator_RowChangingName="PRODUCTRowChanging" msprop:Generator_RowEvHandlerName="PRODUCTRowChangeEventHandler" msprop:Generator_RowDeletedName="PRODUCTRowDeleted" msprop:Generator_UserTableName="PRODUCT" msprop:Generator_RowChangedName="PRODUCTRowChanged" msprop:Generator_RowEvArgName="PRODUCTRowChangeEvent" msprop:Generator_RowClassName="PRODUCTRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="P_ID" msprop:Generator_ColumnVarNameInTable="columnP_ID" msprop:Generator_ColumnPropNameInRow="P_ID" msprop:Generator_ColumnPropNameInTable="P_IDColumn" msprop:Generator_UserColumnName="P_ID" type="xs:decimal" />
@@ -826,7 +845,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PURCHASE" msprop:Generator_TableClassName="PURCHASEDataTable" msprop:Generator_TableVarName="tablePURCHASE" msprop:Generator_RowChangedName="PURCHASERowChanged" msprop:Generator_TablePropName="PURCHASE" msprop:Generator_RowDeletingName="PURCHASERowDeleting" msprop:Generator_RowChangingName="PURCHASERowChanging" msprop:Generator_RowEvHandlerName="PURCHASERowChangeEventHandler" msprop:Generator_RowDeletedName="PURCHASERowDeleted" msprop:Generator_RowClassName="PURCHASERow" msprop:Generator_UserTableName="PURCHASE" msprop:Generator_RowEvArgName="PURCHASERowChangeEvent">
+        <xs:element name="PURCHASE" msprop:Generator_TableClassName="PURCHASEDataTable" msprop:Generator_TableVarName="tablePURCHASE" msprop:Generator_TablePropName="PURCHASE" msprop:Generator_RowDeletingName="PURCHASERowDeleting" msprop:Generator_RowChangingName="PURCHASERowChanging" msprop:Generator_RowEvHandlerName="PURCHASERowChangeEventHandler" msprop:Generator_RowDeletedName="PURCHASERowDeleted" msprop:Generator_UserTableName="PURCHASE" msprop:Generator_RowChangedName="PURCHASERowChanged" msprop:Generator_RowEvArgName="PURCHASERowChangeEvent" msprop:Generator_RowClassName="PURCHASERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="C_EMAIL" msprop:Generator_ColumnVarNameInTable="columnC_EMAIL" msprop:Generator_ColumnPropNameInRow="C_EMAIL" msprop:Generator_ColumnPropNameInTable="C_EMAILColumn" msprop:Generator_UserColumnName="C_EMAIL">
@@ -857,7 +876,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="REFUND" msprop:Generator_TableClassName="REFUNDDataTable" msprop:Generator_TableVarName="tableREFUND" msprop:Generator_RowChangedName="REFUNDRowChanged" msprop:Generator_TablePropName="REFUND" msprop:Generator_RowDeletingName="REFUNDRowDeleting" msprop:Generator_RowChangingName="REFUNDRowChanging" msprop:Generator_RowEvHandlerName="REFUNDRowChangeEventHandler" msprop:Generator_RowDeletedName="REFUNDRowDeleted" msprop:Generator_RowClassName="REFUNDRow" msprop:Generator_UserTableName="REFUND" msprop:Generator_RowEvArgName="REFUNDRowChangeEvent">
+        <xs:element name="REFUND" msprop:Generator_TableClassName="REFUNDDataTable" msprop:Generator_TableVarName="tableREFUND" msprop:Generator_TablePropName="REFUND" msprop:Generator_RowDeletingName="REFUNDRowDeleting" msprop:Generator_RowChangingName="REFUNDRowChanging" msprop:Generator_RowEvHandlerName="REFUNDRowChangeEventHandler" msprop:Generator_RowDeletedName="REFUNDRowDeleted" msprop:Generator_UserTableName="REFUND" msprop:Generator_RowChangedName="REFUNDRowChanged" msprop:Generator_RowEvArgName="REFUNDRowChangeEvent" msprop:Generator_RowClassName="REFUNDRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="C_EMAIL" msprop:Generator_ColumnVarNameInTable="columnC_EMAIL" msprop:Generator_ColumnPropNameInRow="C_EMAIL" msprop:Generator_ColumnPropNameInTable="C_EMAILColumn" msprop:Generator_UserColumnName="C_EMAIL">
@@ -878,7 +897,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="SELLER" msprop:Generator_TableClassName="SELLERDataTable" msprop:Generator_TableVarName="tableSELLER" msprop:Generator_RowChangedName="SELLERRowChanged" msprop:Generator_TablePropName="SELLER" msprop:Generator_RowDeletingName="SELLERRowDeleting" msprop:Generator_RowChangingName="SELLERRowChanging" msprop:Generator_RowEvHandlerName="SELLERRowChangeEventHandler" msprop:Generator_RowDeletedName="SELLERRowDeleted" msprop:Generator_RowClassName="SELLERRow" msprop:Generator_UserTableName="SELLER" msprop:Generator_RowEvArgName="SELLERRowChangeEvent">
+        <xs:element name="SELLER" msprop:Generator_TableClassName="SELLERDataTable" msprop:Generator_TableVarName="tableSELLER" msprop:Generator_TablePropName="SELLER" msprop:Generator_RowDeletingName="SELLERRowDeleting" msprop:Generator_RowChangingName="SELLERRowChanging" msprop:Generator_RowEvHandlerName="SELLERRowChangeEventHandler" msprop:Generator_RowDeletedName="SELLERRowDeleted" msprop:Generator_UserTableName="SELLER" msprop:Generator_RowChangedName="SELLERRowChanged" msprop:Generator_RowEvArgName="SELLERRowChangeEvent" msprop:Generator_RowClassName="SELLERRow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="S_EMAIL" msprop:Generator_ColumnVarNameInTable="columnS_EMAIL" msprop:Generator_ColumnPropNameInRow="S_EMAIL" msprop:Generator_ColumnPropNameInTable="S_EMAILColumn" msprop:Generator_UserColumnName="S_EMAIL">
@@ -905,7 +924,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PURCHASE_VIEW1" msprop:Generator_TableClassName="PURCHASE_VIEW1DataTable" msprop:Generator_TableVarName="tablePURCHASE_VIEW1" msprop:Generator_RowChangedName="PURCHASE_VIEW1RowChanged" msprop:Generator_TablePropName="PURCHASE_VIEW1" msprop:Generator_RowDeletingName="PURCHASE_VIEW1RowDeleting" msprop:Generator_RowChangingName="PURCHASE_VIEW1RowChanging" msprop:Generator_RowEvHandlerName="PURCHASE_VIEW1RowChangeEventHandler" msprop:Generator_RowDeletedName="PURCHASE_VIEW1RowDeleted" msprop:Generator_RowClassName="PURCHASE_VIEW1Row" msprop:Generator_UserTableName="PURCHASE_VIEW1" msprop:Generator_RowEvArgName="PURCHASE_VIEW1RowChangeEvent">
+        <xs:element name="PURCHASE_VIEW1" msprop:Generator_TableClassName="PURCHASE_VIEW1DataTable" msprop:Generator_TableVarName="tablePURCHASE_VIEW1" msprop:Generator_TablePropName="PURCHASE_VIEW1" msprop:Generator_RowDeletingName="PURCHASE_VIEW1RowDeleting" msprop:Generator_RowChangingName="PURCHASE_VIEW1RowChanging" msprop:Generator_RowEvHandlerName="PURCHASE_VIEW1RowChangeEventHandler" msprop:Generator_RowDeletedName="PURCHASE_VIEW1RowDeleted" msprop:Generator_UserTableName="PURCHASE_VIEW1" msprop:Generator_RowChangedName="PURCHASE_VIEW1RowChanged" msprop:Generator_RowEvArgName="PURCHASE_VIEW1RowChangeEvent" msprop:Generator_RowClassName="PURCHASE_VIEW1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="C_EMAIL" msprop:Generator_ColumnVarNameInTable="columnC_EMAIL" msprop:Generator_ColumnPropNameInRow="C_EMAIL" msprop:Generator_ColumnPropNameInTable="C_EMAILColumn" msprop:Generator_UserColumnName="C_EMAIL">
@@ -959,7 +978,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="NOTIFICATION" msprop:Generator_TableClassName="NOTIFICATIONDataTable" msprop:Generator_TableVarName="tableNOTIFICATION" msprop:Generator_TablePropName="NOTIFICATION" msprop:Generator_RowDeletingName="NOTIFICATIONRowDeleting" msprop:Generator_RowChangingName="NOTIFICATIONRowChanging" msprop:Generator_RowEvHandlerName="NOTIFICATIONRowChangeEventHandler" msprop:Generator_RowDeletedName="NOTIFICATIONRowDeleted" msprop:Generator_UserTableName="NOTIFICATION" msprop:Generator_RowChangedName="NOTIFICATIONRowChanged" msprop:Generator_RowEvArgName="NOTIFICATIONRowChangeEvent" msprop:Generator_RowClassName="NOTIFICATIONRow">
+        <xs:element name="NOTIFICATION" msprop:Generator_TableClassName="NOTIFICATIONDataTable" msprop:Generator_TableVarName="tableNOTIFICATION" msprop:Generator_RowChangedName="NOTIFICATIONRowChanged" msprop:Generator_TablePropName="NOTIFICATION" msprop:Generator_RowDeletingName="NOTIFICATIONRowDeleting" msprop:Generator_RowChangingName="NOTIFICATIONRowChanging" msprop:Generator_RowEvHandlerName="NOTIFICATIONRowChangeEventHandler" msprop:Generator_RowDeletedName="NOTIFICATIONRowDeleted" msprop:Generator_RowClassName="NOTIFICATIONRow" msprop:Generator_UserTableName="NOTIFICATION" msprop:Generator_RowEvArgName="NOTIFICATIONRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="CREATION_TIME" msprop:Generator_ColumnVarNameInTable="columnCREATION_TIME" msprop:Generator_ColumnPropNameInRow="CREATION_TIME" msprop:Generator_ColumnPropNameInTable="CREATION_TIMEColumn" msprop:Generator_UserColumnName="CREATION_TIME" type="xs:dateTime" />
@@ -980,7 +999,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="REVIEW_VIEW1" msprop:Generator_TableClassName="REVIEW_VIEW1DataTable" msprop:Generator_TableVarName="tableREVIEW_VIEW1" msprop:Generator_TablePropName="REVIEW_VIEW1" msprop:Generator_RowDeletingName="REVIEW_VIEW1RowDeleting" msprop:Generator_RowChangingName="REVIEW_VIEW1RowChanging" msprop:Generator_RowEvHandlerName="REVIEW_VIEW1RowChangeEventHandler" msprop:Generator_RowDeletedName="REVIEW_VIEW1RowDeleted" msprop:Generator_UserTableName="REVIEW_VIEW1" msprop:Generator_RowChangedName="REVIEW_VIEW1RowChanged" msprop:Generator_RowEvArgName="REVIEW_VIEW1RowChangeEvent" msprop:Generator_RowClassName="REVIEW_VIEW1Row">
+        <xs:element name="REVIEW_VIEW1" msprop:Generator_TableClassName="REVIEW_VIEW1DataTable" msprop:Generator_TableVarName="tableREVIEW_VIEW1" msprop:Generator_RowChangedName="REVIEW_VIEW1RowChanged" msprop:Generator_TablePropName="REVIEW_VIEW1" msprop:Generator_RowDeletingName="REVIEW_VIEW1RowDeleting" msprop:Generator_RowChangingName="REVIEW_VIEW1RowChanging" msprop:Generator_RowEvHandlerName="REVIEW_VIEW1RowChangeEventHandler" msprop:Generator_RowDeletedName="REVIEW_VIEW1RowDeleted" msprop:Generator_RowClassName="REVIEW_VIEW1Row" msprop:Generator_UserTableName="REVIEW_VIEW1" msprop:Generator_RowEvArgName="REVIEW_VIEW1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" minOccurs="0">
@@ -1015,7 +1034,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="REVIEW" msprop:Generator_TableClassName="REVIEWDataTable" msprop:Generator_TableVarName="tableREVIEW" msprop:Generator_TablePropName="REVIEW" msprop:Generator_RowDeletingName="REVIEWRowDeleting" msprop:Generator_RowChangingName="REVIEWRowChanging" msprop:Generator_RowEvHandlerName="REVIEWRowChangeEventHandler" msprop:Generator_RowDeletedName="REVIEWRowDeleted" msprop:Generator_UserTableName="REVIEW" msprop:Generator_RowChangedName="REVIEWRowChanged" msprop:Generator_RowEvArgName="REVIEWRowChangeEvent" msprop:Generator_RowClassName="REVIEWRow">
+        <xs:element name="REVIEW" msprop:Generator_TableClassName="REVIEWDataTable" msprop:Generator_TableVarName="tableREVIEW" msprop:Generator_RowChangedName="REVIEWRowChanged" msprop:Generator_TablePropName="REVIEW" msprop:Generator_RowDeletingName="REVIEWRowDeleting" msprop:Generator_RowChangingName="REVIEWRowChanging" msprop:Generator_RowEvHandlerName="REVIEWRowChangeEventHandler" msprop:Generator_RowDeletedName="REVIEWRowDeleted" msprop:Generator_RowClassName="REVIEWRow" msprop:Generator_UserTableName="REVIEW" msprop:Generator_RowEvArgName="REVIEWRowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="C_EMAIL" msprop:Generator_ColumnVarNameInTable="columnC_EMAIL" msprop:Generator_ColumnPropNameInRow="C_EMAIL" msprop:Generator_ColumnPropNameInTable="C_EMAILColumn" msprop:Generator_UserColumnName="C_EMAIL" minOccurs="0">
@@ -1051,7 +1070,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="CART_VIEW1" msprop:Generator_TableClassName="CART_VIEW1DataTable" msprop:Generator_TableVarName="tableCART_VIEW1" msprop:Generator_RowChangedName="CART_VIEW1RowChanged" msprop:Generator_TablePropName="CART_VIEW1" msprop:Generator_RowDeletingName="CART_VIEW1RowDeleting" msprop:Generator_RowChangingName="CART_VIEW1RowChanging" msprop:Generator_RowEvHandlerName="CART_VIEW1RowChangeEventHandler" msprop:Generator_RowDeletedName="CART_VIEW1RowDeleted" msprop:Generator_RowClassName="CART_VIEW1Row" msprop:Generator_UserTableName="CART_VIEW1" msprop:Generator_RowEvArgName="CART_VIEW1RowChangeEvent">
+        <xs:element name="CART_VIEW1" msprop:Generator_TableClassName="CART_VIEW1DataTable" msprop:Generator_TableVarName="tableCART_VIEW1" msprop:Generator_TablePropName="CART_VIEW1" msprop:Generator_RowDeletingName="CART_VIEW1RowDeleting" msprop:Generator_RowChangingName="CART_VIEW1RowChanging" msprop:Generator_RowEvHandlerName="CART_VIEW1RowChangeEventHandler" msprop:Generator_RowDeletedName="CART_VIEW1RowDeleted" msprop:Generator_UserTableName="CART_VIEW1" msprop:Generator_RowChangedName="CART_VIEW1RowChanged" msprop:Generator_RowEvArgName="CART_VIEW1RowChangeEvent" msprop:Generator_RowClassName="CART_VIEW1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="C_EMAIL" msprop:Generator_ColumnVarNameInTable="columnC_EMAIL" msprop:Generator_ColumnPropNameInRow="C_EMAIL" msprop:Generator_ColumnPropNameInTable="C_EMAILColumn" msprop:Generator_UserColumnName="C_EMAIL">
@@ -1090,7 +1109,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PURCHASE_VIEW2" msprop:Generator_TableClassName="PURCHASE_VIEW2DataTable" msprop:Generator_TableVarName="tablePURCHASE_VIEW2" msprop:Generator_TablePropName="PURCHASE_VIEW2" msprop:Generator_RowDeletingName="PURCHASE_VIEW2RowDeleting" msprop:Generator_RowChangingName="PURCHASE_VIEW2RowChanging" msprop:Generator_RowEvHandlerName="PURCHASE_VIEW2RowChangeEventHandler" msprop:Generator_RowDeletedName="PURCHASE_VIEW2RowDeleted" msprop:Generator_UserTableName="PURCHASE_VIEW2" msprop:Generator_RowChangedName="PURCHASE_VIEW2RowChanged" msprop:Generator_RowEvArgName="PURCHASE_VIEW2RowChangeEvent" msprop:Generator_RowClassName="PURCHASE_VIEW2Row">
+        <xs:element name="PURCHASE_VIEW2" msprop:Generator_TableClassName="PURCHASE_VIEW2DataTable" msprop:Generator_TableVarName="tablePURCHASE_VIEW2" msprop:Generator_RowChangedName="PURCHASE_VIEW2RowChanged" msprop:Generator_TablePropName="PURCHASE_VIEW2" msprop:Generator_RowDeletingName="PURCHASE_VIEW2RowDeleting" msprop:Generator_RowChangingName="PURCHASE_VIEW2RowChanging" msprop:Generator_RowEvHandlerName="PURCHASE_VIEW2RowChangeEventHandler" msprop:Generator_RowDeletedName="PURCHASE_VIEW2RowDeleted" msprop:Generator_RowClassName="PURCHASE_VIEW2Row" msprop:Generator_UserTableName="PURCHASE_VIEW2" msprop:Generator_RowEvArgName="PURCHASE_VIEW2RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="PRICE" msprop:Generator_ColumnVarNameInTable="columnPRICE" msprop:Generator_ColumnPropNameInRow="PRICE" msprop:Generator_ColumnPropNameInTable="PRICEColumn" msprop:Generator_UserColumnName="PRICE" type="xs:decimal" minOccurs="0" />
@@ -1113,7 +1132,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PURCHASE_VIEW2_GROUP_NAME" msprop:Generator_TableClassName="PURCHASE_VIEW2_GROUP_NAMEDataTable" msprop:Generator_TableVarName="tablePURCHASE_VIEW2_GROUP_NAME" msprop:Generator_RowChangedName="PURCHASE_VIEW2_GROUP_NAMERowChanged" msprop:Generator_TablePropName="PURCHASE_VIEW2_GROUP_NAME" msprop:Generator_RowDeletingName="PURCHASE_VIEW2_GROUP_NAMERowDeleting" msprop:Generator_RowChangingName="PURCHASE_VIEW2_GROUP_NAMERowChanging" msprop:Generator_RowEvHandlerName="PURCHASE_VIEW2_GROUP_NAMERowChangeEventHandler" msprop:Generator_RowDeletedName="PURCHASE_VIEW2_GROUP_NAMERowDeleted" msprop:Generator_RowClassName="PURCHASE_VIEW2_GROUP_NAMERow" msprop:Generator_UserTableName="PURCHASE_VIEW2_GROUP_NAME" msprop:Generator_RowEvArgName="PURCHASE_VIEW2_GROUP_NAMERowChangeEvent">
+        <xs:element name="PURCHASE_VIEW2_GROUP_NAME" msprop:Generator_TableClassName="PURCHASE_VIEW2_GROUP_NAMEDataTable" msprop:Generator_TableVarName="tablePURCHASE_VIEW2_GROUP_NAME" msprop:Generator_TablePropName="PURCHASE_VIEW2_GROUP_NAME" msprop:Generator_RowDeletingName="PURCHASE_VIEW2_GROUP_NAMERowDeleting" msprop:Generator_RowChangingName="PURCHASE_VIEW2_GROUP_NAMERowChanging" msprop:Generator_RowEvHandlerName="PURCHASE_VIEW2_GROUP_NAMERowChangeEventHandler" msprop:Generator_RowDeletedName="PURCHASE_VIEW2_GROUP_NAMERowDeleted" msprop:Generator_UserTableName="PURCHASE_VIEW2_GROUP_NAME" msprop:Generator_RowChangedName="PURCHASE_VIEW2_GROUP_NAMERowChanged" msprop:Generator_RowEvArgName="PURCHASE_VIEW2_GROUP_NAMERowChangeEvent" msprop:Generator_RowClassName="PURCHASE_VIEW2_GROUP_NAMERow">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="NAME" msprop:Generator_ColumnVarNameInTable="columnNAME" msprop:Generator_ColumnPropNameInRow="NAME" msprop:Generator_ColumnPropNameInTable="NAMEColumn" msprop:Generator_UserColumnName="NAME" minOccurs="0">
@@ -1128,7 +1147,7 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="PURCHASE_VIEW_WEEK1" msprop:Generator_TableClassName="PURCHASE_VIEW_WEEK1DataTable" msprop:Generator_TableVarName="tablePURCHASE_VIEW_WEEK1" msprop:Generator_TablePropName="PURCHASE_VIEW_WEEK1" msprop:Generator_RowDeletingName="PURCHASE_VIEW_WEEK1RowDeleting" msprop:Generator_RowChangingName="PURCHASE_VIEW_WEEK1RowChanging" msprop:Generator_RowEvHandlerName="PURCHASE_VIEW_WEEK1RowChangeEventHandler" msprop:Generator_RowDeletedName="PURCHASE_VIEW_WEEK1RowDeleted" msprop:Generator_UserTableName="PURCHASE_VIEW_WEEK1" msprop:Generator_RowChangedName="PURCHASE_VIEW_WEEK1RowChanged" msprop:Generator_RowEvArgName="PURCHASE_VIEW_WEEK1RowChangeEvent" msprop:Generator_RowClassName="PURCHASE_VIEW_WEEK1Row">
+        <xs:element name="PURCHASE_VIEW_WEEK1" msprop:Generator_TableClassName="PURCHASE_VIEW_WEEK1DataTable" msprop:Generator_TableVarName="tablePURCHASE_VIEW_WEEK1" msprop:Generator_RowChangedName="PURCHASE_VIEW_WEEK1RowChanged" msprop:Generator_TablePropName="PURCHASE_VIEW_WEEK1" msprop:Generator_RowDeletingName="PURCHASE_VIEW_WEEK1RowDeleting" msprop:Generator_RowChangingName="PURCHASE_VIEW_WEEK1RowChanging" msprop:Generator_RowEvHandlerName="PURCHASE_VIEW_WEEK1RowChangeEventHandler" msprop:Generator_RowDeletedName="PURCHASE_VIEW_WEEK1RowDeleted" msprop:Generator_RowClassName="PURCHASE_VIEW_WEEK1Row" msprop:Generator_UserTableName="PURCHASE_VIEW_WEEK1" msprop:Generator_RowEvArgName="PURCHASE_VIEW_WEEK1RowChangeEvent">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="WEEK" msprop:Generator_ColumnVarNameInTable="columnWEEK" msprop:Generator_ColumnPropNameInRow="WEEK" msprop:Generator_ColumnPropNameInTable="WEEKColumn" msprop:Generator_UserColumnName="WEEK" minOccurs="0">
@@ -1143,13 +1162,28 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
             </xs:sequence>
           </xs:complexType>
         </xs:element>
-        <xs:element name="DataTable1" msprop:Generator_TableClassName="DataTable1DataTable" msprop:Generator_TableVarName="tableDataTable1" msprop:Generator_TablePropName="DataTable1" msprop:Generator_RowDeletingName="DataTable1RowDeleting" msprop:Generator_RowChangingName="DataTable1RowChanging" msprop:Generator_RowEvHandlerName="DataTable1RowChangeEventHandler" msprop:Generator_RowDeletedName="DataTable1RowDeleted" msprop:Generator_UserTableName="DataTable1" msprop:Generator_RowChangedName="DataTable1RowChanged" msprop:Generator_RowEvArgName="DataTable1RowChangeEvent" msprop:Generator_RowClassName="DataTable1Row">
+        <xs:element name="PURCHASE_VIEW_DAY1" msprop:Generator_TableClassName="PURCHASE_VIEW_DAY1DataTable" msprop:Generator_TableVarName="tablePURCHASE_VIEW_DAY1" msprop:Generator_TablePropName="PURCHASE_VIEW_DAY1" msprop:Generator_RowDeletingName="PURCHASE_VIEW_DAY1RowDeleting" msprop:Generator_RowChangingName="PURCHASE_VIEW_DAY1RowChanging" msprop:Generator_RowEvHandlerName="PURCHASE_VIEW_DAY1RowChangeEventHandler" msprop:Generator_RowDeletedName="PURCHASE_VIEW_DAY1RowDeleted" msprop:Generator_UserTableName="PURCHASE_VIEW_DAY1" msprop:Generator_RowChangedName="PURCHASE_VIEW_DAY1RowChanged" msprop:Generator_RowEvArgName="PURCHASE_VIEW_DAY1RowChangeEvent" msprop:Generator_RowClassName="PURCHASE_VIEW_DAY1Row">
           <xs:complexType>
             <xs:sequence>
               <xs:element name="DAY" msprop:Generator_ColumnVarNameInTable="columnDAY" msprop:Generator_ColumnPropNameInRow="DAY" msprop:Generator_ColumnPropNameInTable="DAYColumn" msprop:Generator_UserColumnName="DAY" minOccurs="0">
                 <xs:simpleType>
                   <xs:restriction base="xs:string">
                     <xs:maxLength value="10" />
+                  </xs:restriction>
+                </xs:simpleType>
+              </xs:element>
+              <xs:element name="TOTAL_PRICE" msprop:Generator_ColumnVarNameInTable="columnTOTAL_PRICE" msprop:Generator_ColumnPropNameInRow="TOTAL_PRICE" msprop:Generator_ColumnPropNameInTable="TOTAL_PRICEColumn" msprop:Generator_UserColumnName="TOTAL_PRICE" type="xs:decimal" minOccurs="0" />
+              <xs:element name="TOTAL_STOCK" msprop:Generator_ColumnVarNameInTable="columnTOTAL_STOCK" msprop:Generator_ColumnPropNameInRow="TOTAL_STOCK" msprop:Generator_ColumnPropNameInTable="TOTAL_STOCKColumn" msprop:Generator_UserColumnName="TOTAL_STOCK" type="xs:decimal" minOccurs="0" />
+            </xs:sequence>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="PURCHASE_VIEW_DOW1" msprop:Generator_TableClassName="PURCHASE_VIEW_DOW1DataTable" msprop:Generator_TableVarName="tablePURCHASE_VIEW_DOW1" msprop:Generator_TablePropName="PURCHASE_VIEW_DOW1" msprop:Generator_RowDeletingName="PURCHASE_VIEW_DOW1RowDeleting" msprop:Generator_RowChangingName="PURCHASE_VIEW_DOW1RowChanging" msprop:Generator_RowEvHandlerName="PURCHASE_VIEW_DOW1RowChangeEventHandler" msprop:Generator_RowDeletedName="PURCHASE_VIEW_DOW1RowDeleted" msprop:Generator_UserTableName="PURCHASE_VIEW_DOW1" msprop:Generator_RowChangedName="PURCHASE_VIEW_DOW1RowChanged" msprop:Generator_RowEvArgName="PURCHASE_VIEW_DOW1RowChangeEvent" msprop:Generator_RowClassName="PURCHASE_VIEW_DOW1Row">
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="DAY_OF_WEEK" msprop:Generator_ColumnVarNameInTable="columnDAY_OF_WEEK" msprop:Generator_ColumnPropNameInRow="DAY_OF_WEEK" msprop:Generator_ColumnPropNameInTable="DAY_OF_WEEKColumn" msprop:Generator_UserColumnName="DAY_OF_WEEK" minOccurs="0">
+                <xs:simpleType>
+                  <xs:restriction base="xs:string">
+                    <xs:maxLength value="9" />
                   </xs:restriction>
                 </xs:simpleType>
               </xs:element>
@@ -1201,16 +1235,16 @@ FROM     PURCHASE_VIEW_DAY1</CommandText>
   </xs:element>
   <xs:annotation>
     <xs:appinfo>
-      <msdata:Relationship name="CART_FK1" msdata:parent="CUSTOMER" msdata:child="CART" msdata:parentkey="C_EMAIL" msdata:childkey="C_EMAIL" msprop:Generator_UserChildTable="CART" msprop:Generator_ChildPropName="GetCARTRows" msprop:Generator_UserRelationName="CART_FK1" msprop:Generator_ParentPropName="CUSTOMERRow" msprop:Generator_RelationVarName="relationCART_FK1" msprop:Generator_UserParentTable="CUSTOMER" />
-      <msdata:Relationship name="CART_FK2" msdata:parent="PRODUCT" msdata:child="CART" msdata:parentkey="P_ID" msdata:childkey="P_ID" msprop:Generator_UserChildTable="CART" msprop:Generator_ChildPropName="GetCARTRows" msprop:Generator_UserRelationName="CART_FK2" msprop:Generator_ParentPropName="PRODUCTRow" msprop:Generator_RelationVarName="relationCART_FK2" msprop:Generator_UserParentTable="PRODUCT" />
-      <msdata:Relationship name="PRODUCT_FK1" msdata:parent="SELLER" msdata:child="PRODUCT" msdata:parentkey="S_EMAIL" msdata:childkey="S_EMAIL" msprop:Generator_UserChildTable="PRODUCT" msprop:Generator_ChildPropName="GetPRODUCTRows" msprop:Generator_UserRelationName="PRODUCT_FK1" msprop:Generator_ParentPropName="SELLERRow" msprop:Generator_RelationVarName="relationPRODUCT_FK1" msprop:Generator_UserParentTable="SELLER" />
-      <msdata:Relationship name="PURCHASE_FK1" msdata:parent="CUSTOMER" msdata:child="PURCHASE" msdata:parentkey="C_EMAIL" msdata:childkey="C_EMAIL" msprop:Generator_UserChildTable="PURCHASE" msprop:Generator_ChildPropName="GetPURCHASERows" msprop:Generator_UserRelationName="PURCHASE_FK1" msprop:Generator_RelationVarName="relationPURCHASE_FK1" msprop:Generator_UserParentTable="CUSTOMER" msprop:Generator_ParentPropName="CUSTOMERRow" />
-      <msdata:Relationship name="PURCHASE_FK2" msdata:parent="PRODUCT" msdata:child="PURCHASE" msdata:parentkey="P_ID" msdata:childkey="P_ID" msprop:Generator_UserChildTable="PURCHASE" msprop:Generator_ChildPropName="GetPURCHASERows" msprop:Generator_UserRelationName="PURCHASE_FK2" msprop:Generator_RelationVarName="relationPURCHASE_FK2" msprop:Generator_UserParentTable="PRODUCT" msprop:Generator_ParentPropName="PRODUCTRow" />
-      <msdata:Relationship name="REFUND_FK1" msdata:parent="CUSTOMER" msdata:child="REFUND" msdata:parentkey="C_EMAIL" msdata:childkey="C_EMAIL" msprop:Generator_UserChildTable="REFUND" msprop:Generator_ChildPropName="GetREFUNDRows" msprop:Generator_UserRelationName="REFUND_FK1" msprop:Generator_RelationVarName="relationREFUND_FK1" msprop:Generator_UserParentTable="CUSTOMER" msprop:Generator_ParentPropName="CUSTOMERRow" />
-      <msdata:Relationship name="REFUND_FK2" msdata:parent="PRODUCT" msdata:child="REFUND" msdata:parentkey="P_ID" msdata:childkey="P_ID" msprop:Generator_UserChildTable="REFUND" msprop:Generator_ChildPropName="GetREFUNDRows" msprop:Generator_UserRelationName="REFUND_FK2" msprop:Generator_RelationVarName="relationREFUND_FK2" msprop:Generator_UserParentTable="PRODUCT" msprop:Generator_ParentPropName="PRODUCTRow" />
-      <msdata:Relationship name="REVIEW_FK1" msdata:parent="CUSTOMER" msdata:child="REVIEW" msdata:parentkey="C_EMAIL" msdata:childkey="C_EMAIL" msprop:Generator_UserChildTable="REVIEW" msprop:Generator_ChildPropName="GetREVIEWRows" msprop:Generator_UserRelationName="REVIEW_FK1" msprop:Generator_ParentPropName="CUSTOMERRow" msprop:Generator_RelationVarName="relationREVIEW_FK1" msprop:Generator_UserParentTable="CUSTOMER" />
-      <msdata:Relationship name="REVIEW_FK2" msdata:parent="PRODUCT" msdata:child="REVIEW" msdata:parentkey="P_ID" msdata:childkey="P_ID" msprop:Generator_UserChildTable="REVIEW" msprop:Generator_ChildPropName="GetREVIEWRows" msprop:Generator_UserRelationName="REVIEW_FK2" msprop:Generator_ParentPropName="PRODUCTRow" msprop:Generator_RelationVarName="relationREVIEW_FK2" msprop:Generator_UserParentTable="PRODUCT" />
-      <msdata:Relationship name="REVIEW_FK3" msdata:parent="PURCHASE" msdata:child="REVIEW" msdata:parentkey="ID" msdata:childkey="ID" msprop:Generator_UserChildTable="REVIEW" msprop:Generator_ChildPropName="GetREVIEWRows" msprop:Generator_UserRelationName="REVIEW_FK3" msprop:Generator_ParentPropName="PURCHASERow" msprop:Generator_RelationVarName="relationREVIEW_FK3" msprop:Generator_UserParentTable="PURCHASE" />
+      <msdata:Relationship name="CART_FK1" msdata:parent="CUSTOMER" msdata:child="CART" msdata:parentkey="C_EMAIL" msdata:childkey="C_EMAIL" msprop:Generator_UserChildTable="CART" msprop:Generator_ChildPropName="GetCARTRows" msprop:Generator_UserRelationName="CART_FK1" msprop:Generator_RelationVarName="relationCART_FK1" msprop:Generator_UserParentTable="CUSTOMER" msprop:Generator_ParentPropName="CUSTOMERRow" />
+      <msdata:Relationship name="CART_FK2" msdata:parent="PRODUCT" msdata:child="CART" msdata:parentkey="P_ID" msdata:childkey="P_ID" msprop:Generator_UserChildTable="CART" msprop:Generator_ChildPropName="GetCARTRows" msprop:Generator_UserRelationName="CART_FK2" msprop:Generator_RelationVarName="relationCART_FK2" msprop:Generator_UserParentTable="PRODUCT" msprop:Generator_ParentPropName="PRODUCTRow" />
+      <msdata:Relationship name="PRODUCT_FK1" msdata:parent="SELLER" msdata:child="PRODUCT" msdata:parentkey="S_EMAIL" msdata:childkey="S_EMAIL" msprop:Generator_UserChildTable="PRODUCT" msprop:Generator_ChildPropName="GetPRODUCTRows" msprop:Generator_UserRelationName="PRODUCT_FK1" msprop:Generator_RelationVarName="relationPRODUCT_FK1" msprop:Generator_UserParentTable="SELLER" msprop:Generator_ParentPropName="SELLERRow" />
+      <msdata:Relationship name="PURCHASE_FK1" msdata:parent="CUSTOMER" msdata:child="PURCHASE" msdata:parentkey="C_EMAIL" msdata:childkey="C_EMAIL" msprop:Generator_UserChildTable="PURCHASE" msprop:Generator_ChildPropName="GetPURCHASERows" msprop:Generator_UserRelationName="PURCHASE_FK1" msprop:Generator_ParentPropName="CUSTOMERRow" msprop:Generator_RelationVarName="relationPURCHASE_FK1" msprop:Generator_UserParentTable="CUSTOMER" />
+      <msdata:Relationship name="PURCHASE_FK2" msdata:parent="PRODUCT" msdata:child="PURCHASE" msdata:parentkey="P_ID" msdata:childkey="P_ID" msprop:Generator_UserChildTable="PURCHASE" msprop:Generator_ChildPropName="GetPURCHASERows" msprop:Generator_UserRelationName="PURCHASE_FK2" msprop:Generator_ParentPropName="PRODUCTRow" msprop:Generator_RelationVarName="relationPURCHASE_FK2" msprop:Generator_UserParentTable="PRODUCT" />
+      <msdata:Relationship name="REFUND_FK1" msdata:parent="CUSTOMER" msdata:child="REFUND" msdata:parentkey="C_EMAIL" msdata:childkey="C_EMAIL" msprop:Generator_UserChildTable="REFUND" msprop:Generator_ChildPropName="GetREFUNDRows" msprop:Generator_UserRelationName="REFUND_FK1" msprop:Generator_ParentPropName="CUSTOMERRow" msprop:Generator_RelationVarName="relationREFUND_FK1" msprop:Generator_UserParentTable="CUSTOMER" />
+      <msdata:Relationship name="REFUND_FK2" msdata:parent="PRODUCT" msdata:child="REFUND" msdata:parentkey="P_ID" msdata:childkey="P_ID" msprop:Generator_UserChildTable="REFUND" msprop:Generator_ChildPropName="GetREFUNDRows" msprop:Generator_UserRelationName="REFUND_FK2" msprop:Generator_ParentPropName="PRODUCTRow" msprop:Generator_RelationVarName="relationREFUND_FK2" msprop:Generator_UserParentTable="PRODUCT" />
+      <msdata:Relationship name="REVIEW_FK1" msdata:parent="CUSTOMER" msdata:child="REVIEW" msdata:parentkey="C_EMAIL" msdata:childkey="C_EMAIL" msprop:Generator_UserChildTable="REVIEW" msprop:Generator_ChildPropName="GetREVIEWRows" msprop:Generator_UserRelationName="REVIEW_FK1" msprop:Generator_RelationVarName="relationREVIEW_FK1" msprop:Generator_UserParentTable="CUSTOMER" msprop:Generator_ParentPropName="CUSTOMERRow" />
+      <msdata:Relationship name="REVIEW_FK2" msdata:parent="PRODUCT" msdata:child="REVIEW" msdata:parentkey="P_ID" msdata:childkey="P_ID" msprop:Generator_UserChildTable="REVIEW" msprop:Generator_ChildPropName="GetREVIEWRows" msprop:Generator_UserRelationName="REVIEW_FK2" msprop:Generator_RelationVarName="relationREVIEW_FK2" msprop:Generator_UserParentTable="PRODUCT" msprop:Generator_ParentPropName="PRODUCTRow" />
+      <msdata:Relationship name="REVIEW_FK3" msdata:parent="PURCHASE" msdata:child="REVIEW" msdata:parentkey="ID" msdata:childkey="ID" msprop:Generator_UserChildTable="REVIEW" msprop:Generator_ChildPropName="GetREVIEWRows" msprop:Generator_UserRelationName="REVIEW_FK3" msprop:Generator_RelationVarName="relationREVIEW_FK3" msprop:Generator_UserParentTable="PURCHASE" msprop:Generator_ParentPropName="PURCHASERow" />
     </xs:appinfo>
   </xs:annotation>
 </xs:schema>

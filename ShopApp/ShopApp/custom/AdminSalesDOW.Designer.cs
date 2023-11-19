@@ -1,7 +1,7 @@
 ﻿
 namespace ShopApp.custom
 {
-    partial class AdminSalesDay
+    partial class AdminSalesDOW
     {
         /// <summary>
         /// Required designer variable.
@@ -44,10 +44,10 @@ namespace ShopApp.custom
             System.Windows.Forms.DataVisualization.Charting.Series series4 = new System.Windows.Forms.DataVisualization.Charting.Series();
             this.panel1 = new System.Windows.Forms.Panel();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.pURCHASEVIEWDAY1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.dataSet1 = new ShopApp.DataSet1();
-            this.pURCHASE_VIEW_DAY1TableAdapter = new ShopApp.DataSet1TableAdapters.PURCHASE_VIEW_DAY1TableAdapter();
-            this.dAYDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
+            this.pURCHASEVIEWDOW1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.pURCHASE_VIEW_DOW1TableAdapter = new ShopApp.DataSet1TableAdapters.PURCHASE_VIEW_DOW1TableAdapter();
+            this.dAYOFWEEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tOTALPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tOTALSTOCKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tabControl1 = new System.Windows.Forms.TabControl();
@@ -61,8 +61,8 @@ namespace ShopApp.custom
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEWDAY1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEWDOW1BindingSource)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
@@ -92,10 +92,10 @@ namespace ShopApp.custom
             this.dataGridView1.AutoGenerateColumns = false;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.dAYDataGridViewTextBoxColumn,
+            this.dAYOFWEEKDataGridViewTextBoxColumn,
             this.tOTALPRICEDataGridViewTextBoxColumn,
             this.tOTALSTOCKDataGridViewTextBoxColumn});
-            this.dataGridView1.DataSource = this.pURCHASEVIEWDAY1BindingSource;
+            this.dataGridView1.DataSource = this.pURCHASEVIEWDOW1BindingSource;
             this.dataGridView1.Dock = System.Windows.Forms.DockStyle.Left;
             this.dataGridView1.Location = new System.Drawing.Point(0, 0);
             this.dataGridView1.Name = "dataGridView1";
@@ -104,30 +104,31 @@ namespace ShopApp.custom
             this.dataGridView1.Size = new System.Drawing.Size(434, 500);
             this.dataGridView1.TabIndex = 0;
             // 
-            // pURCHASEVIEWDAY1BindingSource
-            // 
-            this.pURCHASEVIEWDAY1BindingSource.DataMember = "PURCHASE_VIEW_DAY1";
-            this.pURCHASEVIEWDAY1BindingSource.DataSource = this.dataSet1;
-            // 
             // dataSet1
             // 
             this.dataSet1.DataSetName = "DataSet1";
             this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // pURCHASE_VIEW_DAY1TableAdapter
+            // pURCHASEVIEWDOW1BindingSource
             // 
-            this.pURCHASE_VIEW_DAY1TableAdapter.ClearBeforeFill = true;
+            this.pURCHASEVIEWDOW1BindingSource.DataMember = "PURCHASE_VIEW_DOW1";
+            this.pURCHASEVIEWDOW1BindingSource.DataSource = this.dataSet1;
             // 
-            // dAYDataGridViewTextBoxColumn
+            // pURCHASE_VIEW_DOW1TableAdapter
             // 
-            this.dAYDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
-            this.dAYDataGridViewTextBoxColumn.DataPropertyName = "DAY";
-            this.dAYDataGridViewTextBoxColumn.HeaderText = "날짜";
-            this.dAYDataGridViewTextBoxColumn.Name = "dAYDataGridViewTextBoxColumn";
-            this.dAYDataGridViewTextBoxColumn.ReadOnly = true;
+            this.pURCHASE_VIEW_DOW1TableAdapter.ClearBeforeFill = true;
+            // 
+            // dAYOFWEEKDataGridViewTextBoxColumn
+            // 
+            this.dAYOFWEEKDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
+            this.dAYOFWEEKDataGridViewTextBoxColumn.DataPropertyName = "DAY_OF_WEEK";
+            this.dAYOFWEEKDataGridViewTextBoxColumn.HeaderText = "요일";
+            this.dAYOFWEEKDataGridViewTextBoxColumn.Name = "dAYOFWEEKDataGridViewTextBoxColumn";
+            this.dAYOFWEEKDataGridViewTextBoxColumn.ReadOnly = true;
             // 
             // tOTALPRICEDataGridViewTextBoxColumn
             // 
+            this.tOTALPRICEDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tOTALPRICEDataGridViewTextBoxColumn.DataPropertyName = "TOTAL_PRICE";
             this.tOTALPRICEDataGridViewTextBoxColumn.HeaderText = "총 판매액";
             this.tOTALPRICEDataGridViewTextBoxColumn.Name = "tOTALPRICEDataGridViewTextBoxColumn";
@@ -135,6 +136,7 @@ namespace ShopApp.custom
             // 
             // tOTALSTOCKDataGridViewTextBoxColumn
             // 
+            this.tOTALSTOCKDataGridViewTextBoxColumn.AutoSizeMode = System.Windows.Forms.DataGridViewAutoSizeColumnMode.Fill;
             this.tOTALSTOCKDataGridViewTextBoxColumn.DataPropertyName = "TOTAL_STOCK";
             this.tOTALSTOCKDataGridViewTextBoxColumn.HeaderText = "총 판매량";
             this.tOTALSTOCKDataGridViewTextBoxColumn.Name = "tOTALSTOCKDataGridViewTextBoxColumn";
@@ -170,7 +172,7 @@ namespace ShopApp.custom
             chartArea1.AxisY.Title = "총 매출액";
             chartArea1.Name = "ChartArea1";
             this.chart1.ChartAreas.Add(chartArea1);
-            this.chart1.DataSource = this.pURCHASEVIEWDAY1BindingSource;
+            this.chart1.DataSource = this.pURCHASEVIEWDOW1BindingSource;
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Enabled = false;
             legend1.Name = "Legend1";
@@ -182,7 +184,7 @@ namespace ShopApp.custom
             series1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             series1.Legend = "Legend1";
             series1.Name = "Series1";
-            series1.XValueMember = "DAY";
+            series1.XValueMember = "DAY_OF_WEEK";
             series1.YValueMembers = "TOTAL_PRICE";
             this.chart1.Series.Add(series1);
             this.chart1.Size = new System.Drawing.Size(563, 463);
@@ -202,13 +204,13 @@ namespace ShopApp.custom
             // 
             // chart3
             // 
-            chartArea2.AxisX.Title = "날짜";
+            chartArea2.AxisX.Title = "요일";
             chartArea2.AxisX.TitleFont = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea2.AxisY.Title = "총 판매액";
             chartArea2.AxisY.TitleFont = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             chartArea2.Name = "ChartArea1";
             this.chart3.ChartAreas.Add(chartArea2);
-            this.chart3.DataSource = this.pURCHASEVIEWDAY1BindingSource;
+            this.chart3.DataSource = this.pURCHASEVIEWDOW1BindingSource;
             this.chart3.Dock = System.Windows.Forms.DockStyle.Fill;
             legend2.Enabled = false;
             legend2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -222,7 +224,7 @@ namespace ShopApp.custom
             series2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 15.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             series2.Legend = "Legend1";
             series2.Name = "Series1";
-            series2.XValueMember = "DAY";
+            series2.XValueMember = "DAY_OF_WEEK";
             series2.YValueMembers = "TOTAL_PRICE";
             this.chart3.Series.Add(series2);
             this.chart3.Size = new System.Drawing.Size(563, 463);
@@ -243,7 +245,7 @@ namespace ShopApp.custom
             // 
             chartArea3.Name = "ChartArea1";
             this.chart4.ChartAreas.Add(chartArea3);
-            this.chart4.DataSource = this.pURCHASEVIEWDAY1BindingSource;
+            this.chart4.DataSource = this.pURCHASEVIEWDOW1BindingSource;
             this.chart4.Dock = System.Windows.Forms.DockStyle.Fill;
             legend3.Enabled = false;
             legend3.Name = "Legend1";
@@ -255,7 +257,7 @@ namespace ShopApp.custom
             series3.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series3.Legend = "Legend1";
             series3.Name = "Series1";
-            series3.XValueMember = "DAY";
+            series3.XValueMember = "DAY_OF_WEEK";
             series3.YValueMembers = "TOTAL_STOCK";
             series3.YValuesPerPoint = 3;
             this.chart4.Series.Add(series3);
@@ -276,13 +278,13 @@ namespace ShopApp.custom
             // 
             // chart2
             // 
-            chartArea4.AxisX.Title = "날짜";
+            chartArea4.AxisX.Title = "요일";
             chartArea4.AxisX.TitleFont = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             chartArea4.AxisY.Title = "총 판매량";
             chartArea4.AxisY.TitleFont = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             chartArea4.Name = "ChartArea1";
             this.chart2.ChartAreas.Add(chartArea4);
-            this.chart2.DataSource = this.pURCHASEVIEWDAY1BindingSource;
+            this.chart2.DataSource = this.pURCHASEVIEWDOW1BindingSource;
             this.chart2.Dock = System.Windows.Forms.DockStyle.Fill;
             legend4.Enabled = false;
             legend4.Name = "Legend1";
@@ -294,28 +296,29 @@ namespace ShopApp.custom
             series4.Font = new System.Drawing.Font("던파 비트비트체 TTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             series4.Legend = "Legend1";
             series4.Name = "Series1";
-            series4.XValueMember = "DAY";
+            series4.XValueMember = "DAY_OF_WEEK";
             series4.YValueMembers = "TOTAL_STOCK";
             series4.YValuesPerPoint = 3;
             this.chart2.Series.Add(series4);
             this.chart2.Size = new System.Drawing.Size(563, 463);
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart2";
+            this.chart2.Click += new System.EventHandler(this.chart2_Click);
             // 
-            // AdminSalesDay
+            // AdminSalesDOW
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 500);
             this.Controls.Add(this.panel1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
-            this.Name = "AdminSalesDay";
-            this.Text = "AdminSalesDay";
-            this.Load += new System.EventHandler(this.AdminSalesDay_Load);
+            this.Name = "AdminSalesDOW";
+            this.Text = "AdminSalesDOW";
+            this.Load += new System.EventHandler(this.AdminSalesDOW_Load);
             this.panel1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEWDAY1BindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEWDOW1BindingSource)).EndInit();
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
@@ -334,9 +337,9 @@ namespace ShopApp.custom
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.DataGridView dataGridView1;
         private DataSet1 dataSet1;
-        private System.Windows.Forms.BindingSource pURCHASEVIEWDAY1BindingSource;
-        private DataSet1TableAdapters.PURCHASE_VIEW_DAY1TableAdapter pURCHASE_VIEW_DAY1TableAdapter;
-        private System.Windows.Forms.DataGridViewTextBoxColumn dAYDataGridViewTextBoxColumn;
+        private System.Windows.Forms.BindingSource pURCHASEVIEWDOW1BindingSource;
+        private DataSet1TableAdapters.PURCHASE_VIEW_DOW1TableAdapter pURCHASE_VIEW_DOW1TableAdapter;
+        private System.Windows.Forms.DataGridViewTextBoxColumn dAYOFWEEKDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tOTALPRICEDataGridViewTextBoxColumn;
         private System.Windows.Forms.DataGridViewTextBoxColumn tOTALSTOCKDataGridViewTextBoxColumn;
         private System.Windows.Forms.TabControl tabControl1;

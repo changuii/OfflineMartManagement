@@ -30,10 +30,10 @@ namespace ShopApp.custom
         private void InitializeComponent()
         {
             this.panel1 = new System.Windows.Forms.Panel();
-            this.customButton1 = new ShopApp.custom.CustomButton();
-            this.customButton2 = new ShopApp.custom.CustomButton();
             this.customButton3 = new ShopApp.custom.CustomButton();
             this.customButton4 = new ShopApp.custom.CustomButton();
+            this.customButton2 = new ShopApp.custom.CustomButton();
+            this.customButton1 = new ShopApp.custom.CustomButton();
             this.SuspendLayout();
             // 
             // panel1
@@ -43,41 +43,6 @@ namespace ShopApp.custom
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1010, 500);
             this.panel1.TabIndex = 0;
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton1.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton1.BorderRadius = 40;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(12, 9);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(169, 42);
-            this.customButton1.TabIndex = 1;
-            this.customButton1.Text = "제품별 매출현황";
-            this.customButton1.UseVisualStyleBackColor = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
-            // 
-            // customButton2
-            // 
-            this.customButton2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton2.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton2.BorderRadius = 40;
-            this.customButton2.BorderSize = 0;
-            this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(187, 9);
-            this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(169, 42);
-            this.customButton2.TabIndex = 2;
-            this.customButton2.Text = "날짜별 매출현황";
-            this.customButton2.UseVisualStyleBackColor = false;
             // 
             // customButton3
             // 
@@ -93,8 +58,9 @@ namespace ShopApp.custom
             this.customButton3.Name = "customButton3";
             this.customButton3.Size = new System.Drawing.Size(169, 42);
             this.customButton3.TabIndex = 4;
-            this.customButton3.Text = "월별 매출현황";
+            this.customButton3.Text = "요일별 매출현황";
             this.customButton3.UseVisualStyleBackColor = false;
+            this.customButton3.Click += new System.EventHandler(this.customButton3_Click_1);
             // 
             // customButton4
             // 
@@ -113,6 +79,42 @@ namespace ShopApp.custom
             this.customButton4.Text = "주차별 매출현황";
             this.customButton4.UseVisualStyleBackColor = false;
             this.customButton4.Click += new System.EventHandler(this.customButton4_Click);
+            // 
+            // customButton2
+            // 
+            this.customButton2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton2.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton2.BorderRadius = 40;
+            this.customButton2.BorderSize = 0;
+            this.customButton2.FlatAppearance.BorderSize = 0;
+            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.customButton2.ForeColor = System.Drawing.Color.White;
+            this.customButton2.Location = new System.Drawing.Point(187, 9);
+            this.customButton2.Name = "customButton2";
+            this.customButton2.Size = new System.Drawing.Size(169, 42);
+            this.customButton2.TabIndex = 2;
+            this.customButton2.Text = "날짜별 매출현황";
+            this.customButton2.UseVisualStyleBackColor = false;
+            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton1.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton1.BorderRadius = 40;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.Location = new System.Drawing.Point(12, 9);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(169, 42);
+            this.customButton1.TabIndex = 1;
+            this.customButton1.Text = "제품별 매출현황";
+            this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // AdminMonthSales
             // 

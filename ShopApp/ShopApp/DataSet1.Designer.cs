@@ -54,7 +54,9 @@ namespace ShopApp {
         
         private PURCHASE_VIEW_WEEK1DataTable tablePURCHASE_VIEW_WEEK1;
         
-        private DataTable1DataTable tableDataTable1;
+        private PURCHASE_VIEW_DAY1DataTable tablePURCHASE_VIEW_DAY1;
+        
+        private PURCHASE_VIEW_DOW1DataTable tablePURCHASE_VIEW_DOW1;
         
         private global::System.Data.DataRelation relationCART_FK1;
         
@@ -149,8 +151,11 @@ namespace ShopApp {
                 if ((ds.Tables["PURCHASE_VIEW_WEEK1"] != null)) {
                     base.Tables.Add(new PURCHASE_VIEW_WEEK1DataTable(ds.Tables["PURCHASE_VIEW_WEEK1"]));
                 }
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["PURCHASE_VIEW_DAY1"] != null)) {
+                    base.Tables.Add(new PURCHASE_VIEW_DAY1DataTable(ds.Tables["PURCHASE_VIEW_DAY1"]));
+                }
+                if ((ds.Tables["PURCHASE_VIEW_DOW1"] != null)) {
+                    base.Tables.Add(new PURCHASE_VIEW_DOW1DataTable(ds.Tables["PURCHASE_VIEW_DOW1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -324,9 +329,19 @@ namespace ShopApp {
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Browsable(false)]
         [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
-        public DataTable1DataTable DataTable1 {
+        public PURCHASE_VIEW_DAY1DataTable PURCHASE_VIEW_DAY1 {
             get {
-                return this.tableDataTable1;
+                return this.tablePURCHASE_VIEW_DAY1;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Browsable(false)]
+        [global::System.ComponentModel.DesignerSerializationVisibility(global::System.ComponentModel.DesignerSerializationVisibility.Content)]
+        public PURCHASE_VIEW_DOW1DataTable PURCHASE_VIEW_DOW1 {
+            get {
+                return this.tablePURCHASE_VIEW_DOW1;
             }
         }
         
@@ -442,8 +457,11 @@ namespace ShopApp {
                 if ((ds.Tables["PURCHASE_VIEW_WEEK1"] != null)) {
                     base.Tables.Add(new PURCHASE_VIEW_WEEK1DataTable(ds.Tables["PURCHASE_VIEW_WEEK1"]));
                 }
-                if ((ds.Tables["DataTable1"] != null)) {
-                    base.Tables.Add(new DataTable1DataTable(ds.Tables["DataTable1"]));
+                if ((ds.Tables["PURCHASE_VIEW_DAY1"] != null)) {
+                    base.Tables.Add(new PURCHASE_VIEW_DAY1DataTable(ds.Tables["PURCHASE_VIEW_DAY1"]));
+                }
+                if ((ds.Tables["PURCHASE_VIEW_DOW1"] != null)) {
+                    base.Tables.Add(new PURCHASE_VIEW_DOW1DataTable(ds.Tables["PURCHASE_VIEW_DOW1"]));
                 }
                 this.DataSetName = ds.DataSetName;
                 this.Prefix = ds.Prefix;
@@ -568,10 +586,16 @@ namespace ShopApp {
                     this.tablePURCHASE_VIEW_WEEK1.InitVars();
                 }
             }
-            this.tableDataTable1 = ((DataTable1DataTable)(base.Tables["DataTable1"]));
+            this.tablePURCHASE_VIEW_DAY1 = ((PURCHASE_VIEW_DAY1DataTable)(base.Tables["PURCHASE_VIEW_DAY1"]));
             if ((initTable == true)) {
-                if ((this.tableDataTable1 != null)) {
-                    this.tableDataTable1.InitVars();
+                if ((this.tablePURCHASE_VIEW_DAY1 != null)) {
+                    this.tablePURCHASE_VIEW_DAY1.InitVars();
+                }
+            }
+            this.tablePURCHASE_VIEW_DOW1 = ((PURCHASE_VIEW_DOW1DataTable)(base.Tables["PURCHASE_VIEW_DOW1"]));
+            if ((initTable == true)) {
+                if ((this.tablePURCHASE_VIEW_DOW1 != null)) {
+                    this.tablePURCHASE_VIEW_DOW1.InitVars();
                 }
             }
             this.relationCART_FK1 = this.Relations["CART_FK1"];
@@ -624,8 +648,10 @@ namespace ShopApp {
             base.Tables.Add(this.tablePURCHASE_VIEW2_GROUP_NAME);
             this.tablePURCHASE_VIEW_WEEK1 = new PURCHASE_VIEW_WEEK1DataTable();
             base.Tables.Add(this.tablePURCHASE_VIEW_WEEK1);
-            this.tableDataTable1 = new DataTable1DataTable();
-            base.Tables.Add(this.tableDataTable1);
+            this.tablePURCHASE_VIEW_DAY1 = new PURCHASE_VIEW_DAY1DataTable();
+            base.Tables.Add(this.tablePURCHASE_VIEW_DAY1);
+            this.tablePURCHASE_VIEW_DOW1 = new PURCHASE_VIEW_DOW1DataTable();
+            base.Tables.Add(this.tablePURCHASE_VIEW_DOW1);
             this.relationCART_FK1 = new global::System.Data.DataRelation("CART_FK1", new global::System.Data.DataColumn[] {
                         this.tableCUSTOMER.C_EMAILColumn}, new global::System.Data.DataColumn[] {
                         this.tableCART.C_EMAILColumn}, false);
@@ -760,7 +786,13 @@ namespace ShopApp {
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        private bool ShouldSerializeDataTable1() {
+        private bool ShouldSerializePURCHASE_VIEW_DAY1() {
+            return false;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private bool ShouldSerializePURCHASE_VIEW_DOW1() {
             return false;
         }
         
@@ -865,7 +897,10 @@ namespace ShopApp {
         public delegate void PURCHASE_VIEW_WEEK1RowChangeEventHandler(object sender, PURCHASE_VIEW_WEEK1RowChangeEvent e);
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public delegate void DataTable1RowChangeEventHandler(object sender, DataTable1RowChangeEvent e);
+        public delegate void PURCHASE_VIEW_DAY1RowChangeEventHandler(object sender, PURCHASE_VIEW_DAY1RowChangeEvent e);
+        
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public delegate void PURCHASE_VIEW_DOW1RowChangeEventHandler(object sender, PURCHASE_VIEW_DOW1RowChangeEvent e);
         
         /// <summary>
         ///Represents the strongly named DataTable class.
@@ -5590,7 +5625,7 @@ namespace ShopApp {
         ///</summary>
         [global::System.Serializable()]
         [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
-        public partial class DataTable1DataTable : global::System.Data.TypedTableBase<DataTable1Row> {
+        public partial class PURCHASE_VIEW_DAY1DataTable : global::System.Data.TypedTableBase<PURCHASE_VIEW_DAY1Row> {
             
             private global::System.Data.DataColumn columnDAY;
             
@@ -5600,8 +5635,8 @@ namespace ShopApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1DataTable() {
-                this.TableName = "DataTable1";
+            public PURCHASE_VIEW_DAY1DataTable() {
+                this.TableName = "PURCHASE_VIEW_DAY1";
                 this.BeginInit();
                 this.InitClass();
                 this.EndInit();
@@ -5609,7 +5644,7 @@ namespace ShopApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal DataTable1DataTable(global::System.Data.DataTable table) {
+            internal PURCHASE_VIEW_DAY1DataTable(global::System.Data.DataTable table) {
                 this.TableName = table.TableName;
                 if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
                     this.CaseSensitive = table.CaseSensitive;
@@ -5626,7 +5661,7 @@ namespace ShopApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            protected DataTable1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+            protected PURCHASE_VIEW_DAY1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
                     base(info, context) {
                 this.InitVars();
             }
@@ -5666,47 +5701,47 @@ namespace ShopApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row this[int index] {
+            public PURCHASE_VIEW_DAY1Row this[int index] {
                 get {
-                    return ((DataTable1Row)(this.Rows[index]));
+                    return ((PURCHASE_VIEW_DAY1Row)(this.Rows[index]));
                 }
             }
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanging;
+            public event PURCHASE_VIEW_DAY1RowChangeEventHandler PURCHASE_VIEW_DAY1RowChanging;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowChanged;
+            public event PURCHASE_VIEW_DAY1RowChangeEventHandler PURCHASE_VIEW_DAY1RowChanged;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleting;
+            public event PURCHASE_VIEW_DAY1RowChangeEventHandler PURCHASE_VIEW_DAY1RowDeleting;
             
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public event DataTable1RowChangeEventHandler DataTable1RowDeleted;
+            public event PURCHASE_VIEW_DAY1RowChangeEventHandler PURCHASE_VIEW_DAY1RowDeleted;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void AddDataTable1Row(DataTable1Row row) {
+            public void AddPURCHASE_VIEW_DAY1Row(PURCHASE_VIEW_DAY1Row row) {
                 this.Rows.Add(row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row AddDataTable1Row(string DAY, decimal TOTAL_PRICE, decimal TOTAL_STOCK) {
-                DataTable1Row rowDataTable1Row = ((DataTable1Row)(this.NewRow()));
+            public PURCHASE_VIEW_DAY1Row AddPURCHASE_VIEW_DAY1Row(string DAY, decimal TOTAL_PRICE, decimal TOTAL_STOCK) {
+                PURCHASE_VIEW_DAY1Row rowPURCHASE_VIEW_DAY1Row = ((PURCHASE_VIEW_DAY1Row)(this.NewRow()));
                 object[] columnValuesArray = new object[] {
                         DAY,
                         TOTAL_PRICE,
                         TOTAL_STOCK};
-                rowDataTable1Row.ItemArray = columnValuesArray;
-                this.Rows.Add(rowDataTable1Row);
-                return rowDataTable1Row;
+                rowPURCHASE_VIEW_DAY1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPURCHASE_VIEW_DAY1Row);
+                return rowPURCHASE_VIEW_DAY1Row;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public override global::System.Data.DataTable Clone() {
-                DataTable1DataTable cln = ((DataTable1DataTable)(base.Clone()));
+                PURCHASE_VIEW_DAY1DataTable cln = ((PURCHASE_VIEW_DAY1DataTable)(base.Clone()));
                 cln.InitVars();
                 return cln;
             }
@@ -5714,7 +5749,7 @@ namespace ShopApp {
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataTable CreateInstance() {
-                return new DataTable1DataTable();
+                return new PURCHASE_VIEW_DAY1DataTable();
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -5739,28 +5774,28 @@ namespace ShopApp {
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row NewDataTable1Row() {
-                return ((DataTable1Row)(this.NewRow()));
+            public PURCHASE_VIEW_DAY1Row NewPURCHASE_VIEW_DAY1Row() {
+                return ((PURCHASE_VIEW_DAY1Row)(this.NewRow()));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
-                return new DataTable1Row(builder);
+                return new PURCHASE_VIEW_DAY1Row(builder);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override global::System.Type GetRowType() {
-                return typeof(DataTable1Row);
+                return typeof(PURCHASE_VIEW_DAY1Row);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanged(e);
-                if ((this.DataTable1RowChanged != null)) {
-                    this.DataTable1RowChanged(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.PURCHASE_VIEW_DAY1RowChanged != null)) {
+                    this.PURCHASE_VIEW_DAY1RowChanged(this, new PURCHASE_VIEW_DAY1RowChangeEvent(((PURCHASE_VIEW_DAY1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -5768,8 +5803,8 @@ namespace ShopApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowChanging(e);
-                if ((this.DataTable1RowChanging != null)) {
-                    this.DataTable1RowChanging(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.PURCHASE_VIEW_DAY1RowChanging != null)) {
+                    this.PURCHASE_VIEW_DAY1RowChanging(this, new PURCHASE_VIEW_DAY1RowChangeEvent(((PURCHASE_VIEW_DAY1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -5777,8 +5812,8 @@ namespace ShopApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleted(e);
-                if ((this.DataTable1RowDeleted != null)) {
-                    this.DataTable1RowDeleted(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.PURCHASE_VIEW_DAY1RowDeleted != null)) {
+                    this.PURCHASE_VIEW_DAY1RowDeleted(this, new PURCHASE_VIEW_DAY1RowChangeEvent(((PURCHASE_VIEW_DAY1Row)(e.Row)), e.Action));
                 }
             }
             
@@ -5786,14 +5821,14 @@ namespace ShopApp {
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
                 base.OnRowDeleting(e);
-                if ((this.DataTable1RowDeleting != null)) {
-                    this.DataTable1RowDeleting(this, new DataTable1RowChangeEvent(((DataTable1Row)(e.Row)), e.Action));
+                if ((this.PURCHASE_VIEW_DAY1RowDeleting != null)) {
+                    this.PURCHASE_VIEW_DAY1RowDeleting(this, new PURCHASE_VIEW_DAY1RowChangeEvent(((PURCHASE_VIEW_DAY1Row)(e.Row)), e.Action));
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public void RemoveDataTable1Row(DataTable1Row row) {
+            public void RemovePURCHASE_VIEW_DAY1Row(PURCHASE_VIEW_DAY1Row row) {
                 this.Rows.Remove(row);
             }
             
@@ -5820,7 +5855,283 @@ namespace ShopApp {
                 type.Attributes.Add(attribute1);
                 global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
                 attribute2.Name = "tableTypeName";
-                attribute2.FixedValue = "DataTable1DataTable";
+                attribute2.FixedValue = "PURCHASE_VIEW_DAY1DataTable";
+                type.Attributes.Add(attribute2);
+                type.Particle = sequence;
+                global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
+                if (xs.Contains(dsSchema.TargetNamespace)) {
+                    global::System.IO.MemoryStream s1 = new global::System.IO.MemoryStream();
+                    global::System.IO.MemoryStream s2 = new global::System.IO.MemoryStream();
+                    try {
+                        global::System.Xml.Schema.XmlSchema schema = null;
+                        dsSchema.Write(s1);
+                        for (global::System.Collections.IEnumerator schemas = xs.Schemas(dsSchema.TargetNamespace).GetEnumerator(); schemas.MoveNext(); ) {
+                            schema = ((global::System.Xml.Schema.XmlSchema)(schemas.Current));
+                            s2.SetLength(0);
+                            schema.Write(s2);
+                            if ((s1.Length == s2.Length)) {
+                                s1.Position = 0;
+                                s2.Position = 0;
+                                for (; ((s1.Position != s1.Length) 
+                                            && (s1.ReadByte() == s2.ReadByte())); ) {
+                                    ;
+                                }
+                                if ((s1.Position == s1.Length)) {
+                                    return type;
+                                }
+                            }
+                        }
+                    }
+                    finally {
+                        if ((s1 != null)) {
+                            s1.Close();
+                        }
+                        if ((s2 != null)) {
+                            s2.Close();
+                        }
+                    }
+                }
+                xs.Add(dsSchema);
+                return type;
+            }
+        }
+        
+        /// <summary>
+        ///Represents the strongly named DataTable class.
+        ///</summary>
+        [global::System.Serializable()]
+        [global::System.Xml.Serialization.XmlSchemaProviderAttribute("GetTypedTableSchema")]
+        public partial class PURCHASE_VIEW_DOW1DataTable : global::System.Data.TypedTableBase<PURCHASE_VIEW_DOW1Row> {
+            
+            private global::System.Data.DataColumn columnDAY_OF_WEEK;
+            
+            private global::System.Data.DataColumn columnTOTAL_PRICE;
+            
+            private global::System.Data.DataColumn columnTOTAL_STOCK;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public PURCHASE_VIEW_DOW1DataTable() {
+                this.TableName = "PURCHASE_VIEW_DOW1";
+                this.BeginInit();
+                this.InitClass();
+                this.EndInit();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal PURCHASE_VIEW_DOW1DataTable(global::System.Data.DataTable table) {
+                this.TableName = table.TableName;
+                if ((table.CaseSensitive != table.DataSet.CaseSensitive)) {
+                    this.CaseSensitive = table.CaseSensitive;
+                }
+                if ((table.Locale.ToString() != table.DataSet.Locale.ToString())) {
+                    this.Locale = table.Locale;
+                }
+                if ((table.Namespace != table.DataSet.Namespace)) {
+                    this.Namespace = table.Namespace;
+                }
+                this.Prefix = table.Prefix;
+                this.MinimumCapacity = table.MinimumCapacity;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected PURCHASE_VIEW_DOW1DataTable(global::System.Runtime.Serialization.SerializationInfo info, global::System.Runtime.Serialization.StreamingContext context) : 
+                    base(info, context) {
+                this.InitVars();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn DAY_OF_WEEKColumn {
+                get {
+                    return this.columnDAY_OF_WEEK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TOTAL_PRICEColumn {
+                get {
+                    return this.columnTOTAL_PRICE;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataColumn TOTAL_STOCKColumn {
+                get {
+                    return this.columnTOTAL_STOCK;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            [global::System.ComponentModel.Browsable(false)]
+            public int Count {
+                get {
+                    return this.Rows.Count;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public PURCHASE_VIEW_DOW1Row this[int index] {
+                get {
+                    return ((PURCHASE_VIEW_DOW1Row)(this.Rows[index]));
+                }
+            }
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event PURCHASE_VIEW_DOW1RowChangeEventHandler PURCHASE_VIEW_DOW1RowChanging;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event PURCHASE_VIEW_DOW1RowChangeEventHandler PURCHASE_VIEW_DOW1RowChanged;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event PURCHASE_VIEW_DOW1RowChangeEventHandler PURCHASE_VIEW_DOW1RowDeleting;
+            
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public event PURCHASE_VIEW_DOW1RowChangeEventHandler PURCHASE_VIEW_DOW1RowDeleted;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void AddPURCHASE_VIEW_DOW1Row(PURCHASE_VIEW_DOW1Row row) {
+                this.Rows.Add(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public PURCHASE_VIEW_DOW1Row AddPURCHASE_VIEW_DOW1Row(string DAY_OF_WEEK, decimal TOTAL_PRICE, decimal TOTAL_STOCK) {
+                PURCHASE_VIEW_DOW1Row rowPURCHASE_VIEW_DOW1Row = ((PURCHASE_VIEW_DOW1Row)(this.NewRow()));
+                object[] columnValuesArray = new object[] {
+                        DAY_OF_WEEK,
+                        TOTAL_PRICE,
+                        TOTAL_STOCK};
+                rowPURCHASE_VIEW_DOW1Row.ItemArray = columnValuesArray;
+                this.Rows.Add(rowPURCHASE_VIEW_DOW1Row);
+                return rowPURCHASE_VIEW_DOW1Row;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public override global::System.Data.DataTable Clone() {
+                PURCHASE_VIEW_DOW1DataTable cln = ((PURCHASE_VIEW_DOW1DataTable)(base.Clone()));
+                cln.InitVars();
+                return cln;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataTable CreateInstance() {
+                return new PURCHASE_VIEW_DOW1DataTable();
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal void InitVars() {
+                this.columnDAY_OF_WEEK = base.Columns["DAY_OF_WEEK"];
+                this.columnTOTAL_PRICE = base.Columns["TOTAL_PRICE"];
+                this.columnTOTAL_STOCK = base.Columns["TOTAL_STOCK"];
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            private void InitClass() {
+                this.columnDAY_OF_WEEK = new global::System.Data.DataColumn("DAY_OF_WEEK", typeof(string), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnDAY_OF_WEEK);
+                this.columnTOTAL_PRICE = new global::System.Data.DataColumn("TOTAL_PRICE", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTOTAL_PRICE);
+                this.columnTOTAL_STOCK = new global::System.Data.DataColumn("TOTAL_STOCK", typeof(decimal), null, global::System.Data.MappingType.Element);
+                base.Columns.Add(this.columnTOTAL_STOCK);
+                this.columnDAY_OF_WEEK.MaxLength = 9;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public PURCHASE_VIEW_DOW1Row NewPURCHASE_VIEW_DOW1Row() {
+                return ((PURCHASE_VIEW_DOW1Row)(this.NewRow()));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Data.DataRow NewRowFromBuilder(global::System.Data.DataRowBuilder builder) {
+                return new PURCHASE_VIEW_DOW1Row(builder);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override global::System.Type GetRowType() {
+                return typeof(PURCHASE_VIEW_DOW1Row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanged(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanged(e);
+                if ((this.PURCHASE_VIEW_DOW1RowChanged != null)) {
+                    this.PURCHASE_VIEW_DOW1RowChanged(this, new PURCHASE_VIEW_DOW1RowChangeEvent(((PURCHASE_VIEW_DOW1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowChanging(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowChanging(e);
+                if ((this.PURCHASE_VIEW_DOW1RowChanging != null)) {
+                    this.PURCHASE_VIEW_DOW1RowChanging(this, new PURCHASE_VIEW_DOW1RowChangeEvent(((PURCHASE_VIEW_DOW1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleted(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleted(e);
+                if ((this.PURCHASE_VIEW_DOW1RowDeleted != null)) {
+                    this.PURCHASE_VIEW_DOW1RowDeleted(this, new PURCHASE_VIEW_DOW1RowChangeEvent(((PURCHASE_VIEW_DOW1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            protected override void OnRowDeleting(global::System.Data.DataRowChangeEventArgs e) {
+                base.OnRowDeleting(e);
+                if ((this.PURCHASE_VIEW_DOW1RowDeleting != null)) {
+                    this.PURCHASE_VIEW_DOW1RowDeleting(this, new PURCHASE_VIEW_DOW1RowChangeEvent(((PURCHASE_VIEW_DOW1Row)(e.Row)), e.Action));
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void RemovePURCHASE_VIEW_DOW1Row(PURCHASE_VIEW_DOW1Row row) {
+                this.Rows.Remove(row);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public static global::System.Xml.Schema.XmlSchemaComplexType GetTypedTableSchema(global::System.Xml.Schema.XmlSchemaSet xs) {
+                global::System.Xml.Schema.XmlSchemaComplexType type = new global::System.Xml.Schema.XmlSchemaComplexType();
+                global::System.Xml.Schema.XmlSchemaSequence sequence = new global::System.Xml.Schema.XmlSchemaSequence();
+                DataSet1 ds = new DataSet1();
+                global::System.Xml.Schema.XmlSchemaAny any1 = new global::System.Xml.Schema.XmlSchemaAny();
+                any1.Namespace = "http://www.w3.org/2001/XMLSchema";
+                any1.MinOccurs = new decimal(0);
+                any1.MaxOccurs = decimal.MaxValue;
+                any1.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any1);
+                global::System.Xml.Schema.XmlSchemaAny any2 = new global::System.Xml.Schema.XmlSchemaAny();
+                any2.Namespace = "urn:schemas-microsoft-com:xml-diffgram-v1";
+                any2.MinOccurs = new decimal(1);
+                any2.ProcessContents = global::System.Xml.Schema.XmlSchemaContentProcessing.Lax;
+                sequence.Items.Add(any2);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute1 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute1.Name = "namespace";
+                attribute1.FixedValue = ds.Namespace;
+                type.Attributes.Add(attribute1);
+                global::System.Xml.Schema.XmlSchemaAttribute attribute2 = new global::System.Xml.Schema.XmlSchemaAttribute();
+                attribute2.Name = "tableTypeName";
+                attribute2.FixedValue = "PURCHASE_VIEW_DOW1DataTable";
                 type.Attributes.Add(attribute2);
                 type.Particle = sequence;
                 global::System.Xml.Schema.XmlSchema dsSchema = ds.GetSchemaSerializable();
@@ -8024,15 +8335,15 @@ namespace ShopApp {
         /// <summary>
         ///Represents strongly named DataRow class.
         ///</summary>
-        public partial class DataTable1Row : global::System.Data.DataRow {
+        public partial class PURCHASE_VIEW_DAY1Row : global::System.Data.DataRow {
             
-            private DataTable1DataTable tableDataTable1;
+            private PURCHASE_VIEW_DAY1DataTable tablePURCHASE_VIEW_DAY1;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            internal DataTable1Row(global::System.Data.DataRowBuilder rb) : 
+            internal PURCHASE_VIEW_DAY1Row(global::System.Data.DataRowBuilder rb) : 
                     base(rb) {
-                this.tableDataTable1 = ((DataTable1DataTable)(this.Table));
+                this.tablePURCHASE_VIEW_DAY1 = ((PURCHASE_VIEW_DAY1DataTable)(this.Table));
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
@@ -8040,14 +8351,14 @@ namespace ShopApp {
             public string DAY {
                 get {
                     try {
-                        return ((string)(this[this.tableDataTable1.DAYColumn]));
+                        return ((string)(this[this.tablePURCHASE_VIEW_DAY1.DAYColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'DataTable1\' 테이블의 \'DAY\' 열의 값이 DBNull입니다.", e);
+                        throw new global::System.Data.StrongTypingException("\'PURCHASE_VIEW_DAY1\' 테이블의 \'DAY\' 열의 값이 DBNull입니다.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.DAYColumn] = value;
+                    this[this.tablePURCHASE_VIEW_DAY1.DAYColumn] = value;
                 }
             }
             
@@ -8056,14 +8367,14 @@ namespace ShopApp {
             public decimal TOTAL_PRICE {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDataTable1.TOTAL_PRICEColumn]));
+                        return ((decimal)(this[this.tablePURCHASE_VIEW_DAY1.TOTAL_PRICEColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'DataTable1\' 테이블의 \'TOTAL_PRICE\' 열의 값이 DBNull입니다.", e);
+                        throw new global::System.Data.StrongTypingException("\'PURCHASE_VIEW_DAY1\' 테이블의 \'TOTAL_PRICE\' 열의 값이 DBNull입니다.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.TOTAL_PRICEColumn] = value;
+                    this[this.tablePURCHASE_VIEW_DAY1.TOTAL_PRICEColumn] = value;
                 }
             }
             
@@ -8072,51 +8383,150 @@ namespace ShopApp {
             public decimal TOTAL_STOCK {
                 get {
                     try {
-                        return ((decimal)(this[this.tableDataTable1.TOTAL_STOCKColumn]));
+                        return ((decimal)(this[this.tablePURCHASE_VIEW_DAY1.TOTAL_STOCKColumn]));
                     }
                     catch (global::System.InvalidCastException e) {
-                        throw new global::System.Data.StrongTypingException("\'DataTable1\' 테이블의 \'TOTAL_STOCK\' 열의 값이 DBNull입니다.", e);
+                        throw new global::System.Data.StrongTypingException("\'PURCHASE_VIEW_DAY1\' 테이블의 \'TOTAL_STOCK\' 열의 값이 DBNull입니다.", e);
                     }
                 }
                 set {
-                    this[this.tableDataTable1.TOTAL_STOCKColumn] = value;
+                    this[this.tablePURCHASE_VIEW_DAY1.TOTAL_STOCKColumn] = value;
                 }
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsDAYNull() {
-                return this.IsNull(this.tableDataTable1.DAYColumn);
+                return this.IsNull(this.tablePURCHASE_VIEW_DAY1.DAYColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetDAYNull() {
-                this[this.tableDataTable1.DAYColumn] = global::System.Convert.DBNull;
+                this[this.tablePURCHASE_VIEW_DAY1.DAYColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTOTAL_PRICENull() {
-                return this.IsNull(this.tableDataTable1.TOTAL_PRICEColumn);
+                return this.IsNull(this.tablePURCHASE_VIEW_DAY1.TOTAL_PRICEColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTOTAL_PRICENull() {
-                this[this.tableDataTable1.TOTAL_PRICEColumn] = global::System.Convert.DBNull;
+                this[this.tablePURCHASE_VIEW_DAY1.TOTAL_PRICEColumn] = global::System.Convert.DBNull;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public bool IsTOTAL_STOCKNull() {
-                return this.IsNull(this.tableDataTable1.TOTAL_STOCKColumn);
+                return this.IsNull(this.tablePURCHASE_VIEW_DAY1.TOTAL_STOCKColumn);
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
             public void SetTOTAL_STOCKNull() {
-                this[this.tableDataTable1.TOTAL_STOCKColumn] = global::System.Convert.DBNull;
+                this[this.tablePURCHASE_VIEW_DAY1.TOTAL_STOCKColumn] = global::System.Convert.DBNull;
+            }
+        }
+        
+        /// <summary>
+        ///Represents strongly named DataRow class.
+        ///</summary>
+        public partial class PURCHASE_VIEW_DOW1Row : global::System.Data.DataRow {
+            
+            private PURCHASE_VIEW_DOW1DataTable tablePURCHASE_VIEW_DOW1;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            internal PURCHASE_VIEW_DOW1Row(global::System.Data.DataRowBuilder rb) : 
+                    base(rb) {
+                this.tablePURCHASE_VIEW_DOW1 = ((PURCHASE_VIEW_DOW1DataTable)(this.Table));
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public string DAY_OF_WEEK {
+                get {
+                    try {
+                        return ((string)(this[this.tablePURCHASE_VIEW_DOW1.DAY_OF_WEEKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'PURCHASE_VIEW_DOW1\' 테이블의 \'DAY_OF_WEEK\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tablePURCHASE_VIEW_DOW1.DAY_OF_WEEKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal TOTAL_PRICE {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablePURCHASE_VIEW_DOW1.TOTAL_PRICEColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'PURCHASE_VIEW_DOW1\' 테이블의 \'TOTAL_PRICE\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tablePURCHASE_VIEW_DOW1.TOTAL_PRICEColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public decimal TOTAL_STOCK {
+                get {
+                    try {
+                        return ((decimal)(this[this.tablePURCHASE_VIEW_DOW1.TOTAL_STOCKColumn]));
+                    }
+                    catch (global::System.InvalidCastException e) {
+                        throw new global::System.Data.StrongTypingException("\'PURCHASE_VIEW_DOW1\' 테이블의 \'TOTAL_STOCK\' 열의 값이 DBNull입니다.", e);
+                    }
+                }
+                set {
+                    this[this.tablePURCHASE_VIEW_DOW1.TOTAL_STOCKColumn] = value;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsDAY_OF_WEEKNull() {
+                return this.IsNull(this.tablePURCHASE_VIEW_DOW1.DAY_OF_WEEKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetDAY_OF_WEEKNull() {
+                this[this.tablePURCHASE_VIEW_DOW1.DAY_OF_WEEKColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTOTAL_PRICENull() {
+                return this.IsNull(this.tablePURCHASE_VIEW_DOW1.TOTAL_PRICEColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTOTAL_PRICENull() {
+                this[this.tablePURCHASE_VIEW_DOW1.TOTAL_PRICEColumn] = global::System.Convert.DBNull;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public bool IsTOTAL_STOCKNull() {
+                return this.IsNull(this.tablePURCHASE_VIEW_DOW1.TOTAL_STOCKColumn);
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public void SetTOTAL_STOCKNull() {
+                this[this.tablePURCHASE_VIEW_DOW1.TOTAL_STOCKColumn] = global::System.Convert.DBNull;
             }
         }
         
@@ -8634,22 +9044,56 @@ namespace ShopApp {
         ///Row event argument class
         ///</summary>
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public class DataTable1RowChangeEvent : global::System.EventArgs {
+        public class PURCHASE_VIEW_DAY1RowChangeEvent : global::System.EventArgs {
             
-            private DataTable1Row eventRow;
+            private PURCHASE_VIEW_DAY1Row eventRow;
             
             private global::System.Data.DataRowAction eventAction;
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1RowChangeEvent(DataTable1Row row, global::System.Data.DataRowAction action) {
+            public PURCHASE_VIEW_DAY1RowChangeEvent(PURCHASE_VIEW_DAY1Row row, global::System.Data.DataRowAction action) {
                 this.eventRow = row;
                 this.eventAction = action;
             }
             
             [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
             [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-            public DataTable1Row Row {
+            public PURCHASE_VIEW_DAY1Row Row {
+                get {
+                    return this.eventRow;
+                }
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public global::System.Data.DataRowAction Action {
+                get {
+                    return this.eventAction;
+                }
+            }
+        }
+        
+        /// <summary>
+        ///Row event argument class
+        ///</summary>
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public class PURCHASE_VIEW_DOW1RowChangeEvent : global::System.EventArgs {
+            
+            private PURCHASE_VIEW_DOW1Row eventRow;
+            
+            private global::System.Data.DataRowAction eventAction;
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public PURCHASE_VIEW_DOW1RowChangeEvent(PURCHASE_VIEW_DOW1Row row, global::System.Data.DataRowAction action) {
+                this.eventRow = row;
+                this.eventAction = action;
+            }
+            
+            [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+            [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+            public PURCHASE_VIEW_DOW1Row Row {
                 get {
                     return this.eventRow;
                 }
@@ -14525,7 +14969,7 @@ GROUP BY PRODUCT.""NAME""";
     [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
         ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
     [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
-    public partial class DataTable1TableAdapter : global::System.ComponentModel.Component {
+    public partial class PURCHASE_VIEW_DAY1TableAdapter : global::System.ComponentModel.Component {
         
         private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
         
@@ -14539,7 +14983,7 @@ GROUP BY PRODUCT.""NAME""";
         
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
-        public DataTable1TableAdapter() {
+        public PURCHASE_VIEW_DAY1TableAdapter() {
             this.ClearBeforeFill = true;
         }
         
@@ -14636,7 +15080,7 @@ GROUP BY PRODUCT.""NAME""";
             this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
             global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
             tableMapping.SourceTable = "Table";
-            tableMapping.DataSetTable = "DataTable1";
+            tableMapping.DataSetTable = "PURCHASE_VIEW_DAY1";
             tableMapping.ColumnMappings.Add("DAY", "DAY");
             tableMapping.ColumnMappings.Add("TOTAL_PRICE", "TOTAL_PRICE");
             tableMapping.ColumnMappings.Add("TOTAL_STOCK", "TOTAL_STOCK");
@@ -14656,7 +15100,7 @@ GROUP BY PRODUCT.""NAME""";
             this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
             this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
             this._commandCollection[0].Connection = this.Connection;
-            this._commandCollection[0].CommandText = "SELECT  *\r\nFROM     PURCHASE_VIEW_DAY1";
+            this._commandCollection[0].CommandText = "SELECT  \"DAY\", TOTAL_PRICE, TOTAL_STOCK\r\nFROM     S5584994.PURCHASE_VIEW_DAY1";
             this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
         }
         
@@ -14664,7 +15108,7 @@ GROUP BY PRODUCT.""NAME""";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
-        public virtual int Fill(DataSet1.DataTable1DataTable dataTable) {
+        public virtual int Fill(DataSet1.PURCHASE_VIEW_DAY1DataTable dataTable) {
             this.Adapter.SelectCommand = this.CommandCollection[0];
             if ((this.ClearBeforeFill == true)) {
                 dataTable.Clear();
@@ -14677,9 +15121,178 @@ GROUP BY PRODUCT.""NAME""";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
         [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
-        public virtual DataSet1.DataTable1DataTable GetData() {
+        public virtual DataSet1.PURCHASE_VIEW_DAY1DataTable GetData() {
             this.Adapter.SelectCommand = this.CommandCollection[0];
-            DataSet1.DataTable1DataTable dataTable = new DataSet1.DataTable1DataTable();
+            DataSet1.PURCHASE_VIEW_DAY1DataTable dataTable = new DataSet1.PURCHASE_VIEW_DAY1DataTable();
+            this.Adapter.Fill(dataTable);
+            return dataTable;
+        }
+    }
+    
+    /// <summary>
+    ///Represents the connection and commands used to retrieve and save data.
+    ///</summary>
+    [global::System.ComponentModel.DesignerCategoryAttribute("code")]
+    [global::System.ComponentModel.ToolboxItem(true)]
+    [global::System.ComponentModel.DataObjectAttribute(true)]
+    [global::System.ComponentModel.DesignerAttribute("Microsoft.VSDesigner.DataSource.Design.TableAdapterDesigner, Microsoft.VSDesigner" +
+        ", Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a")]
+    [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+    public partial class PURCHASE_VIEW_DOW1TableAdapter : global::System.ComponentModel.Component {
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleDataAdapter _adapter;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleConnection _connection;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleTransaction _transaction;
+        
+        private global::Oracle.ManagedDataAccess.Client.OracleCommand[] _commandCollection;
+        
+        private bool _clearBeforeFill;
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public PURCHASE_VIEW_DOW1TableAdapter() {
+            this.ClearBeforeFill = true;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected internal global::Oracle.ManagedDataAccess.Client.OracleDataAdapter Adapter {
+            get {
+                if ((this._adapter == null)) {
+                    this.InitAdapter();
+                }
+                return this._adapter;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleConnection Connection {
+            get {
+                if ((this._connection == null)) {
+                    this.InitConnection();
+                }
+                return this._connection;
+            }
+            set {
+                this._connection = value;
+                if ((this.Adapter.InsertCommand != null)) {
+                    this.Adapter.InsertCommand.Connection = value;
+                }
+                if ((this.Adapter.DeleteCommand != null)) {
+                    this.Adapter.DeleteCommand.Connection = value;
+                }
+                if ((this.Adapter.UpdateCommand != null)) {
+                    this.Adapter.UpdateCommand.Connection = value;
+                }
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    if ((this.CommandCollection[i] != null)) {
+                        ((global::Oracle.ManagedDataAccess.Client.OracleCommand)(this.CommandCollection[i])).Connection = value;
+                    }
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        internal global::Oracle.ManagedDataAccess.Client.OracleTransaction Transaction {
+            get {
+                return this._transaction;
+            }
+            set {
+                this._transaction = value;
+                for (int i = 0; (i < this.CommandCollection.Length); i = (i + 1)) {
+                    this.CommandCollection[i].Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.DeleteCommand != null))) {
+                    this.Adapter.DeleteCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.InsertCommand != null))) {
+                    this.Adapter.InsertCommand.Transaction = this._transaction;
+                }
+                if (((this.Adapter != null) 
+                            && (this.Adapter.UpdateCommand != null))) {
+                    this.Adapter.UpdateCommand.Transaction = this._transaction;
+                }
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        protected global::Oracle.ManagedDataAccess.Client.OracleCommand[] CommandCollection {
+            get {
+                if ((this._commandCollection == null)) {
+                    this.InitCommandCollection();
+                }
+                return this._commandCollection;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        public bool ClearBeforeFill {
+            get {
+                return this._clearBeforeFill;
+            }
+            set {
+                this._clearBeforeFill = value;
+            }
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitAdapter() {
+            this._adapter = new global::Oracle.ManagedDataAccess.Client.OracleDataAdapter();
+            global::System.Data.Common.DataTableMapping tableMapping = new global::System.Data.Common.DataTableMapping();
+            tableMapping.SourceTable = "Table";
+            tableMapping.DataSetTable = "PURCHASE_VIEW_DOW1";
+            tableMapping.ColumnMappings.Add("DAY_OF_WEEK", "DAY_OF_WEEK");
+            tableMapping.ColumnMappings.Add("TOTAL_PRICE", "TOTAL_PRICE");
+            tableMapping.ColumnMappings.Add("TOTAL_STOCK", "TOTAL_STOCK");
+            this._adapter.TableMappings.Add(tableMapping);
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitConnection() {
+            this._connection = new global::Oracle.ManagedDataAccess.Client.OracleConnection();
+            this._connection.ConnectionString = global::ShopApp.Properties.Settings.Default.ConnectionString;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        private void InitCommandCollection() {
+            this._commandCollection = new global::Oracle.ManagedDataAccess.Client.OracleCommand[1];
+            this._commandCollection[0] = new global::Oracle.ManagedDataAccess.Client.OracleCommand();
+            this._commandCollection[0].Connection = this.Connection;
+            this._commandCollection[0].CommandText = "SELECT  *\r\nFROM     PURCHASE_VIEW_DOW1";
+            this._commandCollection[0].CommandType = global::System.Data.CommandType.Text;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Fill, true)]
+        public virtual int Fill(DataSet1.PURCHASE_VIEW_DOW1DataTable dataTable) {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            if ((this.ClearBeforeFill == true)) {
+                dataTable.Clear();
+            }
+            int returnValue = this.Adapter.Fill(dataTable);
+            return returnValue;
+        }
+        
+        [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
+        [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
+        [global::System.ComponentModel.Design.HelpKeywordAttribute("vs.data.TableAdapter")]
+        [global::System.ComponentModel.DataObjectMethodAttribute(global::System.ComponentModel.DataObjectMethodType.Select, true)]
+        public virtual DataSet1.PURCHASE_VIEW_DOW1DataTable GetData() {
+            this.Adapter.SelectCommand = this.CommandCollection[0];
+            DataSet1.PURCHASE_VIEW_DOW1DataTable dataTable = new DataSet1.PURCHASE_VIEW_DOW1DataTable();
             this.Adapter.Fill(dataTable);
             return dataTable;
         }
@@ -15007,21 +15620,12 @@ GROUP BY PRODUCT.""NAME""";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._cARTTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.CART.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._rEVIEWTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.REVIEW.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._cARTTableAdapter.Update(updatedRows));
-                    allChangedRows.AddRange(updatedRows);
-                }
-            }
-            if ((this._rEFUNDTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.REFUND.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
-                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
-                if (((updatedRows != null) 
-                            && (0 < updatedRows.Length))) {
-                    result = (result + this._rEFUNDTableAdapter.Update(updatedRows));
+                    result = (result + this._rEVIEWTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15034,12 +15638,21 @@ GROUP BY PRODUCT.""NAME""";
                     allChangedRows.AddRange(updatedRows);
                 }
             }
-            if ((this._rEVIEWTableAdapter != null)) {
-                global::System.Data.DataRow[] updatedRows = dataSet.REVIEW.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+            if ((this._rEFUNDTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.REFUND.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
                 updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
                 if (((updatedRows != null) 
                             && (0 < updatedRows.Length))) {
-                    result = (result + this._rEVIEWTableAdapter.Update(updatedRows));
+                    result = (result + this._rEFUNDTableAdapter.Update(updatedRows));
+                    allChangedRows.AddRange(updatedRows);
+                }
+            }
+            if ((this._cARTTableAdapter != null)) {
+                global::System.Data.DataRow[] updatedRows = dataSet.CART.Select(null, null, global::System.Data.DataViewRowState.ModifiedCurrent);
+                updatedRows = this.GetRealUpdatedRows(updatedRows, allAddedRows);
+                if (((updatedRows != null) 
+                            && (0 < updatedRows.Length))) {
+                    result = (result + this._cARTTableAdapter.Update(updatedRows));
                     allChangedRows.AddRange(updatedRows);
                 }
             }
@@ -15093,19 +15706,11 @@ GROUP BY PRODUCT.""NAME""";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._cARTTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.CART.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._rEVIEWTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.REVIEW.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._cARTTableAdapter.Update(addedRows));
-                    allAddedRows.AddRange(addedRows);
-                }
-            }
-            if ((this._rEFUNDTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.REFUND.Select(null, null, global::System.Data.DataViewRowState.Added);
-                if (((addedRows != null) 
-                            && (0 < addedRows.Length))) {
-                    result = (result + this._rEFUNDTableAdapter.Update(addedRows));
+                    result = (result + this._rEVIEWTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15117,11 +15722,19 @@ GROUP BY PRODUCT.""NAME""";
                     allAddedRows.AddRange(addedRows);
                 }
             }
-            if ((this._rEVIEWTableAdapter != null)) {
-                global::System.Data.DataRow[] addedRows = dataSet.REVIEW.Select(null, null, global::System.Data.DataViewRowState.Added);
+            if ((this._rEFUNDTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.REFUND.Select(null, null, global::System.Data.DataViewRowState.Added);
                 if (((addedRows != null) 
                             && (0 < addedRows.Length))) {
-                    result = (result + this._rEVIEWTableAdapter.Update(addedRows));
+                    result = (result + this._rEFUNDTableAdapter.Update(addedRows));
+                    allAddedRows.AddRange(addedRows);
+                }
+            }
+            if ((this._cARTTableAdapter != null)) {
+                global::System.Data.DataRow[] addedRows = dataSet.CART.Select(null, null, global::System.Data.DataViewRowState.Added);
+                if (((addedRows != null) 
+                            && (0 < addedRows.Length))) {
+                    result = (result + this._cARTTableAdapter.Update(addedRows));
                     allAddedRows.AddRange(addedRows);
                 }
             }
@@ -15135,19 +15748,11 @@ GROUP BY PRODUCT.""NAME""";
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Data.Design.TypedDataSetGenerator", "16.0.0.0")]
         private int UpdateDeletedRows(DataSet1 dataSet, global::System.Collections.Generic.List<global::System.Data.DataRow> allChangedRows) {
             int result = 0;
-            if ((this._rEVIEWTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.REVIEW.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._cARTTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.CART.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._rEVIEWTableAdapter.Update(deletedRows));
-                    allChangedRows.AddRange(deletedRows);
-                }
-            }
-            if ((this._nOTIFICATIONTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.NOTIFICATION.Select(null, null, global::System.Data.DataViewRowState.Deleted);
-                if (((deletedRows != null) 
-                            && (0 < deletedRows.Length))) {
-                    result = (result + this._nOTIFICATIONTableAdapter.Update(deletedRows));
+                    result = (result + this._cARTTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }
@@ -15159,11 +15764,19 @@ GROUP BY PRODUCT.""NAME""";
                     allChangedRows.AddRange(deletedRows);
                 }
             }
-            if ((this._cARTTableAdapter != null)) {
-                global::System.Data.DataRow[] deletedRows = dataSet.CART.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+            if ((this._nOTIFICATIONTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.NOTIFICATION.Select(null, null, global::System.Data.DataViewRowState.Deleted);
                 if (((deletedRows != null) 
                             && (0 < deletedRows.Length))) {
-                    result = (result + this._cARTTableAdapter.Update(deletedRows));
+                    result = (result + this._nOTIFICATIONTableAdapter.Update(deletedRows));
+                    allChangedRows.AddRange(deletedRows);
+                }
+            }
+            if ((this._rEVIEWTableAdapter != null)) {
+                global::System.Data.DataRow[] deletedRows = dataSet.REVIEW.Select(null, null, global::System.Data.DataViewRowState.Deleted);
+                if (((deletedRows != null) 
+                            && (0 < deletedRows.Length))) {
+                    result = (result + this._rEVIEWTableAdapter.Update(deletedRows));
                     allChangedRows.AddRange(deletedRows);
                 }
             }

@@ -123,6 +123,12 @@
     <Compile Include="custom\AdminSalesDay.Designer.cs">
       <DependentUpon>AdminSalesDay.cs</DependentUpon>
     </Compile>
+    <Compile Include="custom\AdminSalesDOW.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="custom\AdminSalesDOW.Designer.cs">
+      <DependentUpon>AdminSalesDOW.cs</DependentUpon>
+    </Compile>
     <Compile Include="custom\AdminSalesWeek.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -261,6 +267,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="custom\AdminSalesDay.resx">
       <DependentUpon>AdminSalesDay.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="custom\AdminSalesDOW.resx">
+      <DependentUpon>AdminSalesDOW.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="custom\AdminSalesWeek.resx">
       <DependentUpon>AdminSalesWeek.cs</DependentUpon>
