@@ -49,24 +49,24 @@ namespace ShopApp.custom
             this.sELLERTableAdapter = new ShopApp.DataSet1TableAdapters.SELLERTableAdapter();
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.registerTextBox = new ShopApp.custom.CustomButton();
-            this.sellerTextBox = new ShopApp.textbox.CostomTextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.stockTextBox = new ShopApp.textbox.CostomTextBox();
             this.label5 = new System.Windows.Forms.Label();
-            this.categoryTextBox = new ShopApp.textbox.CostomTextBox();
             this.label4 = new System.Windows.Forms.Label();
-            this.priceTextBox = new ShopApp.textbox.CostomTextBox();
             this.label3 = new System.Windows.Forms.Label();
-            this.nameTextBox = new ShopApp.textbox.CostomTextBox();
             this.label2 = new System.Windows.Forms.Label();
-            this.p_idTextBox = new ShopApp.textbox.CostomTextBox();
             this.errorText = new System.Windows.Forms.Label();
+            this.notificationTableAdapter1 = new ShopApp.DataSet1TableAdapters.NOTIFICATIONTableAdapter();
             this.customButton4 = new ShopApp.custom.CustomButton();
             this.customButton3 = new ShopApp.custom.CustomButton();
             this.customButton2 = new ShopApp.custom.CustomButton();
             this.customButton1 = new ShopApp.custom.CustomButton();
-            this.notificationTableAdapter1 = new ShopApp.DataSet1TableAdapters.NOTIFICATIONTableAdapter();
+            this.registerTextBox = new ShopApp.custom.CustomButton();
+            this.sellerTextBox = new ShopApp.textbox.CostomTextBox();
+            this.stockTextBox = new ShopApp.textbox.CostomTextBox();
+            this.categoryTextBox = new ShopApp.textbox.CostomTextBox();
+            this.priceTextBox = new ShopApp.textbox.CostomTextBox();
+            this.nameTextBox = new ShopApp.textbox.CostomTextBox();
+            this.p_idTextBox = new ShopApp.textbox.CostomTextBox();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pRODUCTBindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -251,40 +251,6 @@ namespace ShopApp.custom
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Product Info";
             // 
-            // registerTextBox
-            // 
-            this.registerTextBox.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.registerTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.registerTextBox.BorderRadius = 40;
-            this.registerTextBox.BorderSize = 0;
-            this.registerTextBox.FlatAppearance.BorderSize = 0;
-            this.registerTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.registerTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.registerTextBox.ForeColor = System.Drawing.Color.White;
-            this.registerTextBox.Location = new System.Drawing.Point(323, 120);
-            this.registerTextBox.Name = "registerTextBox";
-            this.registerTextBox.Size = new System.Drawing.Size(150, 40);
-            this.registerTextBox.TabIndex = 14;
-            this.registerTextBox.Text = "등록/수정";
-            this.registerTextBox.UseVisualStyleBackColor = false;
-            this.registerTextBox.Click += new System.EventHandler(this.registerTextBox_Click);
-            // 
-            // sellerTextBox
-            // 
-            this.sellerTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.sellerTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.sellerTextBox.BorderSize = 2;
-            this.sellerTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.sellerTextBox.Location = new System.Drawing.Point(366, 65);
-            this.sellerTextBox.Multiline = false;
-            this.sellerTextBox.Name = "sellerTextBox";
-            this.sellerTextBox.Padding = new System.Windows.Forms.Padding(7);
-            this.sellerTextBox.PasswordChar = false;
-            this.sellerTextBox.Size = new System.Drawing.Size(150, 35);
-            this.sellerTextBox.TabIndex = 12;
-            this.sellerTextBox.Texts = "";
-            this.sellerTextBox.UnderlinedStyle = true;
-            // 
             // label6
             // 
             this.label6.AutoSize = true;
@@ -294,22 +260,6 @@ namespace ShopApp.custom
             this.label6.Size = new System.Drawing.Size(60, 20);
             this.label6.TabIndex = 13;
             this.label6.Text = "판매자";
-            // 
-            // stockTextBox
-            // 
-            this.stockTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.stockTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.stockTextBox.BorderSize = 2;
-            this.stockTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.stockTextBox.Location = new System.Drawing.Point(366, 30);
-            this.stockTextBox.Multiline = false;
-            this.stockTextBox.Name = "stockTextBox";
-            this.stockTextBox.Padding = new System.Windows.Forms.Padding(7);
-            this.stockTextBox.PasswordChar = false;
-            this.stockTextBox.Size = new System.Drawing.Size(150, 35);
-            this.stockTextBox.TabIndex = 10;
-            this.stockTextBox.Texts = "";
-            this.stockTextBox.UnderlinedStyle = true;
             // 
             // label5
             // 
@@ -321,22 +271,6 @@ namespace ShopApp.custom
             this.label5.TabIndex = 11;
             this.label5.Text = "재고";
             // 
-            // categoryTextBox
-            // 
-            this.categoryTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.categoryTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.categoryTextBox.BorderSize = 2;
-            this.categoryTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.categoryTextBox.Location = new System.Drawing.Point(100, 135);
-            this.categoryTextBox.Multiline = false;
-            this.categoryTextBox.Name = "categoryTextBox";
-            this.categoryTextBox.Padding = new System.Windows.Forms.Padding(7);
-            this.categoryTextBox.PasswordChar = false;
-            this.categoryTextBox.Size = new System.Drawing.Size(150, 35);
-            this.categoryTextBox.TabIndex = 8;
-            this.categoryTextBox.Texts = "";
-            this.categoryTextBox.UnderlinedStyle = true;
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -346,22 +280,6 @@ namespace ShopApp.custom
             this.label4.Size = new System.Drawing.Size(77, 20);
             this.label4.TabIndex = 9;
             this.label4.Text = "카테고리";
-            // 
-            // priceTextBox
-            // 
-            this.priceTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.priceTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.priceTextBox.BorderSize = 2;
-            this.priceTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.priceTextBox.Location = new System.Drawing.Point(100, 100);
-            this.priceTextBox.Multiline = false;
-            this.priceTextBox.Name = "priceTextBox";
-            this.priceTextBox.Padding = new System.Windows.Forms.Padding(7);
-            this.priceTextBox.PasswordChar = false;
-            this.priceTextBox.Size = new System.Drawing.Size(150, 35);
-            this.priceTextBox.TabIndex = 6;
-            this.priceTextBox.Texts = "";
-            this.priceTextBox.UnderlinedStyle = true;
             // 
             // label3
             // 
@@ -373,22 +291,6 @@ namespace ShopApp.custom
             this.label3.TabIndex = 7;
             this.label3.Text = "가격";
             // 
-            // nameTextBox
-            // 
-            this.nameTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.nameTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.nameTextBox.BorderSize = 2;
-            this.nameTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.nameTextBox.Location = new System.Drawing.Point(100, 65);
-            this.nameTextBox.Multiline = false;
-            this.nameTextBox.Name = "nameTextBox";
-            this.nameTextBox.Padding = new System.Windows.Forms.Padding(7);
-            this.nameTextBox.PasswordChar = false;
-            this.nameTextBox.Size = new System.Drawing.Size(150, 35);
-            this.nameTextBox.TabIndex = 4;
-            this.nameTextBox.Texts = "";
-            this.nameTextBox.UnderlinedStyle = true;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -399,22 +301,6 @@ namespace ShopApp.custom
             this.label2.TabIndex = 5;
             this.label2.Text = "제품명";
             // 
-            // p_idTextBox
-            // 
-            this.p_idTextBox.BackColor = System.Drawing.SystemColors.Window;
-            this.p_idTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.p_idTextBox.BorderSize = 2;
-            this.p_idTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.p_idTextBox.Location = new System.Drawing.Point(100, 30);
-            this.p_idTextBox.Multiline = false;
-            this.p_idTextBox.Name = "p_idTextBox";
-            this.p_idTextBox.Padding = new System.Windows.Forms.Padding(7);
-            this.p_idTextBox.PasswordChar = false;
-            this.p_idTextBox.Size = new System.Drawing.Size(150, 35);
-            this.p_idTextBox.TabIndex = 2;
-            this.p_idTextBox.Texts = "";
-            this.p_idTextBox.UnderlinedStyle = true;
-            // 
             // errorText
             // 
             this.errorText.AutoSize = true;
@@ -424,6 +310,10 @@ namespace ShopApp.custom
             this.errorText.Size = new System.Drawing.Size(100, 18);
             this.errorText.TabIndex = 19;
             this.errorText.Text = "errorText";
+            // 
+            // notificationTableAdapter1
+            // 
+            this.notificationTableAdapter1.ClearBeforeFill = true;
             // 
             // customButton4
             // 
@@ -494,9 +384,120 @@ namespace ShopApp.custom
             this.customButton1.UseVisualStyleBackColor = false;
             this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
-            // notificationTableAdapter1
+            // registerTextBox
             // 
-            this.notificationTableAdapter1.ClearBeforeFill = true;
+            this.registerTextBox.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.registerTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.registerTextBox.BorderRadius = 40;
+            this.registerTextBox.BorderSize = 0;
+            this.registerTextBox.FlatAppearance.BorderSize = 0;
+            this.registerTextBox.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.registerTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.registerTextBox.ForeColor = System.Drawing.Color.White;
+            this.registerTextBox.Location = new System.Drawing.Point(323, 120);
+            this.registerTextBox.Name = "registerTextBox";
+            this.registerTextBox.Size = new System.Drawing.Size(150, 40);
+            this.registerTextBox.TabIndex = 14;
+            this.registerTextBox.Text = "등록/수정";
+            this.registerTextBox.UseVisualStyleBackColor = false;
+            this.registerTextBox.Click += new System.EventHandler(this.registerTextBox_Click);
+            // 
+            // sellerTextBox
+            // 
+            this.sellerTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.sellerTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.sellerTextBox.BorderSize = 2;
+            this.sellerTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.sellerTextBox.Location = new System.Drawing.Point(366, 65);
+            this.sellerTextBox.Multiline = false;
+            this.sellerTextBox.Name = "sellerTextBox";
+            this.sellerTextBox.Padding = new System.Windows.Forms.Padding(7);
+            this.sellerTextBox.PasswordChar = false;
+            this.sellerTextBox.Size = new System.Drawing.Size(150, 35);
+            this.sellerTextBox.TabIndex = 12;
+            this.sellerTextBox.Texts = "";
+            this.sellerTextBox.UnderlinedStyle = true;
+            // 
+            // stockTextBox
+            // 
+            this.stockTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.stockTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.stockTextBox.BorderSize = 2;
+            this.stockTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.stockTextBox.Location = new System.Drawing.Point(366, 30);
+            this.stockTextBox.Multiline = false;
+            this.stockTextBox.Name = "stockTextBox";
+            this.stockTextBox.Padding = new System.Windows.Forms.Padding(7);
+            this.stockTextBox.PasswordChar = false;
+            this.stockTextBox.Size = new System.Drawing.Size(150, 35);
+            this.stockTextBox.TabIndex = 10;
+            this.stockTextBox.Texts = "";
+            this.stockTextBox.UnderlinedStyle = true;
+            // 
+            // categoryTextBox
+            // 
+            this.categoryTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.categoryTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.categoryTextBox.BorderSize = 2;
+            this.categoryTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.categoryTextBox.Location = new System.Drawing.Point(100, 135);
+            this.categoryTextBox.Multiline = false;
+            this.categoryTextBox.Name = "categoryTextBox";
+            this.categoryTextBox.Padding = new System.Windows.Forms.Padding(7);
+            this.categoryTextBox.PasswordChar = false;
+            this.categoryTextBox.Size = new System.Drawing.Size(150, 35);
+            this.categoryTextBox.TabIndex = 8;
+            this.categoryTextBox.Texts = "";
+            this.categoryTextBox.UnderlinedStyle = true;
+            // 
+            // priceTextBox
+            // 
+            this.priceTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.priceTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.priceTextBox.BorderSize = 2;
+            this.priceTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.priceTextBox.Location = new System.Drawing.Point(100, 100);
+            this.priceTextBox.Multiline = false;
+            this.priceTextBox.Name = "priceTextBox";
+            this.priceTextBox.Padding = new System.Windows.Forms.Padding(7);
+            this.priceTextBox.PasswordChar = false;
+            this.priceTextBox.Size = new System.Drawing.Size(150, 35);
+            this.priceTextBox.TabIndex = 6;
+            this.priceTextBox.Texts = "";
+            this.priceTextBox.UnderlinedStyle = true;
+            // 
+            // nameTextBox
+            // 
+            this.nameTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.nameTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.nameTextBox.BorderSize = 2;
+            this.nameTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.nameTextBox.Location = new System.Drawing.Point(100, 65);
+            this.nameTextBox.Multiline = false;
+            this.nameTextBox.Name = "nameTextBox";
+            this.nameTextBox.Padding = new System.Windows.Forms.Padding(7);
+            this.nameTextBox.PasswordChar = false;
+            this.nameTextBox.Size = new System.Drawing.Size(150, 35);
+            this.nameTextBox.TabIndex = 4;
+            this.nameTextBox.Texts = "";
+            this.nameTextBox.UnderlinedStyle = true;
+            // 
+            // p_idTextBox
+            // 
+            this.p_idTextBox.BackColor = System.Drawing.SystemColors.Window;
+            this.p_idTextBox.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.p_idTextBox.BorderSize = 2;
+            this.p_idTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.p_idTextBox.Location = new System.Drawing.Point(100, 30);
+            this.p_idTextBox.Multiline = false;
+            this.p_idTextBox.Name = "p_idTextBox";
+            this.p_idTextBox.Padding = new System.Windows.Forms.Padding(7);
+            this.p_idTextBox.PasswordChar = false;
+            this.p_idTextBox.Size = new System.Drawing.Size(150, 35);
+            this.p_idTextBox.TabIndex = 2;
+            this.p_idTextBox.Texts = "";
+            this.p_idTextBox.UnderlinedStyle = true;
+            this.p_idTextBox.Load += new System.EventHandler(this.p_idTextBox_Load);
             // 
             // AdminProductRegister
             // 

@@ -82,7 +82,7 @@ namespace ShopApp
                 if (result.Length > 0)
                 {
                     this.Hide();
-                    Seller seller = new Seller();
+                    Seller seller = new Seller(email);
                     seller.Show();
                 }
                 else

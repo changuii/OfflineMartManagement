@@ -34,6 +34,7 @@ namespace ShopApp.custom
             this.customButton4 = new ShopApp.custom.CustomButton();
             this.customButton2 = new ShopApp.custom.CustomButton();
             this.customButton1 = new ShopApp.custom.CustomButton();
+            this.customButton5 = new ShopApp.custom.CustomButton();
             this.SuspendLayout();
             // 
             // panel1
@@ -116,11 +117,30 @@ namespace ShopApp.custom
             this.customButton1.UseVisualStyleBackColor = false;
             this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
+            // customButton5
+            // 
+            this.customButton5.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton5.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton5.BorderRadius = 40;
+            this.customButton5.BorderSize = 0;
+            this.customButton5.FlatAppearance.BorderSize = 0;
+            this.customButton5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton5.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.customButton5.ForeColor = System.Drawing.Color.White;
+            this.customButton5.Location = new System.Drawing.Point(712, 9);
+            this.customButton5.Name = "customButton5";
+            this.customButton5.Size = new System.Drawing.Size(169, 42);
+            this.customButton5.TabIndex = 5;
+            this.customButton5.Text = "날짜지정 매출현황";
+            this.customButton5.UseVisualStyleBackColor = false;
+            this.customButton5.Click += new System.EventHandler(this.customButton5_Click);
+            // 
             // AdminMonthSales
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1010, 560);
+            this.Controls.Add(this.customButton5);
             this.Controls.Add(this.customButton3);
             this.Controls.Add(this.customButton4);
             this.Controls.Add(this.customButton2);
@@ -141,5 +161,6 @@ namespace ShopApp.custom
         private CustomButton customButton2;
         private CustomButton customButton3;
         private CustomButton customButton4;
+        private CustomButton customButton5;
     }
 }

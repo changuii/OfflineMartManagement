@@ -4,6 +4,10 @@
 
     partial class DataSet1
     {
+        partial class PURCHASE_VIEW_DATE1DataTable
+        {
+        }
+
         partial class REVIEWDataTable
         {
         }

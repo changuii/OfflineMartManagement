@@ -14,11 +14,12 @@ namespace ShopApp.custom
     {
         DataTable purchaseViewTable;
         DataTable purchaseTable;
-
+        string s_email;
         string[] combo = { "구매요청진행중", "구매완료", "환불요청진행중", "환불완료", "전체보기" };
-        public SellerPurchase()
+        public SellerPurchase(string s_email)
         {
             InitializeComponent();
+            this.s_email = s_email;
         }
 
         private void SellerPurchase_Load(object sender, EventArgs e)
@@ -26,6 +27,7 @@ namespace ShopApp.custom
             // TODO: 이 코드는 데이터를 'dataSet1.PURCHASE_VIEW1' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
             this.pURCHASE_VIEW1TableAdapter.Fill(this.dataSet1.PURCHASE_VIEW1);
             errorText.Text = "";
+            this.pURCHASEVIEW1BindingSource.Filter = $"S_EMAIL = '{this.s_email}'";
             DataGridViewRow dr = dataGridView1.CurrentRow;
 
             if (dr != null)
@@ -160,7 +162,7 @@ namespace ShopApp.custom
                 purchaseViewTable = dataSet1.Tables["PURCHASE_VIEW1"];
                 errorText.ForeColor = Color.MediumSeaGreen;
                 errorText.Text = $"성공적으로 {comboBox1.Text}로 필터링되었습니다.";
-                pURCHASEVIEW1BindingSource.Filter = $"ALLOW = '{this.comboBox1.Text}'";
+                pURCHASEVIEW1BindingSource.Filter = $"ALLOW = '{this.comboBox1.Text}' AND S_EMAIL = '{this.s_email}' ";
                 cellClick();
             }
             else
@@ -169,7 +171,7 @@ namespace ShopApp.custom
                 purchaseViewTable = dataSet1.Tables["PURCHASE_VIEW1"];
                 errorText.ForeColor = Color.MediumSeaGreen;
                 errorText.Text = $"성공적으로 {comboBox1.Text}로 필터링되었습니다.";
-                pURCHASEVIEW1BindingSource.Filter = "";
+                pURCHASEVIEW1BindingSource.Filter = $"S_EMAIL = '{this.s_email}'";
                 this.cellClick();
             }
         }
@@ -234,6 +236,11 @@ namespace ShopApp.custom
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
+
+        private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }

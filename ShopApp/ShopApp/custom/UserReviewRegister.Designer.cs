@@ -60,6 +60,8 @@ namespace ShopApp.custom
             this.rEVIEWVIEW1BindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.rEVIEW_VIEW1TableAdapter = new ShopApp.DataSet1TableAdapters.REVIEW_VIEW1TableAdapter();
             this.reviewTableAdapter1 = new ShopApp.DataSet1TableAdapters.REVIEWTableAdapter();
+            this.customButton1 = new ShopApp.custom.CustomButton();
+            this.customButton2 = new ShopApp.custom.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEW1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -215,6 +217,8 @@ namespace ShopApp.custom
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.customButton2);
+            this.groupBox1.Controls.Add(this.customButton1);
             this.groupBox1.Controls.Add(this.c_emailLabel);
             this.groupBox1.Controls.Add(this.nameLabel);
             this.groupBox1.Controls.Add(this.timeLabel);
@@ -267,7 +271,7 @@ namespace ShopApp.custom
             this.errorLabel.AutoSize = true;
             this.errorLabel.Font = new System.Drawing.Font("던파 비트비트체 TTF", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.errorLabel.ForeColor = System.Drawing.Color.DarkRed;
-            this.errorLabel.Location = new System.Drawing.Point(14, 517);
+            this.errorLabel.Location = new System.Drawing.Point(8, 441);
             this.errorLabel.Name = "errorLabel";
             this.errorLabel.Size = new System.Drawing.Size(88, 15);
             this.errorLabel.TabIndex = 8;
@@ -323,7 +327,7 @@ namespace ShopApp.custom
             this.contentTextBox.Location = new System.Drawing.Point(6, 182);
             this.contentTextBox.Multiline = true;
             this.contentTextBox.Name = "contentTextBox";
-            this.contentTextBox.Size = new System.Drawing.Size(343, 277);
+            this.contentTextBox.Size = new System.Drawing.Size(343, 249);
             this.contentTextBox.TabIndex = 0;
             // 
             // rEVIEWVIEW1BindingSource
@@ -338,6 +342,42 @@ namespace ShopApp.custom
             // reviewTableAdapter1
             // 
             this.reviewTableAdapter1.ClearBeforeFill = true;
+            // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton1.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton1.BorderRadius = 40;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.Location = new System.Drawing.Point(11, 511);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(159, 40);
+            this.customButton1.TabIndex = 13;
+            this.customButton1.Text = "미작성 내역 조회";
+            this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
+            // 
+            // customButton2
+            // 
+            this.customButton2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton2.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton2.BorderRadius = 40;
+            this.customButton2.BorderSize = 0;
+            this.customButton2.FlatAppearance.BorderSize = 0;
+            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.customButton2.ForeColor = System.Drawing.Color.White;
+            this.customButton2.Location = new System.Drawing.Point(191, 511);
+            this.customButton2.Name = "customButton2";
+            this.customButton2.Size = new System.Drawing.Size(163, 40);
+            this.customButton2.TabIndex = 14;
+            this.customButton2.Text = "전체내역 조회";
+            this.customButton2.UseVisualStyleBackColor = false;
+            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
             // 
             // UserReviewRegister
             // 
@@ -391,5 +431,7 @@ namespace ShopApp.custom
         private System.Windows.Forms.TextBox titleTextBox;
         private System.Windows.Forms.TextBox contentTextBox;
         private DataSet1TableAdapters.REVIEWTableAdapter reviewTableAdapter1;
+        private CustomButton customButton2;
+        private CustomButton customButton1;
     }
 }

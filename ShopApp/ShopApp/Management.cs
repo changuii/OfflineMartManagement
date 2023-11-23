@@ -86,7 +86,7 @@ namespace ShopApp
             }
             else if (buttonIndex == 2)
             {
-                sellectIcon.IconChar = button1.IconChar;
+                sellectIcon.IconChar = button2.IconChar;
                 this.button2Panel.Visible = true;
             }
             else if (buttonIndex == 3)
@@ -152,6 +152,12 @@ namespace ShopApp
         private void button5_Click(object sender, EventArgs e)
         {
             sellect_button(5);
+            panel2.Controls.Clear();
+            AdminProductList adminProductList = new AdminProductList();
+            adminProductList.TopLevel = false;
+            adminProductList.Dock = DockStyle.Fill;
+            adminProductList.Visible = true;
+            panel2.Controls.Add(adminProductList);
         }
     }
 }

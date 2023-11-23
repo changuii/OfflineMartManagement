@@ -26,6 +26,8 @@ namespace ShopApp.custom
             this.pRODUCTTableAdapter.Fill(this.dataSet1.PRODUCT);
             errorText.Text = "";
             DataGridViewRow dc = dataGridView2.CurrentRow;
+            this.dataGridView1.Sort(this.dataGridView1.Columns[0], ListSortDirection.Ascending);
+
 
             if (dc != null)
             {
@@ -134,14 +136,21 @@ namespace ShopApp.custom
 
         private void customButton1_Click(object sender, EventArgs e)
         {
+            this.pRODUCTTableAdapter.Fill(dataSet1.PRODUCT);
+            DataTable productTable = this.dataSet1.Tables["PRODUCT"];
             errorText.Text = "정상적으로 비워졌습니다.";
             errorText.ForeColor = Color.MediumSeaGreen;
-            p_idTextBox.Texts = "";
+            p_idTextBox.Texts = (productTable.Rows.Count+1).ToString();
             nameTextBox.Texts = "";
             priceTextBox.Texts = "";
             stockTextBox.Texts = "";
             categoryTextBox.Texts = "";
             sellerTextBox.Texts = "";
+
+        }
+
+        private void p_idTextBox_Load(object sender, EventArgs e)
+        {
 
         }
     }

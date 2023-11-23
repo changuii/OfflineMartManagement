@@ -119,16 +119,16 @@ namespace ShopApp
             this.button5.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.button5.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.button5.ForeColor = System.Drawing.SystemColors.Control;
-            this.button5.IconChar = FontAwesome.Sharp.IconChar.Shopify;
+            this.button5.IconChar = FontAwesome.Sharp.IconChar.BoxesAlt;
             this.button5.IconColor = System.Drawing.Color.Black;
             this.button5.IconFont = FontAwesome.Sharp.IconFont.Auto;
             this.button5.IconSize = 32;
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(0, 0);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(134, 55);
+            this.button5.Size = new System.Drawing.Size(172, 55);
             this.button5.TabIndex = 3;
-            this.button5.Text = "상품 등록";
+            this.button5.Text = "상품 재고 및\r\n통계 현황 ";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
             this.button5.UseVisualStyleBackColor = true;
@@ -168,7 +168,7 @@ namespace ShopApp
             this.button4.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button4.Location = new System.Drawing.Point(0, 0);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(134, 55);
+            this.button4.Size = new System.Drawing.Size(172, 55);
             this.button4.TabIndex = 3;
             this.button4.Text = "매츌 현황";
             this.button4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -210,7 +210,7 @@ namespace ShopApp
             this.button3.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button3.Location = new System.Drawing.Point(0, 0);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(134, 55);
+            this.button3.Size = new System.Drawing.Size(172, 55);
             this.button3.TabIndex = 3;
             this.button3.Text = "고객 관리";
             this.button3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -252,7 +252,7 @@ namespace ShopApp
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(134, 55);
+            this.button2.Size = new System.Drawing.Size(172, 55);
             this.button2.TabIndex = 3;
             this.button2.Text = "공지관리";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -294,7 +294,7 @@ namespace ShopApp
             this.button1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button1.Location = new System.Drawing.Point(0, 0);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(134, 55);
+            this.button1.Size = new System.Drawing.Size(172, 55);
             this.button1.TabIndex = 3;
             this.button1.Text = "상품 등록";
             this.button1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;

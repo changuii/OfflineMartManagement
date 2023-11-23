@@ -46,8 +46,6 @@ namespace ShopApp.custom
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
             this.chart1 = new System.Windows.Forms.DataVisualization.Charting.Chart();
-            this.pURCHASEVIEWWEEK1BindingSource = new System.Windows.Forms.BindingSource(this.components);
-            this.dataSet1 = new ShopApp.DataSet1();
             this.tabPage3 = new System.Windows.Forms.TabPage();
             this.chart3 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.tabPage4 = new System.Windows.Forms.TabPage();
@@ -55,6 +53,8 @@ namespace ShopApp.custom
             this.tabPage2 = new System.Windows.Forms.TabPage();
             this.chart2 = new System.Windows.Forms.DataVisualization.Charting.Chart();
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
+            this.pURCHASEVIEWWEEK1BindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.dataSet1 = new ShopApp.DataSet1();
             this.wEEKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tOTALPRICEDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.tOTALSTOCKDataGridViewTextBoxColumn = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -63,8 +63,6 @@ namespace ShopApp.custom
             this.tabControl1.SuspendLayout();
             this.tabPage1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEWWEEK1BindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.tabPage3.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).BeginInit();
             this.tabPage4.SuspendLayout();
@@ -72,6 +70,8 @@ namespace ShopApp.custom
             this.tabPage2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEWWEEK1BindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
             this.SuspendLayout();
             // 
             // panel1
@@ -118,6 +118,8 @@ namespace ShopApp.custom
             this.chart1.DataSource = this.pURCHASEVIEWWEEK1BindingSource;
             this.chart1.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Enabled = false;
+            legend1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend1.IsTextAutoFit = false;
             legend1.Name = "Legend1";
             this.chart1.Legends.Add(legend1);
             this.chart1.Location = new System.Drawing.Point(3, 3);
@@ -133,16 +135,7 @@ namespace ShopApp.custom
             this.chart1.Size = new System.Drawing.Size(563, 463);
             this.chart1.TabIndex = 1;
             this.chart1.Text = "chart1";
-            // 
-            // pURCHASEVIEWWEEK1BindingSource
-            // 
-            this.pURCHASEVIEWWEEK1BindingSource.DataMember = "PURCHASE_VIEW_WEEK1";
-            this.pURCHASEVIEWWEEK1BindingSource.DataSource = this.dataSet1;
-            // 
-            // dataSet1
-            // 
-            this.dataSet1.DataSetName = "DataSet1";
-            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
+            this.chart1.Click += new System.EventHandler(this.chart1_Click);
             // 
             // tabPage3
             // 
@@ -180,7 +173,7 @@ namespace ShopApp.custom
             series2.XValueMember = "WEEK";
             series2.YValueMembers = "TOTAL_PRICE";
             this.chart3.Series.Add(series2);
-            this.chart3.Size = new System.Drawing.Size(563, 463);
+            this.chart3.Size = new System.Drawing.Size(563, 468);
             this.chart3.TabIndex = 2;
             this.chart3.Text = "chart3";
             this.chart3.Click += new System.EventHandler(this.chart3_Click);
@@ -202,6 +195,8 @@ namespace ShopApp.custom
             this.chart4.DataSource = this.pURCHASEVIEWWEEK1BindingSource;
             this.chart4.Dock = System.Windows.Forms.DockStyle.Fill;
             legend3.Enabled = false;
+            legend3.Font = new System.Drawing.Font("던파 비트비트체 TTF", 8.249999F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            legend3.IsTextAutoFit = false;
             legend3.Name = "Legend1";
             this.chart4.Legends.Add(legend3);
             this.chart4.Location = new System.Drawing.Point(0, 0);
@@ -254,7 +249,7 @@ namespace ShopApp.custom
             series4.YValueMembers = "TOTAL_STOCK";
             series4.YValuesPerPoint = 3;
             this.chart2.Series.Add(series4);
-            this.chart2.Size = new System.Drawing.Size(563, 463);
+            this.chart2.Size = new System.Drawing.Size(563, 468);
             this.chart2.TabIndex = 0;
             this.chart2.Text = "chart2";
             // 
@@ -276,6 +271,16 @@ namespace ShopApp.custom
             this.dataGridView1.RowTemplate.Height = 23;
             this.dataGridView1.Size = new System.Drawing.Size(434, 500);
             this.dataGridView1.TabIndex = 0;
+            // 
+            // pURCHASEVIEWWEEK1BindingSource
+            // 
+            this.pURCHASEVIEWWEEK1BindingSource.DataMember = "PURCHASE_VIEW_WEEK1";
+            this.pURCHASEVIEWWEEK1BindingSource.DataSource = this.dataSet1;
+            // 
+            // dataSet1
+            // 
+            this.dataSet1.DataSetName = "DataSet1";
+            this.dataSet1.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // wEEKDataGridViewTextBoxColumn
             // 
@@ -317,8 +322,6 @@ namespace ShopApp.custom
             this.tabControl1.ResumeLayout(false);
             this.tabPage1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEWWEEK1BindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.tabPage3.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart3)).EndInit();
             this.tabPage4.ResumeLayout(false);
@@ -326,6 +329,8 @@ namespace ShopApp.custom
             this.tabPage2.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.chart2)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEWWEEK1BindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).EndInit();
             this.ResumeLayout(false);
 
         }

@@ -29,7 +29,11 @@ namespace ShopApp
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(User));
             this.panel1 = new System.Windows.Forms.Panel();
+            this.panel10 = new System.Windows.Forms.Panel();
+            this.button7Panel = new System.Windows.Forms.Panel();
+            this.button7 = new FontAwesome.Sharp.IconButton();
             this.panel8 = new System.Windows.Forms.Panel();
             this.button6Panel = new System.Windows.Forms.Panel();
             this.button6 = new FontAwesome.Sharp.IconButton();
@@ -59,10 +63,8 @@ namespace ShopApp
             this.panel2 = new System.Windows.Forms.Panel();
             this.notificationTableAdapter1 = new ShopApp.DataSet1TableAdapters.NOTIFICATIONTableAdapter();
             this.dataSet11 = new ShopApp.DataSet1();
-            this.panel10 = new System.Windows.Forms.Panel();
-            this.button7Panel = new System.Windows.Forms.Panel();
-            this.button7 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
+            this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
             this.panel11.SuspendLayout();
             this.panel9.SuspendLayout();
@@ -72,7 +74,6 @@ namespace ShopApp
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
-            this.panel10.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
@@ -94,6 +95,48 @@ namespace ShopApp
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(172, 615);
             this.panel1.TabIndex = 3;
+            // 
+            // panel10
+            // 
+            this.panel10.Controls.Add(this.button7Panel);
+            this.panel10.Controls.Add(this.button7);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel10.Location = new System.Drawing.Point(0, 456);
+            this.panel10.Name = "panel10";
+            this.panel10.Size = new System.Drawing.Size(172, 55);
+            this.panel10.TabIndex = 16;
+            // 
+            // button7Panel
+            // 
+            this.button7Panel.BackColor = System.Drawing.Color.Lime;
+            this.button7Panel.Dock = System.Windows.Forms.DockStyle.Right;
+            this.button7Panel.Location = new System.Drawing.Point(162, 0);
+            this.button7Panel.Name = "button7Panel";
+            this.button7Panel.Size = new System.Drawing.Size(10, 55);
+            this.button7Panel.TabIndex = 0;
+            this.button7Panel.Visible = false;
+            // 
+            // button7
+            // 
+            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
+            this.button7.FlatAppearance.BorderSize = 0;
+            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.button7.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.button7.ForeColor = System.Drawing.SystemColors.Control;
+            this.button7.IconChar = FontAwesome.Sharp.IconChar.Person;
+            this.button7.IconColor = System.Drawing.Color.Black;
+            this.button7.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.button7.IconSize = 32;
+            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.Location = new System.Drawing.Point(0, 0);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(172, 55);
+            this.button7.TabIndex = 3;
+            this.button7.Text = "내 정보";
+            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.botton7_Click);
             // 
             // panel8
             // 
@@ -129,7 +172,7 @@ namespace ShopApp
             this.button6.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button6.Location = new System.Drawing.Point(0, 0);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(137, 55);
+            this.button6.Size = new System.Drawing.Size(172, 55);
             this.button6.TabIndex = 3;
             this.button6.Text = "리뷰 등록";
             this.button6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -171,7 +214,7 @@ namespace ShopApp
             this.button5.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button5.Location = new System.Drawing.Point(0, 0);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(137, 55);
+            this.button5.Size = new System.Drawing.Size(172, 55);
             this.button5.TabIndex = 3;
             this.button5.Text = "리뷰 확인";
             this.button5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -316,7 +359,7 @@ namespace ShopApp
             this.button2.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.button2.Location = new System.Drawing.Point(0, 0);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(156, 55);
+            this.button2.Size = new System.Drawing.Size(172, 55);
             this.button2.TabIndex = 3;
             this.button2.Text = "나의 장바구니";
             this.button2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -399,6 +442,8 @@ namespace ShopApp
             // 
             // iconButton6
             // 
+            this.iconButton6.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("iconButton6.BackgroundImage")));
+            this.iconButton6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
             this.iconButton6.FlatAppearance.BorderSize = 0;
             this.iconButton6.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.iconButton6.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
@@ -478,48 +523,6 @@ namespace ShopApp
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
-            // panel10
-            // 
-            this.panel10.Controls.Add(this.button7Panel);
-            this.panel10.Controls.Add(this.button7);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 456);
-            this.panel10.Name = "panel10";
-            this.panel10.Size = new System.Drawing.Size(172, 55);
-            this.panel10.TabIndex = 16;
-            // 
-            // button7Panel
-            // 
-            this.button7Panel.BackColor = System.Drawing.Color.Lime;
-            this.button7Panel.Dock = System.Windows.Forms.DockStyle.Right;
-            this.button7Panel.Location = new System.Drawing.Point(162, 0);
-            this.button7Panel.Name = "button7Panel";
-            this.button7Panel.Size = new System.Drawing.Size(10, 55);
-            this.button7Panel.TabIndex = 0;
-            this.button7Panel.Visible = false;
-            // 
-            // button7
-            // 
-            this.button7.Dock = System.Windows.Forms.DockStyle.Left;
-            this.button7.FlatAppearance.BorderSize = 0;
-            this.button7.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.button7.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.button7.ForeColor = System.Drawing.SystemColors.Control;
-            this.button7.IconChar = FontAwesome.Sharp.IconChar.Person;
-            this.button7.IconColor = System.Drawing.Color.Black;
-            this.button7.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.button7.IconSize = 32;
-            this.button7.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.Location = new System.Drawing.Point(0, 0);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(137, 55);
-            this.button7.TabIndex = 3;
-            this.button7.Text = "내 정보";
-            this.button7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.button7.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.botton7_Click);
-            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -534,6 +537,7 @@ namespace ShopApp
             this.Text = "User";
             this.Load += new System.EventHandler(this.User_Load);
             this.panel1.ResumeLayout(false);
+            this.panel10.ResumeLayout(false);
             this.panel8.ResumeLayout(false);
             this.panel11.ResumeLayout(false);
             this.panel9.ResumeLayout(false);
@@ -544,7 +548,6 @@ namespace ShopApp
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
-            this.panel10.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }

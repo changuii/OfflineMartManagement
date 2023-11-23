@@ -20,8 +20,9 @@ namespace ShopApp.custom
 
         private void AdminUserRating_Load(object sender, EventArgs e)
         {
-            // TODO: 이 코드는 데이터를 'dataSet1.CUSTOMER' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
-            this.cUSTOMERTableAdapter.Fill(this.dataSet1.CUSTOMER);
+            // TODO: 이 코드는 데이터를 'dataSet1.CUSTOMER_VIEW1' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
+            this.cUSTOMER_VIEW1TableAdapter.Fill(this.dataSet1.CUSTOMER_VIEW1);
+            
             errorLabel.Text = "";
             this.comboBox1.Items.AddRange(combo);
             
@@ -45,6 +46,9 @@ namespace ShopApp.custom
                 this.c_emailLabel.Text = data.Cells[1].Value.ToString();
                 this.passwordLabel.Text = data.Cells[2].Value.ToString();
                 this.ratingLabel.Text = data.Cells[3].Value.ToString();
+                this.sale_count.Text = data.Cells[4].Value.ToString();
+                this.refund.Text = data.Cells[5].Value.ToString();
+                this.allPrice.Text = data.Cells[6].Value.ToString();
                 this.comboBox1.Text = combo[0];
             }
 
@@ -63,15 +67,16 @@ namespace ShopApp.custom
             {
                 if (!data.Cells[3].Value.ToString().Equals(comboBox1.Text))
                 {
-                    cUSTOMERTableAdapter.Fill(dataSet1.CUSTOMER);
+                    customerTableAdapter1.Fill(dataSet1.CUSTOMER);
                     DataTable userTable = dataSet1.Tables["CUSTOMER"];
                     DataRow[] dataRow = userTable.Select($"C_EMAIL = '{c_emailLabel.Text}'");
                     if(dataRow.Length > 0)
                     {
                         string targetName = dataRow[0]["NAME"].ToString(); 
                         dataRow[0]["RATING"] = comboBox1.Text;
-                        this.cUSTOMERTableAdapter.Update(dataSet1.CUSTOMER);
-                        this.cUSTOMERTableAdapter.Fill(dataSet1.CUSTOMER);
+                        this.customerTableAdapter1.Update(dataSet1.CUSTOMER);
+                        this.customerTableAdapter1.Fill(dataSet1.CUSTOMER);
+                        this.cUSTOMER_VIEW1TableAdapter.Fill(dataSet1.CUSTOMER_VIEW1);
                         this.updateTableView();
                         errorLabel.Text = $"{targetName}님의 등급이 변경되었습니다.";
                         errorLabel.ForeColor = Color.MediumSeaGreen;

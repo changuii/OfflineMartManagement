@@ -31,6 +31,8 @@ namespace ShopApp.custom
                 this.titleTextBox.Text = data.Cells[1].Value.ToString();
                 this.contentTextBox.Text = data.Cells[2].Value.ToString();
             }
+            this.dataGridView1.Sort(this.dataGridView1.Columns[0], ListSortDirection.Descending);
+
 
         }
 

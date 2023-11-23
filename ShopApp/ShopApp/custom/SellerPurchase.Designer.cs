@@ -49,6 +49,7 @@ namespace ShopApp.custom
             this.panel1 = new System.Windows.Forms.Panel();
             this.errorText = new System.Windows.Forms.Label();
             this.groupBox4 = new System.Windows.Forms.GroupBox();
+            this.customButton2 = new ShopApp.custom.CustomButton();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.groupBox3 = new System.Windows.Forms.GroupBox();
             this.timeLabel = new System.Windows.Forms.Label();
@@ -64,11 +65,10 @@ namespace ShopApp.custom
             this.p_idLabel = new System.Windows.Forms.Label();
             this.nameLabel = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.customButton1 = new ShopApp.custom.CustomButton();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.purchaseTableAdapter1 = new ShopApp.DataSet1TableAdapters.PURCHASETableAdapter();
             this.productTableAdapter1 = new ShopApp.DataSet1TableAdapters.PRODUCTTableAdapter();
-            this.customButton2 = new ShopApp.custom.CustomButton();
-            this.customButton1 = new ShopApp.custom.CustomButton();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pURCHASEVIEW1BindingSource)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet1)).BeginInit();
@@ -223,6 +223,7 @@ namespace ShopApp.custom
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1010, 561);
             this.panel1.TabIndex = 1;
+            this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
             // errorText
             // 
@@ -245,6 +246,23 @@ namespace ShopApp.custom
             this.groupBox4.TabIndex = 4;
             this.groupBox4.TabStop = false;
             this.groupBox4.Text = "RequestProcess";
+            // 
+            // customButton2
+            // 
+            this.customButton2.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton2.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton2.BorderRadius = 40;
+            this.customButton2.BorderSize = 0;
+            this.customButton2.FlatAppearance.BorderSize = 0;
+            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton2.ForeColor = System.Drawing.Color.White;
+            this.customButton2.Location = new System.Drawing.Point(192, 20);
+            this.customButton2.Name = "customButton2";
+            this.customButton2.Size = new System.Drawing.Size(150, 40);
+            this.customButton2.TabIndex = 1;
+            this.customButton2.Text = "허용여부 변경";
+            this.customButton2.UseVisualStyleBackColor = false;
+            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
             // 
             // comboBox2
             // 
@@ -406,6 +424,23 @@ namespace ShopApp.custom
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "RequestFilter";
             // 
+            // customButton1
+            // 
+            this.customButton1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton1.BorderColor = System.Drawing.Color.MediumSeaGreen;
+            this.customButton1.BorderRadius = 40;
+            this.customButton1.BorderSize = 0;
+            this.customButton1.FlatAppearance.BorderSize = 0;
+            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.customButton1.ForeColor = System.Drawing.Color.White;
+            this.customButton1.Location = new System.Drawing.Point(169, 20);
+            this.customButton1.Name = "customButton1";
+            this.customButton1.Size = new System.Drawing.Size(150, 40);
+            this.customButton1.TabIndex = 1;
+            this.customButton1.Text = "요청 필터링 ";
+            this.customButton1.UseVisualStyleBackColor = false;
+            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
+            // 
             // comboBox1
             // 
             this.comboBox1.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
@@ -424,40 +459,6 @@ namespace ShopApp.custom
             // productTableAdapter1
             // 
             this.productTableAdapter1.ClearBeforeFill = true;
-            // 
-            // customButton2
-            // 
-            this.customButton2.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton2.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton2.BorderRadius = 40;
-            this.customButton2.BorderSize = 0;
-            this.customButton2.FlatAppearance.BorderSize = 0;
-            this.customButton2.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton2.ForeColor = System.Drawing.Color.White;
-            this.customButton2.Location = new System.Drawing.Point(192, 20);
-            this.customButton2.Name = "customButton2";
-            this.customButton2.Size = new System.Drawing.Size(150, 40);
-            this.customButton2.TabIndex = 1;
-            this.customButton2.Text = "허용여부 변경";
-            this.customButton2.UseVisualStyleBackColor = false;
-            this.customButton2.Click += new System.EventHandler(this.customButton2_Click);
-            // 
-            // customButton1
-            // 
-            this.customButton1.BackColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton1.BorderColor = System.Drawing.Color.MediumSeaGreen;
-            this.customButton1.BorderRadius = 40;
-            this.customButton1.BorderSize = 0;
-            this.customButton1.FlatAppearance.BorderSize = 0;
-            this.customButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.customButton1.ForeColor = System.Drawing.Color.White;
-            this.customButton1.Location = new System.Drawing.Point(169, 20);
-            this.customButton1.Name = "customButton1";
-            this.customButton1.Size = new System.Drawing.Size(150, 40);
-            this.customButton1.TabIndex = 1;
-            this.customButton1.Text = "요청 필터링 ";
-            this.customButton1.UseVisualStyleBackColor = false;
-            this.customButton1.Click += new System.EventHandler(this.customButton1_Click);
             // 
             // SellerPurchase
             // 

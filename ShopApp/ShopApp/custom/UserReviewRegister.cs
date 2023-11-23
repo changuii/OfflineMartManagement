@@ -141,5 +141,25 @@ namespace ShopApp.custom
                 this.reviewTableAdapter1.Update(dataSet1.REVIEW);
             }
         }
+
+        private void customButton1_Click(object sender, EventArgs e)
+        {
+            reviewTableAdapter1.Fill(this.dataSet1.REVIEW);
+            DataTable reviewTable = this.dataSet1.Tables["REVIEW"];
+
+            DataRow[] data = reviewTable.Select();
+
+            string ids = string.Join(",", data.Select(r => "'" + r["ID"].ToString() + "'").ToArray());
+            this.pURCHASEVIEW1BindingSource.Filter = string.Format("ID NOT IN ({0})", ids);
+
+
+
+
+        }
+
+        private void customButton2_Click(object sender, EventArgs e)
+        {
+            this.pURCHASEVIEW1BindingSource.Filter = "";
+        }
     }
 }

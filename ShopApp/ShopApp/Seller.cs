@@ -13,9 +13,12 @@ namespace ShopApp
 {
     public partial class Seller : Form
     {
-        public Seller()
+        string s_email;
+        public Seller(string s_email)
         {
             InitializeComponent();
+            this.s_email = s_email;
+            this.emailLabel.Text = this.s_email + "님 환영합니다.!"; 
         }
 
         private void sellectIcon_Click(object sender, EventArgs e)
@@ -27,9 +30,6 @@ namespace ShopApp
         {
             this.button1Panel.Visible = false;
             this.button2Panel.Visible = false;
-            this.button3Panel.Visible = false;
-            this.button4Panel.Visible = false;
-            this.button5Panel.Visible = false;
             if (buttonIndex == 1)
             {
                 sellectIcon.IconChar = button1.IconChar;
@@ -37,24 +37,10 @@ namespace ShopApp
             }
             else if (buttonIndex == 2)
             {
-                sellectIcon.IconChar = button1.IconChar;
+                sellectIcon.IconChar = button2.IconChar;
                 this.button2Panel.Visible = true;
             }
-            else if (buttonIndex == 3)
-            {
-                sellectIcon.IconChar = button3.IconChar;
-                this.button3Panel.Visible = true;
-            }
-            else if (buttonIndex == 4)
-            {
-                sellectIcon.IconChar = button4.IconChar;
-                this.button4Panel.Visible = true;
-            }
-            else if (buttonIndex == 5)
-            {
-                sellectIcon.IconChar = button5.IconChar;
-                this.button5Panel.Visible = true;
-            }
+            
         }
 
         private void iconButton2_Click(object sender, EventArgs e)
@@ -66,7 +52,7 @@ namespace ShopApp
         {
             sellect_button(1);
             panel2.Controls.Clear();
-            SellerPurchase sellerPurchase = new SellerPurchase();
+            SellerPurchase sellerPurchase = new SellerPurchase(this.s_email);
             sellerPurchase.TopLevel = false;
             sellerPurchase.Dock = DockStyle.Fill;
             sellerPurchase.Visible = true;
@@ -76,6 +62,12 @@ namespace ShopApp
         private void button2_Click(object sender, EventArgs e)
         {
             sellect_button(2);
+            panel2.Controls.Clear();
+            AdminUserRating adminUserRating = new AdminUserRating();
+            adminUserRating.TopLevel = false;
+            adminUserRating.Dock = DockStyle.Fill;
+            adminUserRating.Visible = true;
+            panel2.Controls.Add(adminUserRating);
         }
 
         private void button3_Click(object sender, EventArgs e)
@@ -97,7 +89,7 @@ namespace ShopApp
         {
             sellect_button(1);
             panel2.Controls.Clear();
-            SellerPurchase sellerPurchase = new SellerPurchase();
+            SellerPurchase sellerPurchase = new SellerPurchase(this.s_email);
             sellerPurchase.TopLevel = false;
             sellerPurchase.Dock = DockStyle.Fill;
             sellerPurchase.Visible = true;
@@ -105,6 +97,11 @@ namespace ShopApp
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
         }

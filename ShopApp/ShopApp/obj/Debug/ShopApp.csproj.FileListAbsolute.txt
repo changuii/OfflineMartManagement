@@ -72,3 +72,5 @@ C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\
 C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.AdminSalesWeek.resources
 C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.AdminSalesDay.resources
 C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.AdminSalesDOW.resources
+C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.AdminProductList.resources
+C:\Users\rhljh\OneDrive\Desktop\OfflineMartManagement\ShopApp\ShopApp\obj\Debug\ShopApp.custom.AdminSalesDate.resources
