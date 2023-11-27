@@ -20,8 +20,9 @@ namespace ShopApp.custom
 
         private void AdminUserRating_Load(object sender, EventArgs e)
         {
+            this.updateUserRating();
             // TODO: 이 코드는 데이터를 'dataSet1.CUSTOMER_VIEW1' 테이블에 로드합니다. 필요 시 이 코드를 이동하거나 제거할 수 있습니다.
-            this.cUSTOMER_VIEW1TableAdapter.Fill(this.dataSet1.CUSTOMER_VIEW1);
+            this.cUSTOMER_VIEW1TableAdapter1.Fill(dataSet1.CUSTOMER_VIEW1);
             
             errorLabel.Text = "";
             this.comboBox1.Items.AddRange(combo);
@@ -29,6 +30,52 @@ namespace ShopApp.custom
 
 
             this.updateTableView();
+        }
+
+        private void updateUserRating()
+        {
+            this.customerTableAdapter1.Fill(dataSet1.CUSTOMER);
+            DataTable table = dataSet1.Tables["CUSTOMER"];
+            this.customeR_VIEW_RATING1TableAdapter1.Fill(dataSet1.CUSTOMER_VIEW_RATING1);
+            DataTable rating = dataSet1.Tables["CUSTOMER_VIEW_RATING1"];
+
+            DataRow[] datas = rating.Select();
+            foreach (DataRow data in datas)
+            {
+                DataRow user = table.Rows.Find(data["C_EMAIL"]);
+                if (int.Parse(data["S_PRICE"].ToString()) == 0 && int.Parse(data["R_PRICE"].ToString()) > 0)
+                {
+                    user["RATING"] = "TERRIBLE";
+                }
+                else
+                {
+                    if (int.Parse(data["S_PRICE"].ToString()) - int.Parse(data["R_PRICE"].ToString()) < 0)
+                    {
+                        user["RATING"] = "BAD";
+                    }
+                    else if (int.Parse(data["S_PRICE"].ToString()) > 100000 && int.Parse(data["S_PRICE"].ToString()) < 500000)
+                    {
+                        user["RATING"] = "GOLD";
+                    }
+                    else if (int.Parse(data["S_PRICE"].ToString()) > 500000 && int.Parse(data["S_PRICE"].ToString()) < 1000000)
+                    {
+                        user["RATING"] = "PLATINUM";
+                    }
+                    else if (int.Parse(data["S_PRICE"].ToString()) > 1000000 && int.Parse(data["S_PRICE"].ToString()) < 1500000)
+                    {
+                        user["RATING"] = "VIP";
+                    }
+                    else if (int.Parse(data["S_PRICE"].ToString()) > 1500000)
+                    {
+                        user["RATING"] = "VVIP";
+                    }
+                    else
+                    {
+                        user["RATING"] = "NORMAL";
+                    }
+                }
+            }
+            this.customerTableAdapter1.Update(dataSet1.CUSTOMER);
         }
 
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -76,7 +123,7 @@ namespace ShopApp.custom
                         dataRow[0]["RATING"] = comboBox1.Text;
                         this.customerTableAdapter1.Update(dataSet1.CUSTOMER);
                         this.customerTableAdapter1.Fill(dataSet1.CUSTOMER);
-                        this.cUSTOMER_VIEW1TableAdapter.Fill(dataSet1.CUSTOMER_VIEW1);
+                        this.cUSTOMER_VIEW1TableAdapter1.Fill(dataSet1.CUSTOMER_VIEW1);
                         this.updateTableView();
                         errorLabel.Text = $"{targetName}님의 등급이 변경되었습니다.";
                         errorLabel.ForeColor = Color.MediumSeaGreen;

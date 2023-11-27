@@ -108,6 +108,7 @@ namespace ShopApp
             this.passwordTextBox2.BorderSize = 2;
             this.passwordTextBox2.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.passwordTextBox2.Location = new System.Drawing.Point(59, 198);
+            this.passwordTextBox2.Multiline = false;
             this.passwordTextBox2.Name = "passwordTextBox2";
             this.passwordTextBox2.Padding = new System.Windows.Forms.Padding(7);
             this.passwordTextBox2.PasswordChar = true;
@@ -123,6 +124,7 @@ namespace ShopApp
             this.passwordTextBox1.BorderSize = 2;
             this.passwordTextBox1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.passwordTextBox1.Location = new System.Drawing.Point(59, 158);
+            this.passwordTextBox1.Multiline = false;
             this.passwordTextBox1.Name = "passwordTextBox1";
             this.passwordTextBox1.Padding = new System.Windows.Forms.Padding(7);
             this.passwordTextBox1.PasswordChar = true;
@@ -138,6 +140,7 @@ namespace ShopApp
             this.nameTextBox.BorderSize = 2;
             this.nameTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.nameTextBox.Location = new System.Drawing.Point(59, 238);
+            this.nameTextBox.Multiline = false;
             this.nameTextBox.Name = "nameTextBox";
             this.nameTextBox.Padding = new System.Windows.Forms.Padding(7);
             this.nameTextBox.PasswordChar = false;
@@ -267,6 +270,7 @@ namespace ShopApp
             this.emailTextBox.BorderSize = 2;
             this.emailTextBox.Font = new System.Drawing.Font("던파 비트비트체 TTF", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
             this.emailTextBox.Location = new System.Drawing.Point(59, 114);
+            this.emailTextBox.Multiline = false;
             this.emailTextBox.Name = "emailTextBox";
             this.emailTextBox.Padding = new System.Windows.Forms.Padding(7);
             this.emailTextBox.PasswordChar = false;

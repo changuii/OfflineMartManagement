@@ -14,11 +14,13 @@ namespace ShopApp
     public partial class Management : Form
     {
         string email = "";
-        public Management(string email)
+        main main;
+        public Management(string email, main main)
         {
             this.email = email;
             InitializeComponent();
             timer1.Start();
+            this.main = main;
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -158,6 +160,12 @@ namespace ShopApp
             adminProductList.Dock = DockStyle.Fill;
             adminProductList.Visible = true;
             panel2.Controls.Add(adminProductList);
+        }
+
+        private void iconButton1_Click_2(object sender, EventArgs e)
+        {
+            main.Show();
+            this.Close();
         }
     }
 }

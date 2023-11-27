@@ -48,6 +48,7 @@ namespace ShopApp
             this.customerTableAdapter1 = new ShopApp.DataSet1TableAdapters.CUSTOMERTableAdapter();
             this.sellerTableAdapter1 = new ShopApp.DataSet1TableAdapters.SELLERTableAdapter();
             this.adminTableAdapter1 = new ShopApp.DataSet1TableAdapters.ADMINTableAdapter();
+            this.customeR_VIEW_RATING1TableAdapter1 = new ShopApp.DataSet1TableAdapters.CUSTOMER_VIEW_RATING1TableAdapter();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
             this.SuspendLayout();
@@ -278,6 +279,10 @@ namespace ShopApp
             // 
             this.adminTableAdapter1.ClearBeforeFill = true;
             // 
+            // customeR_VIEW_RATING1TableAdapter1
+            // 
+            this.customeR_VIEW_RATING1TableAdapter1.ClearBeforeFill = true;
+            // 
             // main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -289,6 +294,7 @@ namespace ShopApp
             this.Name = "main";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Form1";
+            this.Load += new System.EventHandler(this.main_Load);
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
@@ -315,6 +321,7 @@ namespace ShopApp
         private DataSet1 dataSet11;
         private DataSet1TableAdapters.ADMINTableAdapter adminTableAdapter1;
         private System.Windows.Forms.Label errorText;
+        private DataSet1TableAdapters.CUSTOMER_VIEW_RATING1TableAdapter customeR_VIEW_RATING1TableAdapter1;
     }
 }
 

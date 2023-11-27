@@ -16,12 +16,13 @@ namespace ShopApp
         string email;
         string name;
         DataTable notificationTable;
-
-        public User(string email, string name)
+        main main;
+        public User(string email, string name, main main)
         {
             InitializeComponent();
             this.email = email;
             this.name = name;
+            this.main = main;
         }
 
         private void User_Load(object sender, EventArgs e)
@@ -168,6 +169,12 @@ namespace ShopApp
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click_1(object sender, EventArgs e)
+        {
+            this.main.Show();
+            this.Close();
         }
     }
 }

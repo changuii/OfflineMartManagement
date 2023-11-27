@@ -46,7 +46,6 @@ namespace ShopApp
             this.panel7 = new System.Windows.Forms.Panel();
             this.button3Panel = new System.Windows.Forms.Panel();
             this.button3 = new FontAwesome.Sharp.IconButton();
-            this.shiftButton = new FontAwesome.Sharp.IconButton();
             this.panel6 = new System.Windows.Forms.Panel();
             this.button2Panel = new System.Windows.Forms.Panel();
             this.button2 = new FontAwesome.Sharp.IconButton();
@@ -63,6 +62,8 @@ namespace ShopApp
             this.panel2 = new System.Windows.Forms.Panel();
             this.notificationTableAdapter1 = new ShopApp.DataSet1TableAdapters.NOTIFICATIONTableAdapter();
             this.dataSet11 = new ShopApp.DataSet1();
+            this.panel12 = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel8.SuspendLayout();
@@ -74,17 +75,18 @@ namespace ShopApp
             this.panel3.SuspendLayout();
             this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).BeginInit();
+            this.panel12.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel1.Controls.Add(this.panel12);
             this.panel1.Controls.Add(this.panel10);
             this.panel1.Controls.Add(this.panel8);
             this.panel1.Controls.Add(this.panel11);
             this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel7);
-            this.panel1.Controls.Add(this.shiftButton);
             this.panel1.Controls.Add(this.panel6);
             this.panel1.Controls.Add(this.panel5);
             this.panel1.Controls.Add(this.iconButton7);
@@ -100,8 +102,8 @@ namespace ShopApp
             // 
             this.panel10.Controls.Add(this.button7Panel);
             this.panel10.Controls.Add(this.button7);
-            this.panel10.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.panel10.Location = new System.Drawing.Point(0, 456);
+            this.panel10.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel10.Location = new System.Drawing.Point(0, 404);
             this.panel10.Name = "panel10";
             this.panel10.Size = new System.Drawing.Size(172, 55);
             this.panel10.TabIndex = 16;
@@ -306,25 +308,6 @@ namespace ShopApp
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
-            // shiftButton
-            // 
-            this.shiftButton.Dock = System.Windows.Forms.DockStyle.Bottom;
-            this.shiftButton.FlatAppearance.BorderSize = 0;
-            this.shiftButton.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.shiftButton.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
-            this.shiftButton.ForeColor = System.Drawing.SystemColors.Control;
-            this.shiftButton.IconChar = FontAwesome.Sharp.IconChar.BoxesAlt;
-            this.shiftButton.IconColor = System.Drawing.Color.Black;
-            this.shiftButton.IconFont = FontAwesome.Sharp.IconFont.Auto;
-            this.shiftButton.IconSize = 32;
-            this.shiftButton.Location = new System.Drawing.Point(0, 511);
-            this.shiftButton.Name = "shiftButton";
-            this.shiftButton.Size = new System.Drawing.Size(172, 52);
-            this.shiftButton.TabIndex = 11;
-            this.shiftButton.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.shiftButton.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
-            this.shiftButton.UseVisualStyleBackColor = true;
-            // 
             // panel6
             // 
             this.panel6.Controls.Add(this.button2Panel);
@@ -523,6 +506,37 @@ namespace ShopApp
             this.dataSet11.DataSetName = "DataSet1";
             this.dataSet11.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
+            // panel12
+            // 
+            this.panel12.Controls.Add(this.iconButton1);
+            this.panel12.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel12.Location = new System.Drawing.Point(0, 508);
+            this.panel12.Name = "panel12";
+            this.panel12.Size = new System.Drawing.Size(172, 55);
+            this.panel12.TabIndex = 17;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.Control;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PlugCircleXmark;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 32;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(172, 55);
+            this.iconButton1.TabIndex = 3;
+            this.iconButton1.Text = "로그아웃";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_1);
+            // 
             // User
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -548,6 +562,7 @@ namespace ShopApp
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dataSet11)).EndInit();
+            this.panel12.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -577,7 +592,6 @@ namespace ShopApp
         private System.Windows.Forms.Panel panel7;
         private System.Windows.Forms.Panel button3Panel;
         private FontAwesome.Sharp.IconButton button3;
-        private FontAwesome.Sharp.IconButton shiftButton;
         private DataSet1TableAdapters.NOTIFICATIONTableAdapter notificationTableAdapter1;
         private DataSet1 dataSet11;
         private System.Windows.Forms.Panel panel8;
@@ -586,5 +600,7 @@ namespace ShopApp
         private System.Windows.Forms.Panel panel10;
         private System.Windows.Forms.Panel button7Panel;
         private FontAwesome.Sharp.IconButton button7;
+        private System.Windows.Forms.Panel panel12;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

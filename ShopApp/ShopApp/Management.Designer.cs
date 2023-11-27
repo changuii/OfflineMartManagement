@@ -56,6 +56,8 @@ namespace ShopApp
             this.emailLabel = new System.Windows.Forms.Label();
             this.timeLabel = new System.Windows.Forms.Label();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.panel9 = new System.Windows.Forms.Panel();
+            this.iconButton1 = new FontAwesome.Sharp.IconButton();
             this.panel1.SuspendLayout();
             this.panel10.SuspendLayout();
             this.panel7.SuspendLayout();
@@ -63,6 +65,7 @@ namespace ShopApp
             this.panel5.SuspendLayout();
             this.panel6.SuspendLayout();
             this.panel4.SuspendLayout();
+            this.panel9.SuspendLayout();
             this.SuspendLayout();
             // 
             // iconDropDownButton1
@@ -78,6 +81,7 @@ namespace ShopApp
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.MediumSeaGreen;
+            this.panel1.Controls.Add(this.panel9);
             this.panel1.Controls.Add(this.panel10);
             this.panel1.Controls.Add(this.panel7);
             this.panel1.Controls.Add(this.panel8);
@@ -394,6 +398,37 @@ namespace ShopApp
             this.timer1.Interval = 1000;
             this.timer1.Tick += new System.EventHandler(this.ClockEvent);
             // 
+            // panel9
+            // 
+            this.panel9.Controls.Add(this.iconButton1);
+            this.panel9.Dock = System.Windows.Forms.DockStyle.Bottom;
+            this.panel9.Location = new System.Drawing.Point(0, 508);
+            this.panel9.Name = "panel9";
+            this.panel9.Size = new System.Drawing.Size(172, 55);
+            this.panel9.TabIndex = 21;
+            // 
+            // iconButton1
+            // 
+            this.iconButton1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.iconButton1.FlatAppearance.BorderSize = 0;
+            this.iconButton1.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.iconButton1.Font = new System.Drawing.Font("던파 비트비트체 TTF", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(129)));
+            this.iconButton1.ForeColor = System.Drawing.SystemColors.Control;
+            this.iconButton1.IconChar = FontAwesome.Sharp.IconChar.PlugCircleXmark;
+            this.iconButton1.IconColor = System.Drawing.Color.Black;
+            this.iconButton1.IconFont = FontAwesome.Sharp.IconFont.Auto;
+            this.iconButton1.IconSize = 32;
+            this.iconButton1.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.Location = new System.Drawing.Point(0, 0);
+            this.iconButton1.Name = "iconButton1";
+            this.iconButton1.Size = new System.Drawing.Size(172, 55);
+            this.iconButton1.TabIndex = 3;
+            this.iconButton1.Text = "로그아웃";
+            this.iconButton1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.iconButton1.TextImageRelation = System.Windows.Forms.TextImageRelation.ImageBeforeText;
+            this.iconButton1.UseVisualStyleBackColor = true;
+            this.iconButton1.Click += new System.EventHandler(this.iconButton1_Click_2);
+            // 
             // Management
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 12F);
@@ -415,6 +450,7 @@ namespace ShopApp
             this.panel6.ResumeLayout(false);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
+            this.panel9.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -445,5 +481,7 @@ namespace ShopApp
         private System.Windows.Forms.Panel button1Panel;
         private FontAwesome.Sharp.IconButton button1;
         private FontAwesome.Sharp.IconButton sellectIcon;
+        private System.Windows.Forms.Panel panel9;
+        private FontAwesome.Sharp.IconButton iconButton1;
     }
 }

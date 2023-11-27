@@ -14,11 +14,13 @@ namespace ShopApp
     public partial class Seller : Form
     {
         string s_email;
-        public Seller(string s_email)
+        main main;
+        public Seller(string s_email, main main)
         {
             InitializeComponent();
             this.s_email = s_email;
-            this.emailLabel.Text = this.s_email + "님 환영합니다.!"; 
+            this.emailLabel.Text = this.s_email + "님 환영합니다.!";
+            this.main = main;
         }
 
         private void sellectIcon_Click(object sender, EventArgs e)
@@ -104,6 +106,12 @@ namespace ShopApp
         private void panel4_Paint(object sender, PaintEventArgs e)
         {
 
+        }
+
+        private void iconButton1_Click(object sender, EventArgs e)
+        {
+            main.Show();
+            this.Close();
         }
     }
 }
