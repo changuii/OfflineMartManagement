@@ -4,12 +4,6 @@
  
 다음 요구 사항을 만족하는 데이터베이스를 설계, 구현하시오. 명시 되지 않은 내용은 본인이 직접 요구 사항을 추가
  
-1) ERWin으로 ER  다이아그램 작성 (11월 4일까지)
-2) 오라클과 C#으로 응용 프로그램 완성
- 11월 18일까지 1차버젼 업로드
- 11월 26일까지 최종 버전 업로드
-3) 프로젝트 발표 (11월 27일부터 수업 시간에, 업로드한 최종 버젼으로)
- 
 ## 요구사항
 - 판매하는 상품 종류는 20가지 이상 (각 종류 당 10개 이상의 상품)
 - 회원 수 10명 이상
@@ -36,3 +30,80 @@
 - 고객 관리 (우수고객, 불량 고객, ..)
 - 상품 관리 (환불이 많은 것, 잘 팔리는 것, ..)
 - 기타 필요하다고 생각되는 내용 추가
+
+# 결과
+
+### 로그인
+
+![sign in](./assets/signin.png)
+
+### 회원가입
+
+![sign up](assets/signup.png)
+
+## 유저
+
+### 상품 목록
+
+![userProductList](assets/userProductList.png)
+
+### 나의 장바구니
+
+![userCart](assets/userCart.png)
+
+### 나의 구매내역
+
+![userPurchaseList](assets/userPurchaseList.png)
+
+### 공지 확인
+
+![userNotification](assets/userNotification.png)
+
+### 리뷰 확인
+
+![userReview](assets/userReviewList.png)
+
+### 리뷰 등록
+
+![userReivewRegister](assets/userReviewRegister.png)
+
+### 내 정보
+
+![userInfo](assets/userProfile.png)
+
+
+## 판매자
+
+### 상품 구매 및 환불 처리
+
+![sellerProductProcess](assets/sellerSalesPurchaseProcess.png)
+
+### 고객 관리
+
+![sellerUserManagement](assets/sellerUserManagement.png)
+
+
+## 관리자
+
+### 상품 등록
+
+![adminProductRegister](assets/adminProductRegister.png)
+
+### 공지 관리
+
+![adminNotification](assets/adminNotificationRegister.png)
+
+### 고객 관리
+
+![adminUserManagement](assets/adminUserManagement.png)
+
+### 매출 현황
+
+![adminSales](assets/adminSales.png)
+
+### 상품 재고 및 통계 현황
+
+![adminSalesCount](assets/adminSalesCount.png)
+
+
+
